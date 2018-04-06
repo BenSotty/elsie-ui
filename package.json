@@ -1,0 +1,27 @@
+{
+  "name": "elsie-ui",
+  "version": "1.0.0",
+  "description": "The UI for Elsie website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenSotty/elsie-ui.git"
+  },
+  "author": "Benjamin Sotty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenSotty/elsie-ui/issues"
+  },
+  "homepage": "https://github.com/BenSotty/elsie-ui#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-include-html": "^1.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.0"
+  }
+}
