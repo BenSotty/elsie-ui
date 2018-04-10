@@ -9821,12 +9821,15 @@ h1, h2, h3, h4, h5 {
 h2 {
   font-weight: bold; }
 
-.card-bodered .title, .card-quotes .title, .card-open .title, .card-bodered .contact .name, .card-quotes .contact .name, .card-open .contact .name, .navigation .nav-item .dropdown-menu .dropdown-item .title,
+.card-bodered .title, .card-bodered-full-width .title, .card-quotes .title, .card-open .title, .card-bodered .contact .name, .card-bodered-full-width .contact .name, .card-quotes .contact .name, .card-open .contact .name, .navigation .nav-item .dropdown-menu .dropdown-item .title,
 .bold {
   font-family: "nunito-bold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 .text-grey {
   color: #6c757d; }
+
+.sub-text {
+  font-size: 0.75rem; }
 
 .no-margin {
   margin: 0 !important; }
@@ -9845,6 +9848,17 @@ a.arrow-right i {
   background: linear-gradient(to right, #373682 0%, #a967cb 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373682', endColorstr='#a967cb',GradientType=1 );
+  /* IE6-9 */
+  color: #fff; }
+
+.bg-purple-light-grad {
+  background-color: #50e3d9;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#5c4294), to(#9a71f4));
+  background: linear-gradient(to right, #5c4294 0%, #9a71f4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c4294', endColorstr='#9a71f4',GradientType=1 );
   /* IE6-9 */
   color: #fff; }
 
@@ -9951,7 +9965,7 @@ input.open {
   border-bottom: solid 1px #55459f;
   padding: 0 0 3px 0; }
 
-ul.inline, ul.evenly-spread-list, ul.separated,
+ul.inline, ul.evenly-spread-list, ul.separated, ul.ticks,
 ul.unstyled {
   list-style: none;
   margin: 0;
@@ -9981,6 +9995,20 @@ ul.separated li:not(:last-child) {
 ul.partners-logos img {
   height: 30px; }
 
+ul.ticks li {
+  position: relative;
+  padding-left: 40px; }
+  ul.ticks li i {
+    color: #2cd4d9;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    left: 0; }
+  ul.ticks li:not(:last-child) {
+    margin-bottom: 15px; }
+
 .shape-section,
 .shape-separator {
   position: relative;
@@ -10000,53 +10028,70 @@ ul.partners-logos img {
     height: 130px;
     width: 130px; }
 
-.shape-separator .shape-right {
-  bottom: auto;
-  top: 0; }
-
-.shape-separator .shape-left {
-  top: 130px; }
+.shape-separator {
+  z-index: -1; }
+  .shape-separator .shape-right {
+    bottom: auto;
+    top: 0; }
+  .shape-separator .shape-left {
+    top: 130px; }
 
 .shape-separator-sub-section {
   padding-top: 86.66667px;
   padding-left: 130px;
   padding-right: 130px; }
 
+.shape-separator-inside-block {
+  padding-left: 130px;
+  padding-right: 130px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+  .shape-separator-inside-block > * {
+    background-color: #fff; }
+
 .shape-section-content {
   padding-left: 130px;
   padding-right: 130px; }
 
-.card-bodered .icon, .card-quotes .icon, .card-open .icon {
+.card-bodered .icon, .card-bodered-full-width .icon, .card-quotes .icon, .card-open .icon {
   margin-bottom: 15px;
-  height: 30px; }
+  height: 30px;
+  max-width: 40px; }
 
-.card-bodered .title, .card-quotes .title, .card-open .title {
+.card-bodered .icon-inline, .card-bodered-full-width .icon-inline, .card-quotes .icon-inline, .card-open .icon-inline {
+  display: inline-block;
+  margin-right: 7.5px;
+  height: 30px;
+  max-width: 30px; }
+
+.card-bodered .title, .card-bodered-full-width .title, .card-quotes .title, .card-open .title {
   font-size: 1rem;
   margin-bottom: 15px; }
 
-.card-bodered .text, .card-quotes .text, .card-open .text {
+.card-bodered .text, .card-bodered-full-width .text, .card-quotes .text, .card-open .text {
   font-size: 0.875rem;
   line-height: 1.0625rem;
   color: #6c757d; }
 
-.card-bodered .link, .card-quotes .link, .card-open .link {
+.card-bodered .link, .card-bodered-full-width .link, .card-quotes .link, .card-open .link {
   display: inline-block;
   margin-top: 15px;
   color: #55459f;
   font-size: 0.875rem; }
 
-.card-bodered .contact, .card-quotes .contact, .card-open .contact {
+.card-bodered .contact, .card-bodered-full-width .contact, .card-quotes .contact, .card-open .contact {
   font-size: 0.875rem;
   margin-top: 30px; }
-  .card-bodered .contact img, .card-quotes .contact img, .card-open .contact img {
+  .card-bodered .contact img, .card-bodered-full-width .contact img, .card-quotes .contact img, .card-open .contact img {
     float: left;
     margin-right: 15px;
     height: 50px;
     width: 50px; }
-  .card-bodered .contact .info, .card-quotes .contact .info, .card-open .contact .info {
+  .card-bodered .contact .info, .card-bodered-full-width .contact .info, .card-quotes .contact .info, .card-open .contact .info {
     color: #6c757d; }
 
 .card-bodered,
+.card-bodered-full-width,
 .card-quotes {
   display: inline-block;
   max-width: 200px;
@@ -10055,6 +10100,10 @@ ul.partners-logos img {
   -webkit-box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.07);
   text-align: left; }
+
+.card-bodered-full-width {
+  max-width: none;
+  width: 100%; }
 
 .card-quotes {
   max-width: 450px;
@@ -10141,3 +10190,32 @@ ul.partners-logos img {
 
 .navigation li.nav-item:not(:last-child) button {
   margin-right: 1rem; }
+
+.workflow .workflow-block {
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%; }
+  .workflow .workflow-block:not(:last-of-type) {
+    margin-bottom: 60px; }
+
+.workflow .workflow-number-block {
+  position: relative;
+  height: 100%; }
+  .workflow .workflow-number-block.left {
+    float: left;
+    margin-right: 60px; }
+  .workflow .workflow-number-block.right {
+    float: right;
+    margin-left: 60px; }
+  .workflow .workflow-number-block .workflow-number {
+    height: 200px; }
+  .workflow .workflow-number-block .workflow-number-icon {
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 0; }
+
+.workflow .workflow-text-block {
+  min-height: 200px; }

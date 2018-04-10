@@ -39,3 +39,25 @@ ul.partners-logos {
     height: 30px;
   }
 }
+
+ul.ticks {
+  @extend %list-unstyled;
+
+  li {
+    position: relative;
+    padding-left: 40px;
+
+    i {
+      color: $blue;
+      font-size: rem(28px);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $gutter / 2;
+    }
+  }
+}

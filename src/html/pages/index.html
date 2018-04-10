@@ -1,4 +1,4 @@
-@@include('start.html' , {
+@@include('start', {
   title:'Elsie home page',
   description:'Get to know the Elsie organisation'
 })
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="col-6 img-header-container sub-section">
-        <img class="img-header" alt="Elsie life cycle" src="images/icon-header-home-page.png" />
+        <img class="img-header" alt="Elsie work flow" src="images/icons/work-flow.svg" />
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
 <div class="shape-separator bg-purple-grad">
   <img class="shape-right" src="images/shape-right-white.png" />
   <!-- TODO: Add grey shape icon -->
-  <img class="shape-left" src="images/shape-left-home.png" />
+  <img class="shape-left" src="images/shape-left-purple-grad.png" />
 </div>
 <!-- Advantages section -->
 <div class="shape-separator-sub-section">
@@ -49,7 +49,7 @@
         <img class="icon" src="images/icons/icon_healthcare-units.svg" />
         <h3 class="title">Healthcare Units</h3>
         <p class="text">One stop solution for all your genetic needs.</p>
-        <a class="link arrow-right" href="health-units.html">
+        <a class="link arrow-right" href="healthcare-units.html">
           <span>Learn more</span>
           <i class="fa fa-arrow-right"></i>
         </a>
@@ -140,53 +140,14 @@
     </div>
   </div>
 </div>
-<!-- Featured partner -->
-<div class="shape-section">
-  <img class="shape-right" src="images/shape-right-grey.png" />
-  <div class="shape-section-content">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="bold text-grey">Featured partners</div>
-          <ul class="evenly-spread-list partners-logos">
-            <li><img alt="Oswald Cruz logo" src="images/oswald-cruz.png" /></li>
-            <li><img alt="Preventicum logo" src="images/preventicum.png" /></li>
-            <li><img alt="CHUC logo" src="images/chuc.png" /></li>
-            <li><img alt="Ruppiner logo" src="images/ruppiner.png" /></li>
-            <li><img alt="Rambam Health Care Campus logo" src="images/rambam.png" /></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Featured partners -->
+@@include('partners')
 <!-- Next step -->
-<div class="bg-purple-grad section-block">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h3>Take the next step</h3>
-        <p>Schedule a demo to see Elsie in action, or leave your email and we'll be in touch.</p>
-      </div>
-      <div class="col-6">
-        <div class="layout-bottom-right">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="fa fa-paper-plane"></i>
-              </span>
-            </div>
-            <input type="email" class="form-control short" placeholder="Email" aria-label="Email" aria-describedby="email-newsletter">
-            <div class="input-group-append">
-              <button class="btn" type="button">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+@@include('newsletter_section', {
+  title:'Take the next step',
+  text:"Schedule a demo to see Elsie in action, or leave your email and we'll be in touch."
+})
 
 <!-- End content -->
-@@include('footer.html')
-@@include('end.html')
+@@include('footer')
+@@include('end')
