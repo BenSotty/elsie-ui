@@ -17,11 +17,16 @@
   },
   "homepage": "https://github.com/BenSotty/elsie-ui#readme",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap": "^4.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.3",
     "gulp-include-html": "^1.0.14",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.0"
+  },
+  "dependencies": {
+    "sass-rem": "^2.0.1"
   }
 }

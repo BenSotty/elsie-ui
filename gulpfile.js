@@ -1,7 +1,9 @@
 var gulp = require("gulp"),
     sass = require("gulp-sass"),
     includeHtml = require("gulp-include-html"),
-    cleanCSS = require("gulp-clean-css");
+    prefix = require('gulp-autoprefixer'),
+    minify = require("gulp-clean-css"),
+    plumber = require("gulp-plumber"),
     rename = require('gulp-rename');
 
 // Source and distribution folder
@@ -9,13 +11,10 @@ var source = "src/",
     dest = "dist/";
 
 // Bootstrap-sass path
-var  bootstrapSassPath = "./node_modules/bootstrap-sass/";
+var  bootstrapSassPath = "./node_modules/bootstrap/";
 
 var fonts = {
-  in: [
-    source + "fonts/*.*",
-    bootstrapSassPath + "assets/fonts/**/*"
-  ],
+  in: source + "fonts/*.*",
   out: dest + "fonts/"
 };
 
@@ -32,15 +31,12 @@ var scss = {
       outputStyle: "nested",
       precison: 3,
       errLogToConsole: true,
-      includePaths: [bootstrapSassPath + "assets/stylesheets"]
+      includePaths: [
+        bootstrapSassPath + "/scss",
+        "./node_modules/sass-rem"
+      ]
   }
 };
-
-var css = {
-  in: dest + "css/app.css",
-  out: dest + "css",
-  cleanCSSOpts: {}
-}
 
 var html = {
   in: source + "html/pages/**/*.html",
@@ -76,19 +72,20 @@ gulp.task("js", function () {
 });
 
 // compile scss
-gulp.task("sass", function () {
+gulp.task('sass', function(){
   return gulp
     .src(scss.in)
     .pipe(sass(scss.sassOpts))
-    .pipe(gulp.dest(scss.out));
-});
-
-gulp.task("css", ["sass"], function () {
-  return gulp
-    .src(css.in)
-    .pipe(cleanCSS(css.cleanCSSOpts))
+    .pipe(prefix('last 2 versions'))
+    .pipe(gulp.dest(scss.out))
+    .pipe(minify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(css.out));
+    .pipe(gulp.dest(scss.out))
+    .pipe(plumber({
+      errorHandler: function onError(err) {
+          console.log(err);
+      }
+    }))
 });
 
 // compile html
@@ -103,8 +100,8 @@ gulp.task("watch", function () {
   gulp.watch(fonts.in, ["fonts"]);
   gulp.watch(images.in, ["images"]);
   gulp.watch(js.in, ["js"]);
-  gulp.watch(scss.watch, ["css"]);
+  gulp.watch(scss.watch, ["sass"]);
   gulp.watch(html.watch, ["html"]);
 });
 
-gulp.task("default",["fonts", "images", "js", "css", "html"], function () {});
+gulp.task("default",["fonts", "images", "js", "sass", "html"], function () {});
