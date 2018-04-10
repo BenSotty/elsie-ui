@@ -66,9 +66,10 @@ gulp.task("images", function () {
 });
 
 gulp.task("js", function () {
-  return gulp
-    .src(js.in)
-    .pipe(gulp.dest(js.out));
+  // There is no need for js build until there is some custom Js in the project
+  // return gulp
+  //   .src(js.in)
+  //   .pipe(gulp.dest(js.out));
 });
 
 // compile scss
