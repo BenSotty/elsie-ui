@@ -10039,7 +10039,8 @@ ul.ticks li {
 .shape-separator-sub-section {
   padding-top: 86.66667px;
   padding-left: 130px;
-  padding-right: 130px; }
+  padding-right: 130px;
+  position: relative; }
 
 .shape-separator-inside-block {
   padding-left: 130px;
@@ -10052,6 +10053,33 @@ ul.ticks li {
 .shape-section-content {
   padding-left: 130px;
   padding-right: 130px; }
+
+.shape-dna-container {
+  position: relative; }
+
+.shape-dna-1 {
+  height: 130px;
+  position: absolute;
+  top: 130px;
+  left: 160px; }
+
+.shape-dna-2 {
+  position: absolute;
+  top: 80%;
+  height: 8px;
+  right: 4%; }
+
+.shape-dna-3 {
+  position: absolute;
+  top: 20%;
+  height: 110px;
+  right: 3%; }
+
+.shape-dna-4 {
+  position: absolute;
+  bottom: 15%;
+  height: 115px;
+  left: 6%; }
 
 .card-bodered .icon, .card-bodered-full-width .icon, .card-quotes .icon, .card-open .icon {
   margin-bottom: 15px;
