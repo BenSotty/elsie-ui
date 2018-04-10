@@ -9821,7 +9821,7 @@ h1, h2, h3, h4, h5 {
 h2 {
   font-weight: bold; }
 
-.card-bodered .title, .card-quotes .title, .card-open .title, .card-bodered .contact .name, .card-quotes .contact .name, .card-open .contact .name,
+.card-bodered .title, .card-quotes .title, .card-open .title, .card-bodered .contact .name, .card-quotes .contact .name, .card-open .contact .name, .navigation .nav-item .dropdown-menu .dropdown-item .title,
 .bold {
   font-family: "nunito-bold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
@@ -10097,14 +10097,47 @@ ul.partners-logos img {
 .navigation .nav-item a {
   color: #fff; }
 
-.navigation .nav-item .dropdown-menu a {
-  color: #000; }
-
 .navigation .nav-item .dropdown-toggle i {
   font-size: 12px; }
 
 .navigation .nav-item .dropdown-toggle:after {
   display: none; }
+
+.navigation .nav-item .dropdown-menu {
+  width: 270px;
+  padding: 0;
+  border-radius: 8px; }
+  .navigation .nav-item .dropdown-menu .dropdown-item {
+    color: #000;
+    font-size: 0.875rem;
+    float: left;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0; }
+    .navigation .nav-item .dropdown-menu .dropdown-item .dropdown-item-content {
+      float: left;
+      width: 100%;
+      padding-bottom: 15px; }
+    .navigation .nav-item .dropdown-menu .dropdown-item:not(:last-of-type) .dropdown-item-content {
+      border-bottom: solid 1px #dee2e6; }
+    .navigation .nav-item .dropdown-menu .dropdown-item .icon-container {
+      width: 10%;
+      float: left;
+      margin-right: 10px; }
+    .navigation .nav-item .dropdown-menu .dropdown-item .text-area {
+      float: left;
+      width: 233px;
+      width: calc(90% - 10px); }
+    .navigation .nav-item .dropdown-menu .dropdown-item .icon {
+      max-width: 100%;
+      height: 30px; }
+    .navigation .nav-item .dropdown-menu .dropdown-item .title {
+      margin-bottom: 5px; }
+    .navigation .nav-item .dropdown-menu .dropdown-item .text {
+      color: #6c757d;
+      white-space: normal; }
 
 .navigation li.nav-item:not(:last-child) button {
   margin-right: 1rem; }
