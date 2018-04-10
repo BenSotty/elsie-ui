@@ -1,0 +1,36 @@
+.section,
+%section {
+  padding-top: 2 * $gutter;
+}
+
+.section-block,
+%section-block {
+  @extend %section;
+  padding-bottom: 2 * $gutter;
+}
+
+.section-block-grey {
+  @extend %section-block;
+  background-color: $section-grey;
+}
+
+.sub-section,
+%sub-section {
+  padding-top: $gutter;
+}
+
+.sub-section-border-top {
+  margin-top: $gutter;
+  padding-top: $gutter / 2;
+  padding-bottom: $gutter / 2;
+  border-top: solid 1px $border-grey;
+}
+
+.sub-section-block {
+  @extend %sub-section;
+  padding-bottom: 2 * $gutter;
+}
+
+.suber-section {
+  padding-top: $gutter / 2;
+}

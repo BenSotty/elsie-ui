@@ -1,0 +1,10 @@
+.layout-bottom-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+
+  > * {
+    width: auto;
+  }
+}

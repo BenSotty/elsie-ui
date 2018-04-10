@@ -1,0 +1,40 @@
+.input-group {
+  $input-height: 40px;
+
+  .input-group-prepend {
+    .input-group-text {
+      background-color: $white;
+      border: none;
+      border-radius: $input-height 0 0 $input-height;
+
+      i {
+        color: $text-grey;
+      }
+    }
+  }
+
+  input {
+    border: none;
+    padding-left: 0;
+    background-clip: border-box;
+  }
+
+  .input-group-append {
+    > .btn {
+      border-radius: $input-height;
+      margin-left: - $input-height / 2;
+    }
+  }
+}
+
+input.short {
+  max-width: 200px;
+}
+
+input.open {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 1px $purple;
+  padding: 0 0 3px 0;
+}

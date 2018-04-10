@@ -1,2 +1,21 @@
 @import "variables";
-@import "bootstrap-components";
+@import "bootstrap";
+@import "vendor/fontawesome";
+@import "rem";
+
+// include custom made components
+@import "components/fonts";
+@import "components/typography";
+@import "components/helpers";
+@import "components/links";
+@import "components/backgrounds";
+@import "components/sections";
+@import "components/buttons";
+@import "components/layout";
+@import "components/inputs";
+@import "components/lists";
+@import "components/shapes";
+@import "components/cards";
+@import "components/header";
+@import "components/footer";
+@import "components/navigation";

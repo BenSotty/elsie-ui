@@ -1,0 +1,47 @@
+$shape-separator-height: 130px;
+
+.shape-section,
+%shape-section {
+  position: relative;
+  min-height: $shape-separator-height;
+
+  .shape-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: $shape-separator-height;
+    width: $shape-separator-height;
+  }
+
+  .shape-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $shape-separator-height;
+    width: $shape-separator-height;
+  }
+}
+
+.shape-separator {
+  @extend %shape-section;
+
+  .shape-right {
+    bottom: auto;
+    top: 0;
+  }
+
+  .shape-left {
+    top: $shape-separator-height;
+  }
+}
+
+.shape-separator-sub-section {
+  padding-top: 2 * $shape-separator-height / 3;
+  padding-left: $shape-separator-height;
+  padding-right: $shape-separator-height;
+}
+
+.shape-section-content {
+  padding-left: $shape-separator-height;
+  padding-right: $shape-separator-height;
+}

@@ -1,0 +1,41 @@
+%list-unstyled,
+ul.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.inline {
+  @extend %list-unstyled;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    font-size: 1rem;
+
+    &:not(:last-child) {
+      margin-right: $gutter / 2;
+    }
+  }
+}
+
+ul.evenly-spread-list {
+  @extend %list-unstyled;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul.separated {
+  @extend %list-unstyled;
+
+  li:not(:last-child) {
+    margin-bottom: $gutter / 3;
+  }
+}
+
+ul.partners-logos {
+  img {
+    height: 30px;
+  }
+}

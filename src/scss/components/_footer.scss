@@ -1,0 +1,21 @@
+.footer {
+  color: $text-grey;
+  font-size: rem(14px);
+
+  .main-logo {
+    max-width: 100%;
+    max-height: 30px;
+  }
+
+  a {
+    color: $text-grey;
+  }
+
+  input[type=email] {
+    margin-top: $gutter / 3;
+  }
+
+  .partners-logos {
+    float: right;
+  }
+}

@@ -1,0 +1,31 @@
+.navigation {
+  .logo {
+    height: 30px;
+  }
+
+  .nav-item {
+    a {
+      color: $white;
+    }
+
+    .dropdown-menu a {
+      color: $black;
+    }
+
+    .dropdown-toggle {
+      i {
+        font-size: 12px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  li.nav-item:not(:last-child) {
+    button {
+      margin-right: $navbar-nav-link-padding-x;
+    }
+  }
+}
