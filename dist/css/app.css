@@ -9862,7 +9862,18 @@ a.arrow-right i {
   background: -webkit-gradient(linear, left top, right top, from(#5c4294), to(#9a71f4));
   background: linear-gradient(to right, #5c4294 0%, #9a71f4 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c4294', endColorstr='#9a71f4',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6060ab', endColorstr='#8181d3',GradientType=1 );
+  /* IE6-9 */
+  color: #fff; }
+
+.bg-blue-grad {
+  background-color: #484991;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#484991), to(#7a7aca));
+  background: linear-gradient(to right, #484991 0%, #7a7aca 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373682', endColorstr='#a967cb',GradientType=1 );
   /* IE6-9 */
   color: #fff; }
 
