@@ -5,6 +5,7 @@
 
   .nav-item {
     a {
+      border-radius: $box-radius;
       color: $white;
     }
 
@@ -21,7 +22,7 @@
     .dropdown-menu {
       width: 270px;
       padding: 0;
-      border-radius: 8px;
+      border-radius: $box-radius;
 
       .dropdown-item {
         color: $black;
@@ -131,6 +132,7 @@
           color: $blue;
           background: transparent;
           border: none;
+          border-radius: 0px;
           padding: 0;
           margin-bottom: .5rem;
         }
@@ -143,7 +145,7 @@
       .navbar-nav {
         padding: $gutter / 2;
         background-color: $white;
-        border-radius: 8px;
+        border-radius: $box-radius;
       }
 
       .dropdown-menu {

@@ -10115,7 +10115,7 @@ ul.ticks li {
   padding-left: 100px;
   padding-right: 100px; }
 
-.shape-dna-container {
+.shape-container {
   position: relative; }
 
 .shape-dna-1 {
@@ -10184,6 +10184,27 @@ ul.ticks li {
   height: 60px;
   left: 3%; }
 
+.shape-grad-1, .shape-grad-2, .shape-grad-3 {
+  position: absolute;
+  opacity: 0.05;
+  height: 130px; }
+
+.shape-grad-1 {
+  left: 0;
+  top: 0; }
+
+.shape-grad-2 {
+  right: -80px;
+  top: 45px;
+  height: 140px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
+.shape-grad-3 {
+  top: 0;
+  left: 35%;
+  height: 150px; }
+
 @media (max-width: 991.98px) {
   .shape-separator .shape-left {
     top: 80px; }
@@ -10208,23 +10229,18 @@ ul.ticks li {
     bottom: 1%;
     height: 6px;
     right: 2%; }
-  .shape-dna-3 {
-    display: none; }
-  .shape-dna-4 {
-    display: none; }
-  .shape-dna-5 {
-    display: none; }
-  .shape-dna-6 {
-    display: none; }
-  .shape-dna-7 {
-    display: none; }
-  .shape-dna-8 {
-    display: none; }
-  .shape-dna-9 {
-    display: none; }
-  .shape-dna-10 {
-    display: none; }
-  .shape-dna-11 {
+  .shape-dna-3,
+  .shape-dna-4,
+  .shape-dna-5,
+  .shape-dna-6,
+  .shape-dna-7,
+  .shape-dna-8,
+  .shape-dna-9,
+  .shape-dna-10,
+  .shape-dna-11,
+  .shape-grad-1,
+  .shape-grad-2,
+  .shape-grad-3 {
     display: none; } }
 
 .card-bodered, .card-bodered-full-width, .card-quotes, .card-open {
@@ -10330,6 +10346,7 @@ ul.ticks li {
   height: 30px; }
 
 .navigation .nav-item a {
+  border-radius: 8px;
   color: #fff; }
 
 .navigation .nav-item .dropdown-toggle i {
@@ -10406,6 +10423,7 @@ ul.ticks li {
       color: #2cd4d9;
       background: transparent;
       border: none;
+      border-radius: 0px;
       padding: 0;
       margin-bottom: .5rem; }
     .navigation .navigation-container .nav-item a {
