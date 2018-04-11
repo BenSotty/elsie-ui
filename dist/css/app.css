@@ -10123,6 +10123,36 @@ ul.ticks li {
   height: 50px;
   left: 15%; }
 
+.shape-dna-7 {
+  position: absolute;
+  top: 56%;
+  height: 260px;
+  right: 4%; }
+
+.shape-dna-8 {
+  position: absolute;
+  top: -25px;
+  height: 65px;
+  left: 135px; }
+
+.shape-dna-9 {
+  position: absolute;
+  top: 0;
+  height: 160px;
+  right: 5%; }
+
+.shape-dna-10 {
+  position: absolute;
+  top: 10%;
+  height: 120px;
+  left: 5%; }
+
+.shape-dna-11 {
+  position: absolute;
+  bottom: 3%;
+  height: 60px;
+  left: 3%; }
+
 @media (max-width: 991.98px) {
   .shape-separator .shape-left {
     top: 80px; }
@@ -10133,6 +10163,12 @@ ul.ticks li {
     padding-top: 53.33333px;
     padding-left: 80px;
     padding-right: 80px; }
+  .shape-separator-inside-block {
+    margin-top: 110px;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-transform: none;
+            transform: none; }
   .shape-dna-1 {
     height: 72px;
     top: 80px;
@@ -10148,6 +10184,16 @@ ul.ticks li {
   .shape-dna-5 {
     display: none; }
   .shape-dna-6 {
+    display: none; }
+  .shape-dna-7 {
+    display: none; }
+  .shape-dna-8 {
+    display: none; }
+  .shape-dna-9 {
+    display: none; }
+  .shape-dna-10 {
+    display: none; }
+  .shape-dna-11 {
     display: none; } }
 
 .card-bodered, .card-bodered-full-width, .card-quotes, .card-open {
@@ -10237,6 +10283,16 @@ ul.ticks li {
     margin-top: 10px; }
   .footer .partners-logos {
     float: right; }
+
+@media (max-width: 767.98px) {
+  .footer .partners-logos {
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
 
 .navigation .logo {
   height: 30px; }
@@ -10334,19 +10390,27 @@ ul.ticks li {
 .workflow .workflow-block {
   margin-left: auto;
   margin-right: auto;
-  width: 55%; }
+  width: 55%;
+  position: relative; }
   .workflow .workflow-block:not(:last-of-type) {
     margin-bottom: 60px; }
+  .workflow .workflow-block .workflow-number-wrapper {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+  .workflow .workflow-block.number-left .workflow-number-wrapper {
+    left: 0; }
+  .workflow .workflow-block.number-left .workflow-text-block {
+    padding-left: 200px; }
+  .workflow .workflow-block.number-right .workflow-number-wrapper {
+    right: 0; }
+  .workflow .workflow-block.number-right .workflow-text-block {
+    padding-right: 200px; }
 
 .workflow .workflow-number-block {
   position: relative;
   height: 100%; }
-  .workflow .workflow-number-block.left {
-    float: left;
-    margin-right: 60px; }
-  .workflow .workflow-number-block.right {
-    float: right;
-    margin-left: 60px; }
   .workflow .workflow-number-block .workflow-number {
     height: 200px; }
   .workflow .workflow-number-block .workflow-number-icon {
@@ -10359,3 +10423,27 @@ ul.ticks li {
 
 .workflow .workflow-text-block {
   min-height: 200px; }
+
+@media (max-width: 991.98px) {
+  .workflow .workflow-block {
+    width: 75%; } }
+
+@media (max-width: 767.98px) {
+  .workflow .workflow-block {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%; }
+    .workflow .workflow-block.number-left .workflow-number-wrapper {
+      left: 15px; }
+    .workflow .workflow-block.number-left .workflow-text-block {
+      padding-left: 100px; }
+    .workflow .workflow-block.number-right .workflow-number-wrapper {
+      right: 15px; }
+    .workflow .workflow-block.number-right .workflow-text-block {
+      padding-right: 100px; }
+  .workflow .workflow-number-block .workflow-number {
+    height: 100px; }
+  .workflow .workflow-text-block {
+    min-height: 100px; } }

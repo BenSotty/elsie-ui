@@ -19,3 +19,11 @@
     float: right;
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .footer .partners-logos {
+    float: none;
+    display: flex;
+    justify-content: space-between;
+  }
+}

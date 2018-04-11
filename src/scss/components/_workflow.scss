@@ -1,29 +1,47 @@
-.workflow {
-  $number-height: 200px;
+$number-height: 200px;
+$number-height-sm: 100px;
 
+.workflow {
   .workflow-block {
     margin-left: auto;
     margin-right: auto;
     width: 55%;
+    position: relative;
 
     &:not(:last-of-type) {
       margin-bottom: 2 * $gutter;
+    }
+
+    .workflow-number-wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &.number-left {
+      .workflow-number-wrapper {
+        left: 0;
+      }
+
+      .workflow-text-block {
+        padding-left: $number-height;
+      }
+    }
+
+    &.number-right {
+      .workflow-number-wrapper {
+        right: 0;
+      }
+
+      .workflow-text-block {
+        padding-right: $number-height;
+      }
     }
   }
 
   .workflow-number-block {
     position: relative;
     height: 100%;
-
-    &.left {
-      float: left;
-      margin-right: 2 * $gutter;
-    }
-
-    &.right {
-      float: right;
-      margin-left: 2 * $gutter;
-    }
 
     .workflow-number {
       height: $number-height;
@@ -40,5 +58,55 @@
 
   .workflow-text-block {
     min-height: $number-height;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .workflow {
+    .workflow-block {
+      width: 75%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .workflow {
+    .workflow-block {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+      width: 100%;
+
+      &.number-left {
+        .workflow-number-wrapper {
+          left: $gutter / 2;
+        }
+
+        .workflow-text-block {
+          padding-left: $number-height-sm;
+        }
+      }
+
+      &.number-right {
+        .workflow-number-wrapper {
+          right: $gutter / 2;
+        }
+
+        .workflow-text-block {
+          padding-right: $number-height-sm;
+        }
+      }
+    }
+
+    .workflow-number-block {
+      .workflow-number {
+        height: $number-height-sm;
+      }
+    }
+
+    .workflow-text-block {
+      min-height: $number-height-sm;
+    }
   }
 }

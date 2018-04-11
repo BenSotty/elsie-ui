@@ -115,6 +115,41 @@ $shape-separator-height-md: 80px;
   left: 15%;
 }
 
+.shape-dna-7 {
+  position: absolute;
+  top: 56%;
+  height: 260px;
+  right: 4%;
+}
+
+.shape-dna-8 {
+  position: absolute;
+  top: -25px;
+  height: 65px;
+  left: 135px;
+}
+
+.shape-dna-9 {
+  position: absolute;
+  top: 0;
+  height: 160px;
+  right: 5%;
+}
+
+.shape-dna-10 {
+  position: absolute;
+  top: 10%;
+  height: 120px;
+  left: 5%;
+}
+
+.shape-dna-11 {
+  position: absolute;
+  bottom: 3%;
+  height: 60px;
+  left: 3%;
+}
+
 @include media-breakpoint-down(md) {
   .shape-separator .shape-left {
     top: $shape-separator-height-md;
@@ -129,6 +164,13 @@ $shape-separator-height-md: 80px;
     padding-top: 2 * $shape-separator-height-md / 3;
     padding-left: $shape-separator-height-md;
     padding-right: $shape-separator-height-md;
+  }
+
+  .shape-separator-inside-block {
+    margin-top: $shape-separator-height-md + $gutter;
+    padding-left: 0;
+    padding-right: 0;
+    transform: none;
   }
 
   .shape-dna-1 {
@@ -156,6 +198,26 @@ $shape-separator-height-md: 80px;
   }
 
   .shape-dna-6 {
+    display: none;
+  }
+
+  .shape-dna-7 {
+    display: none;
+  }
+
+  .shape-dna-8 {
+    display: none;
+  }
+
+  .shape-dna-9 {
+    display: none;
+  }
+
+  .shape-dna-10 {
+    display: none;
+  }
+
+  .shape-dna-11 {
     display: none;
   }
 }
