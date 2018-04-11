@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="107px" viewBox="0 0 107 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03-Desktop-Labs" transform="translate(-414.000000, -1271.000000)" fill-rule="nonzero">
+            <g id="Group-21" transform="translate(316.000000, 1148.000000)">
+                <g id="Group-39" transform="translate(0.000000, 16.000000)">
+                    <g id="Group-14" transform="translate(97.000000, 107.000000)">
+                        <path d="M83.5787106,48 L24.856072,48 C11.7352324,48 1,37.2 1,24 C1,10.8 11.7352324,0 24.856072,0 L83.5787106,0 C96.6995502,0 107.434783,10.8 107.434783,24 C107.434783,37.2 96.6995502,48 83.5787106,48 Z" id="Shape" fill="#DBA1D7"></path>
+                        <ellipse id="Oval" fill="#FFFFFF" cx="25.7080745" cy="24" rx="16.4973913" ry="16.5333333"></ellipse>
+                        <g id="Group-8" transform="translate(53.934783, 82.404762) scale(-1, 1) translate(-53.934783, -82.404762) translate(0.434783, 57.904762)">
+                            <path d="M23.856072,48.7619048 L82.5787106,48.7619048 C95.6995502,48.7619048 106.434783,37.9619048 106.434783,24.7619048 C106.434783,11.5619048 95.6995502,0.761904762 82.5787106,0.761904762 L23.856072,0.761904762 C10.7352324,0.761904762 0,11.5619048 0,24.7619048 C0,37.9619048 10.7352324,48.7619048 23.856072,48.7619048 Z" id="Shape" fill="#D587D0"></path>
+                            <ellipse id="Oval" fill="#FFFFFF" cx="23.9478261" cy="24.7619048" rx="16.4973913" ry="16.5333333"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
