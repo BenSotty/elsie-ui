@@ -5,7 +5,8 @@ ul.unstyled {
   padding: 0;
 }
 
-ul.inline {
+ul.inline,
+%list-inline {
   @extend %list-unstyled;
   font-size: 0;
 
@@ -35,8 +36,13 @@ ul.separated {
 }
 
 ul.partners-logos {
+  li {
+    max-width: 20%;
+  }
+
   img {
-    height: 30px;
+    max-width: 100%;
+    max-height: 30px;
   }
 }
 

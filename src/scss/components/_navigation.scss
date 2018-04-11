@@ -80,4 +80,78 @@
       margin-right: $navbar-nav-link-padding-x;
     }
   }
+
+  .navbar-toggler {
+    color: $white;
+    float: right;
+    height: 100%;
+    padding: 0;
+    line-height: 40px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .navigation {
+    .brand-container {
+      display: none;
+    }
+
+    li.nav-item {
+      a.nav-link {
+        padding-left: .25rem;
+        padding-right: .25rem;
+      }
+
+      &:not(:last-child) {
+        button {
+          margin-right: .25rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .navigation {
+    .brand-container {
+      width: 100%;
+      display: block;
+    }
+
+    .logo {
+      height: 30px;
+    }
+
+    .navigation-container {
+      width: 100%;
+      margin-top: $gutter / 2;
+
+      .nav-item {
+        button {
+          color: $blue;
+          background: transparent;
+          border: none;
+          padding: 0;
+          margin-bottom: .5rem;
+        }
+
+        a {
+          color: $black;
+        }
+      }
+
+      .navbar-nav {
+        padding: $gutter / 2;
+        background-color: $white;
+        border-radius: 8px;
+      }
+
+      .dropdown-menu {
+        float: left;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+
 }

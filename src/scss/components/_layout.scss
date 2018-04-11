@@ -8,3 +8,21 @@
     width: auto;
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .hide-lg-down {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .hide-md-down {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .hide-sm-down {
+    display: none !important;
+  }
+}

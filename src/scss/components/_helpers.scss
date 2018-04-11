@@ -1,3 +1,9 @@
 .no-margin {
   margin: 0 !important;
 }
+
+@include media-breakpoint-down(sm) {
+  .no-padding-sm-down{
+    padding: 0 !important;
+  }
+}

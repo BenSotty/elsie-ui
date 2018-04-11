@@ -1,4 +1,6 @@
 %elsie-card {
+  height: 100%;
+
   .icon {
     margin-bottom: $gutter / 2;
     height: 30px;
@@ -91,5 +93,11 @@
     background-image: url("../images/icons/quotes.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card-quotes:before {
+    display: none;
   }
 }
