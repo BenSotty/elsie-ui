@@ -1,0 +1,23 @@
+%animate-slide-down-collapsed {
+  transition: all 0.3s ease-out;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+%animate-slide-down-expanded {
+  // Override max-height for every use case
+  max-height: 450px;
+  opacity: 1;
+}
+
+.dropdown {
+  .dropdown-menu {
+    @extend %animate-slide-down-collapsed;
+  }
+
+  &.show .dropdown-menu {
+    @extend %animate-slide-down-expanded;
+  }
+}

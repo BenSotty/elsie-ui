@@ -19,6 +19,11 @@
       }
     }
 
+    .dropdown.show .dropdown-menu {
+      // Set max heigth on show for animation
+      max-height: 450px;
+    }
+
     .dropdown-menu {
       width: 270px;
       padding: 0;
@@ -140,6 +145,10 @@
         a {
           color: $black;
         }
+
+        .dropdown-menu {
+          width: auto;
+        }
       }
 
       .navbar-nav {
@@ -155,5 +164,4 @@
       }
     }
   }
-
 }

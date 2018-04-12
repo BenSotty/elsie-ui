@@ -9838,6 +9838,18 @@ h2 {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0; }
+
+.dropdown.show .dropdown-menu {
+  max-height: 450px;
+  opacity: 1; }
+
 a.arrow-right > * {
   margin-right: 5px; }
 
@@ -10355,6 +10367,9 @@ ul.ticks li {
 .navigation .nav-item .dropdown-toggle:after {
   display: none; }
 
+.navigation .nav-item .dropdown.show .dropdown-menu {
+  max-height: 450px; }
+
 .navigation .nav-item .dropdown-menu {
   width: 270px;
   padding: 0;
@@ -10428,6 +10443,8 @@ ul.ticks li {
       margin-bottom: .5rem; }
     .navigation .navigation-container .nav-item a {
       color: #000; }
+    .navigation .navigation-container .nav-item .dropdown-menu {
+      width: auto; }
     .navigation .navigation-container .navbar-nav {
       padding: 15px;
       background-color: #fff;
