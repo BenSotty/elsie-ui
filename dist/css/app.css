@@ -9938,11 +9938,11 @@ a.arrow-right i {
     color: #a967cb; }
 
 .bg-purple-light-grad {
-  background-color: #50e3d9;
+  background-color: #9A71F5;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#5c4294), to(#9a71f4));
-  background: linear-gradient(to right, #5c4294 0%, #9a71f4 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#523B85), to(#9a71f4));
+  background: linear-gradient(to right, #523B85 0%, #9a71f4 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6060ab', endColorstr='#8181d3',GradientType=1 );
   /* IE6-9 */
@@ -10075,7 +10075,7 @@ button:focus {
     .btn.btn-icon > * {
       padding-right: 36px; }
     .btn.btn-icon i {
-      background-color: #50e3d9;
+      background-color: #9A71F5;
       height: 36px;
       width: 36px;
       border-radius: 36px;
