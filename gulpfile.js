@@ -4,7 +4,9 @@ var gulp = require("gulp"),
     prefix = require('gulp-autoprefixer'),
     minify = require("gulp-clean-css"),
     plumber = require("gulp-plumber"),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify');
 
 // Source and distribution folder
 var source = "src/",
@@ -48,8 +50,15 @@ var html = {
 };
 
 var js = {
-  in: source + "js/**/*.js",
-  out: dest + "/js",
+  in: [
+    source + "js/vendor/jquery-3.2.1.slim.min.js",
+    source + "js/vendor/popper.min.js",
+    source + "js/vendor/bootstrap.min.js",
+    source + "js/components/**/*.js",
+    source + "js/app.js"
+  ],
+  name: "app.js",
+  out: dest + "/js"
 };
 
 // Copy fonts to from Bootstrap-sass and src/fonts to dist/fonts
@@ -65,11 +74,15 @@ gulp.task("images", function () {
     .pipe(gulp.dest(images.out));
 });
 
+// Concat components into app.js
 gulp.task("js", function () {
-  // There is no need for js build until there is some custom Js in the project
-  // return gulp
-  //   .src(js.in)
-  //   .pipe(gulp.dest(js.out));
+  return gulp
+    .src(js.in)
+    .pipe(concat(js.name))
+    .pipe(gulp.dest(js.out))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(js.out));
 });
 
 // compile scss

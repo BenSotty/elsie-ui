@@ -1,159 +1,176 @@
-$shape-separator-height: 100px;
-$shape-separator-height-md: 80px;
+$shape-size: 100px;
+$shape-size-md: 80px;
 
 .shape-section,
 %shape-section {
   position: relative;
-  min-height: $shape-separator-height;
+  min-height: $shape-size;
 
-  .shape-right {
+  .shape-section-right,
+  .shape-section-left {
+    display: none;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    height: $shape-separator-height;
-    width: $shape-separator-height;
   }
 
-  .shape-left {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: $shape-separator-height;
-    width: $shape-separator-height;
+  @include media-breakpoint-up(md) {
+    min-height: $shape-size-md;
+
+    .shape-section-right,
+    .shape-section-left {
+      display: block;
+      position: absolute;
+      height: $shape-size-md;
+      width: $shape-size-md;
+    }
+
+    .shape-section-right {
+      right: 0;
+      bottom: 0;
+    }
+
+    .shape-section-left {
+      top: 0;
+      left: 0;
+      transform: rotate(180deg);
+    }
   }
 
-  @include media-breakpoint-down(md) {
-    min-height: $shape-separator-height-md;
+  @include media-breakpoint-up(lg) {
+    min-height: $shape-size;
 
-    .shape-right,
-    .shape-left {
-      height: $shape-separator-height-md;
-      width: $shape-separator-height-md;
+    .shape-section-right,
+    .shape-section-left {
+      position: absolute;
+      height: $shape-size;
+      width: $shape-size;
     }
   }
 }
 
-.shape-separator {
-  @extend %shape-section;
-  z-index: -1; // For inside block
+.shape-section-content {
+  padding-left: 0;
+  padding-right: 0;
 
-  .shape-right {
-    bottom: auto;
-    top: 0;
+  @include media-breakpoint-up(md) {
+    padding-left: $shape-size-md;
+    padding-right: $shape-size-md;
   }
 
-  .shape-left {
-    top: $shape-separator-height;
+  @include media-breakpoint-up(lg) {
+    padding-left: $shape-size;
+    padding-right: $shape-size;
+  }
+}
+
+.shape-separator {
+  height: $shape-size;
+    z-index: -1; // For inside block
+
+  .shape-separator-right,
+  .shape-separator-left,
+  .cover {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    height: $shape-size-md * 2;
+
+    .shape-separator-right,
+    .shape-separator-left {
+      display: block;
+      position: absolute;
+      height: $shape-size-md;
+      width: $shape-size-md;
+    }
+
+    .shape-separator-right {
+      right: 0;
+      top: 0;
+    }
+
+    .shape-separator-left {
+      position: absolute;
+      left: $shape-size-md / 2;
+      top: $shape-size-md;
+    }
+
+    .cover {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: $shape-size-md;
+      left: $shape-size-md;
+      height: $shape-size-md;
+      background-color: $white;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $shape-size * 2;
+
+    .shape-separator-right,
+    .shape-separator-left {
+      height: $shape-size;
+      width: $shape-size;
+    }
+
+    .shape-separator-left {
+      left: $shape-size / 2;
+      top: $shape-size;
+    }
+
+    .cover {
+      top: $shape-size;
+      left: $shape-size;
+      height: $shape-size;
+      background-color: $white;
+    }
   }
 }
 
 .shape-separator-sub-section {
-  padding-top: 2 * $shape-separator-height / 3;
-  padding-left: $shape-separator-height;
-  padding-right: $shape-separator-height;
+  padding-top: 2 * $shape-size / 3;
+  padding-left: $shape-size;
+  padding-right: $shape-size;
   position: relative;
 }
 
 .shape-separator-inside-block {
-  padding-left: $shape-separator-height;
-  padding-right: $shape-separator-height;
-  transform: translate(0, -50%);
+  margin-top: - 60px;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
 
   > * {
     background-color: $white;
   }
+
+  @include media-breakpoint-up(md) {
+    padding-left: $shape-size-md + $gutter / 2;
+    padding-right: $shape-size-md + $gutter / 2;
+    margin-top: - 2 * $shape-size-md  + $gutter / 2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: $shape-size + $gutter / 2;
+    padding-right: $shape-size + $gutter / 2;
+    margin-top: - 2 * $shape-size  + $gutter / 2;
+  }
 }
 
-.shape-section-content {
-  padding-left: $shape-separator-height;
-  padding-right: $shape-separator-height;
-}
 
 .shape-container {
   position: relative;
-}
-
-.shape-dna-1 {
-  height: $shape-separator-height * 0.9;
-  position: absolute;
-  top: $shape-separator-height;
-  left: $shape-separator-height + $gutter;
-}
-
-.shape-dna-2 {
-  position: absolute;
-  top: 80%;
-  height: 8px;
-  right: 2%;
-}
-
-.shape-dna-3 {
-  position: absolute;
-  top: 20%;
-  height: 110px;
-  right: 2%;
-}
-
-.shape-dna-4 {
-  position: absolute;
-  bottom: 15%;
-  height: 115px;
-  left: 1%;
-}
-
-.shape-dna-5 {
-  position: absolute;
-  top: 20%;
-  height: 150px;
-  right: 4%;
-}
-
-.shape-dna-6 {
-  position: absolute;
-  bottom: 10%;
-  height: 50px;
-  left: 15%;
-}
-
-.shape-dna-7 {
-  position: absolute;
-  top: 56%;
-  height: 260px;
-  right: 4%;
-}
-
-.shape-dna-8 {
-  position: absolute;
-  top: -25px;
-  height: 65px;
-  left: 135px;
-}
-
-.shape-dna-9 {
-  position: absolute;
-  top: 0;
-  height: 160px;
-  right: 5%;
-}
-
-.shape-dna-10 {
-  position: absolute;
-  top: 10%;
-  height: 120px;
-  left: 5%;
-}
-
-.shape-dna-11 {
-  position: absolute;
-  bottom: 3%;
-  height: 60px;
-  left: 3%;
 }
 
 %shape-grad {
   position: absolute;
   opacity: 0.05;
   height: 130px;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
 .shape-grad-1 {
@@ -174,56 +191,13 @@ $shape-separator-height-md: 80px;
   @extend %shape-grad;
   top: 0;
   left: 35%;
-  height: 3 * $shape-separator-height / 2;
+  height: 3 * $shape-size / 2;
 }
 
 @include media-breakpoint-down(md) {
-  .shape-separator .shape-left {
-    top: $shape-separator-height-md;
-  }
-
-  .shape-section-content {
-    padding-left: $shape-separator-height-md;
-    padding-right: $shape-separator-height-md;
-  }
-
   .shape-separator-sub-section {
-    padding-top: 2 * $shape-separator-height-md / 3;
-    padding-left: $shape-separator-height-md;
-    padding-right: $shape-separator-height-md;
-  }
-
-  .shape-separator-inside-block {
-    margin-top: $shape-separator-height-md + $gutter;
-    padding-left: 0;
-    padding-right: 0;
-    transform: none;
-  }
-
-  .shape-dna-1 {
-    height: $shape-separator-height-md * 0.9;
-    top: $shape-separator-height-md;
-    left: $shape-separator-height-md + $gutter / 2;
-  }
-
-  .shape-dna-2 {
-    bottom: 1%;
-    height: 6px;
-    right: 2%;
-  }
-
-  .shape-dna-3,
-  .shape-dna-4,
-  .shape-dna-5,
-  .shape-dna-6,
-  .shape-dna-7,
-  .shape-dna-8,
-  .shape-dna-9,
-  .shape-dna-10,
-  .shape-dna-11,
-  .shape-grad-1,
-  .shape-grad-2,
-  .shape-grad-3 {
-    display: none;
+    padding-top: 2 * $shape-size-md / 3;
+    padding-left: $shape-size-md;
+    padding-right: $shape-size-md;
   }
 }

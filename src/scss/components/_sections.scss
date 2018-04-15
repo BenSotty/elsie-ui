@@ -1,12 +1,32 @@
+$section-space: 120px;
+$section-space-md: 90px;
+$section-header-space: 100px;
+$section-header-space-sm: 40px;
+$sub-section-space: 35px;
+$suber-section-space: 15px;
+
 .section,
 %section {
-  padding-top: 2 * $gutter;
+  padding-top: $section-space;
+
+  @include media-breakpoint-down(md) {
+    padding-top: $section-space-md;
+  }
+}
+
+.section-header {
+  padding-top: $section-header-space;
+  padding-bottom: $sub-section-space;
 }
 
 .section-block,
 %section-block {
   @extend %section;
-  padding-bottom: 2 * $gutter;
+  padding-bottom: $section-space;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: $section-space-md;
+  }
 }
 
 .section-block-grey {
@@ -14,23 +34,45 @@
   background-color: $section-grey;
 }
 
+.section-grey {
+  @extend %section;
+  background-color: $section-grey;
+}
+
 .sub-section,
 %sub-section {
-  padding-top: $gutter;
+  padding-top: $sub-section-space;
+}
+
+.sub-section-grey {
+  @extend %sub-section;
+  background-color: $section-grey;
 }
 
 .sub-section-border-top {
-  margin-top: $gutter;
-  padding-top: $gutter / 2;
-  padding-bottom: $gutter / 2;
+  margin-top: $sub-section-space;
+  padding-top: $sub-section-space / 2;
+  padding-bottom: $sub-section-space / 2;
   border-top: solid 1px $border-grey;
 }
 
 .sub-section-block {
   @extend %sub-section;
-  padding-bottom: 2 * $gutter;
+  padding-bottom: $section-space;
 }
 
 .suber-section {
-  padding-top: $gutter / 2;
+  padding-top: $suber-section-space;
+}
+
+@include media-breakpoint-down(sm) {
+  .section-header {
+    padding-top: $section-header-space-sm;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-lg-0 {
+    padding-top: 0;
+  }
 }

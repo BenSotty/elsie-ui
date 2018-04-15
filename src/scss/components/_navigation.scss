@@ -1,6 +1,19 @@
 .navigation {
-  .logo {
+  .logo,
+  .logo-scrolled {
     height: 30px;
+  }
+
+  .logo {
+    display: inline-block;
+  }
+
+  .logo-scrolled {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
   }
 
   .nav-item {
@@ -9,27 +22,41 @@
       color: $white;
     }
 
-    .dropdown-toggle {
-      i {
-        font-size: 12px;
+    &.expandable-hover {
+      position: relative;
+
+      &:hover .expandable-content {
+        // Set max heigth on show for animation
+        max-height: 450px;
       }
 
-      &:after {
-        display: none;
+      .expandable-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        width: 270px;
+        margin-top: - $box-indicator-height;
       }
-    }
 
-    .dropdown.show .dropdown-menu {
-      // Set max heigth on show for animation
-      max-height: 450px;
-    }
+      .box-indicator {
+        margin-left: 30px;
+      }
 
-    .dropdown-menu {
-      width: 270px;
-      padding: 0;
-      border-radius: $box-radius;
+      .expandable-items {
+        background-color: $white;
+        border-radius: $box-radius;
+        float: left;
+      }
 
-      .dropdown-item {
+      .expandable-toggle {
+        i {
+          font-size: rem(12px);
+        }
+      }
+
+      .expandable-item {
+        @extend %transition-all;
         color: $black;
         font-size: rem(14px);
         float: left;
@@ -39,33 +66,37 @@
         padding-right: $gutter / 2;
         padding-bottom: 0;
 
-        .dropdown-item-content {
+        &:hover {
+          background-color: $gray-100;
+        }
+
+        .expandable-item-content {
           float: left;
           width: 100%;
           padding-bottom: $gutter / 2;
         }
 
         &:not(:last-of-type) {
-          .dropdown-item-content {
+          .expandable-item-content {
             border-bottom: solid 1px $border-grey;
           }
         }
 
         .icon-container {
-          width: 10%;
+          width: 15%;
           float: left;
-          margin-right: 10px;
+          margin-right: 15px;
         }
 
         .text-area {
           float: left;
-          width: 233px; // Fallback: 270 * .9 - 10
-          width: calc(90% - 10px);
+          width: 218px; // Fallback: 270 * .85 - 10
+          width: calc(85% - 15px);
         }
 
         .icon {
           max-width: 100%;
-          height: 30px;
+          height: 40px;
         }
 
         .title {
@@ -81,9 +112,19 @@
     }
   }
 
-  li.nav-item:not(:last-child) {
+  li.nav-item {
+    &.nav-item-links a {
+      float: left;
+    }
+
     button {
-      margin-right: $navbar-nav-link-padding-x;
+      margin-left: $navbar-nav-link-padding-x;
+    }
+
+    &:not(:last-child) {
+      button {
+        margin-right: $navbar-nav-link-padding-x;
+      }
     }
   }
 
@@ -94,73 +135,172 @@
     padding: 0;
     line-height: 40px;
   }
+
+  &.scrolled {
+    background: $white;
+    box-shadow: 0 3px 2px -2px rgba(0,0,0,.07);
+
+    .logo-scrolled {
+      display: inline-block;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .nav-item {
+      a {
+        color: $purple;
+      }
+    }
+
+    .expandable-items {
+      border: solid 1px $border-grey;
+    }
+  }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .navigation {
-    .brand-container {
-      display: none;
+    .logo,
+    .logo-scrolled {
+      height: 20px;
     }
 
     li.nav-item {
       a.nav-link {
-        padding-left: .25rem;
-        padding-right: .25rem;
+        padding-left: $navbar-nav-link-padding-x / 3;
+        padding-right: $navbar-nav-link-padding-x / 3;
+      }
+
+      button {
+        margin-left: $navbar-nav-link-padding-x / 3;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       &:not(:last-child) {
         button {
-          margin-right: .25rem;
+          margin-right: $navbar-nav-link-padding-x / 3;
         }
       }
     }
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   .navigation {
     .brand-container {
       width: 100%;
       display: block;
     }
 
-    .logo {
-      height: 30px;
-    }
-
     .navigation-container {
-      width: 100%;
-      margin-top: $gutter / 2;
+      position: absolute;
+      top: $gutter / 2;
+      left: 0;
+      right: 0;
 
-      .nav-item {
-        button {
-          color: $blue;
-          background: transparent;
-          border: none;
-          border-radius: 0px;
-          padding: 0;
-          margin-bottom: .5rem;
-        }
-
-        a {
-          color: $black;
-        }
-
-        .dropdown-menu {
-          width: auto;
-        }
+      .navbar-collapse {
+        position: relative;
       }
 
       .navbar-nav {
-        padding: $gutter / 2;
+        padding: 0;
         background-color: $white;
         border-radius: $box-radius;
+        border: solid 1px $border-grey;
       }
 
-      .dropdown-menu {
-        float: left;
-        border-radius: 0;
-        border: none;
+      .close-btn {
+        display: block;
+        position: absolute;
+        top: $gutter / 2;
+        right: $gutter / 2;
+        z-index: 1;
+      }
+
+      .nav-item {
+        .expandable-toggle {
+          padding: $gutter / 2;
+          color: $text-grey;
+          cursor: default;
+
+          i {
+            display: none;
+          }
+        }
+
+        .expandable-content {
+          position: relative;
+          // Show expandable content
+          transition: none;
+          max-height: none;
+          opacity: 1;
+          overflow: visible;
+
+          width: auto;
+          border: none;
+          float: left;
+
+          .box-indicator {
+            display: none;
+          }
+
+          .expandable-items {
+            border-radius: 0px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: solid 1px $border-grey;
+
+            .expandable-item {
+              border-radius: 0px;
+            }
+          }
+        }
+
+        &.nav-item-links {
+          padding-left: $gutter / 2;
+
+          a {
+            float: left;
+            width: 50%;
+            padding-left: 0;
+            padding-right: 0;
+            color: $purple;
+          }
+        }
+
+        &.book-demo {
+          display: none;
+        }
+
+        &.log-in {
+          width: 100%;
+          border-top: solid 1px $border-grey;
+          background-color: $gray-100;
+          border-radius: 0 0 $box-radius $box-radius;
+          padding-left: $gutter / 2;
+
+          button {
+            margin: 0;
+            border: none;
+            padding: 0;
+          }
+
+
+          i {
+            font-size: rem(12px);
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+
+    &.scrolled {
+      .navbar-toggler {
+        color: $purple;
       }
     }
   }

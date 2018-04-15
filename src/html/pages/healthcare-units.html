@@ -3,31 +3,32 @@
   description:'How Elsie works with healthcare units'
 })
 
-<div class="header bg-purple-light-grad">
-  @@include('navigation')
+@@include('navigation', {  bg:'bg-purple-light-grad' })
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 section">
-        <span class="sub-text">HEALTHCARE UNITS</span>
-        <h1>Your digital one-stop solution for genetics.</h1>
-        <div class="sub-section">
-          <p>Providing the best care for your patients, does not need to be arduous or expensive. Elsie offers a convenient genetics tests-handling platform. Enables quick, simple, cost-effective connections with global labs, transforming cumbersome paperwork into a unified digital experience.</p>
+<!-- Begin content -->
+<div id="main-navigation-header" class="header">
+  <div class="bg-purple-light-grad">
+    <div class="container section-header">
+      <div class="row">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+          <span class="sub-text">HEALTHCARE UNITS</span>
+          <h1>Your digital one-stop solution for genetics.</h1>
+          <div class="sub-section">
+            <p class="big">Providing the best care for your patients, does not need to be arduous or expensive. Elsie offers a convenient genetics tests-handling platform. Enables quick, simple, cost-effective connections with global labs, transforming cumbersome paperwork into a unified digital experience.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-6 hide-md-down img-header-container sub-section">
-        <img class="img-header" alt="Elsie healthcare units workflow" src="images/icons/healthcare-units-workflow.svg" />
+        <div class="col-12 col-lg-6 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/icons/healthcare-units-workflow.svg" />
+        </div>
       </div>
     </div>
   </div>
+  @@include('shape_separator', { classes:'bg-purple-light-grad' })
 </div>
-<div class="shape-separator bg-purple-light-grad">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-purple-light-grad.png" />
-</div>
+<!-- Card full width -->
 <div class="shape-separator-inside-block">
-  <div class="card-bodered-full-width">
-    <div class="container">
+  <div class="card-bodered">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 mb-3 col-md-6 col-lg-4">
           <img class="icon-inline" src="images/icons/icon_interaction.svg" />
@@ -57,17 +58,12 @@
     </div>
   </div>
 </div>
-<div class="section shape-container">
-  <img class="shape-dna-8 " src="images/shape-dna-8.png" />
-  <h2 class="text-center">How Elsie Works.</h2>
-  <p class="text-center text-secondary">Use Elsie's cutting edge digital platform to deliver premium genetics service.</p>
-</div>
+@@include('workflow_header', {
+  title: 'How Elsie Works.',
+  text: "Use Elsie's cutting edge digital platform to deliver premium genetics service."
+})
 <!-- Work flow -->
-<div class="section-block workflow shape-container">
-  <img class="shape-dna-7" src="images/shape-dna-7.png" />
-  <img class="shape-dna-9 " src="images/shape-dna-9.png" />
-  <img class="shape-dna-10 " src="images/shape-dna-10.png" />
-  <img class="shape-dna-11 " src="images/shape-dna-11.png" />
+<div class="section-block workflow">
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -127,13 +123,13 @@
 </div>
 <!-- Innovate with Elsie section -->
 <div class="section-block-grey shape-section">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-white.png" />
+  <img class="shape-section-right" src="images/shapes/shape-separator.png" />
+  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h2 class="text-center no-margin">Innovate with Elsie.</h2>
+          <h2 class="text-center-md no-margin">Innovate with Elsie.</h2>
         </div>
       </div>
       <div class="row sub-section">

@@ -1,3 +1,8 @@
+// Remove default outline on focus
+input:focus {
+  outline: 0;
+}
+
 .input-group {
   $input-height: 40px;
 
@@ -23,6 +28,7 @@
     > .btn {
       border-radius: $input-height;
       margin-left: - $input-height / 2;
+      z-index: 5; // prevent bug on focus
     }
   }
 }
@@ -32,6 +38,7 @@ input.short {
 }
 
 input.open {
+  background-color: transparent;
   border-top: none;
   border-right: none;
   border-left: none;

@@ -1,5 +1,5 @@
 $number-height: 200px;
-$number-height-sm: 100px;
+$number-height-sm: 50px;
 
 .workflow {
   .workflow-block {
@@ -78,35 +78,43 @@ $number-height-sm: 100px;
       padding-right: $gutter / 2;
       width: 100%;
 
-      &.number-left {
-        .workflow-number-wrapper {
-          left: $gutter / 2;
-        }
+      &:not(:last-of-type) {
+        margin-bottom: 2 * $gutter;
+      }
 
+      .workflow-number-wrapper {
+        position: relative;
+        transform: none;
+        margin-bottom: $gutter / 2;
+
+        .workflow-number-block {
+          .workflow-number {
+            height: $number-height-sm;
+          }
+
+          .workflow-number-icon {
+            position: relative;
+            transform: none;
+            height: $number-height-sm;
+          }
+        }
+      }
+
+      .workflow-text-block {
+        min-height: auto;
+      }
+
+      &.number-left {
         .workflow-text-block {
-          padding-left: $number-height-sm;
+          padding-left: 0;
         }
       }
 
       &.number-right {
-        .workflow-number-wrapper {
-          right: $gutter / 2;
-        }
-
         .workflow-text-block {
-          padding-right: $number-height-sm;
+          padding-right: 0;
         }
       }
-    }
-
-    .workflow-number-block {
-      .workflow-number {
-        height: $number-height-sm;
-      }
-    }
-
-    .workflow-text-block {
-      min-height: $number-height-sm;
     }
   }
 }

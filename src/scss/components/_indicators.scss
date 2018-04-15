@@ -1,0 +1,20 @@
+$box-indicator-height: 6px;
+
+.box-indicator {
+  position: relative;
+  width: $box-indicator-height;
+  height: $box-indicator-height;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $box-indicator-height $box-indicator-height $box-indicator-height;
+    border-color: transparent transparent #ffffff transparent;
+    line-height: 0px;
+  }
+}

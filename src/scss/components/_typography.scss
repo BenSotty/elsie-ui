@@ -1,9 +1,19 @@
 h1, h2, h3, h4, h5 {
   font-family: $font-family-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: rem(44px);
 }
 
 h2 {
-  font-weight: bold;
+  font-family: $font-family-serif-bold;
+  font-size: rem(34px);
+}
+
+.big {
+  font-size: rem(18px);
 }
 
 %sans-serif-bold,
@@ -28,4 +38,32 @@ h2 {
   font-variant:normal;
   text-rendering:auto;
   line-height:1
+}
+
+@include media-breakpoint-up(xl) {
+  h1 {
+    font-size: rem(50px);
+  }
+
+  h2 {
+    font-size: rem(40px);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .text-center-lg {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .text-center-md {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  h1 {
+    font-size: rem(34px);
+  }
 }

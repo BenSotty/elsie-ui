@@ -45,117 +45,133 @@
   <body>
 
 
-<div class="header bg-blue-grad">
-<div class="container navigation">
-  <div class="row">
-    <div class="col">
-      <nav class="navbar navbar-expand-sm justify-content-between">
-        <div class="brand-container">
-          <a class="navbar-brand" href="index.html">
-            <img class="logo" alt="Elsie logo" src="images/navigation-logo.png" />
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#elsie-for-dropdown" aria-controls="elsie-for-dropdown" aria-expanded="false" aria-label="Toggle Elsie for navigation">
-              <i class="fa fa-bars"></i>
-          </button>
-        </div>
-        <div class="navigation-container">
-          <div class="collapse navbar-collapse" id="elsie-for-dropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="elsie-for-dropdown-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span>Elsie for</span>
-                  <i class="fa fa-arrow-up"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="elsie-for-dropdown-link">
-                  <a class="dropdown-item" href="healthcare-units.html">
-                    <div class="dropdown-item-content">
-                      <div class="icon-container">
-                        <img class="icon" src="images/icons/icon_healthcare-units.svg" />
-                      </div>
-                      <div class="text-area">
-                        <span class="title">Healthcare Units</span>
-                        <p class="text">One stop solution for all your genetic needs.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="dropdown-item" href="physicians.html">
-                    <div class="dropdown-item-content">
-                      <div class="icon-container">
-                        <img class="icon" src="images/icons/icon_physicians.svg" />
-                      </div>
-                      <div class="text-area">
-                        <span class="title">Physicians</span>
-                        <p class="text">Bring genetically informed medicine to your desktop.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="dropdown-item" href="laboratories.html">
-                    <div class="dropdown-item-content">
-                      <div class="icon-container">
-                        <img class="icon" src="images/icons/icon_laboratories.svg" />
-                      </div>
-                      <div class="text-area">
-                        <span class="title">Laboratories</span>
-                        <p class="text">Exploit the full potential of your genetic tests portfolio.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a class="dropdown-item" href="patients-and-family.html">
-                    <div class="dropdown-item-content">
-                      <div class="icon-container">
-                        <img class="icon" src="images/icons/icon_patients-family.svg" />
-                      </div>
-                      <div class="text-area">
-                        <span class="title">Patients Family</span>
-                        <p class="text">Get better care with your genome.</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="case-studies.html">Case studies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="btn outline">log in</button>
-              </li>
-              <li class="nav-item">
-                <button type="button" class="btn">Book a demo</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-</div>
-
-
+<div id="main-navigation" class="navigation sticky-top bg-blue-grad">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-6 section">
-        <span class="sub-text">PHYSICIANS</span>
-        <h1>Your genetic digital assitant.</h1>
-        <div class="sub-section">
-          <p>Speed-up and simplify how you find, access and order the best genetics tests that meet your patients' need in a user-firendly workspace. Our expert team gathers highly-curated genetics content to assist your clinical cases, from first patient contact to genetics results analysis.</p>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6 hide-md-down img-header-container sub-section">
-        <img class="img-header" alt="Elsie physicians workflow" src="images/icons/physicians-workflow.svg" />
+      <div class="col">
+        <nav class="navbar navbar-expand-md justify-content-between">
+          <div class="brand-container">
+            <a class="navbar-brand" href="index.html">
+              <img class="logo" alt="Elsie logo" src="images/icons/elsie_logo_white.svg" />
+              <img class="logo-scrolled" alt="Elsie logo" src="images/icons/elsie_logo.svg" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#elsie-for-dropdown" aria-controls="elsie-for-dropdown" aria-expanded="false" aria-label="Toggle Elsie for navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <div class="navigation-container">
+            <div class="collapse navbar-collapse" id="elsie-for-dropdown">
+              <button class="btn-unstyled close-btn" type="button" data-toggle="collapse" data-target="#elsie-for-dropdown" aria-controls="elsie-for-dropdown" aria-expanded="false" aria-label="Toggle Elsie for navigation">
+                  <i class="fa fa-times"></i>
+              </button>
+              <ul class="navbar-nav">
+                <li class="nav-item expandable-hover">
+                  <a class="nav-link expandable-toggle" href="#">
+                    <span>Elsie for</span>
+                    <i class="fa fa-arrow-up"></i>
+                  </a>
+                  <div class="expandable-content">
+                    <div class="box-indicator"></div>
+                    <div class="expandable-items">
+                      <a class="expandable-item" href="healthcare-units.html">
+                        <div class="expandable-item-content">
+                          <div class="icon-container">
+                            <img class="icon" src="images/icons/icon_healthcare-units.svg" />
+                          </div>
+                          <div class="text-area">
+                            <span class="title">Healthcare Units</span>
+                            <p class="text">One stop solution for all your genetic needs.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="expandable-item" href="physicians.html">
+                        <div class="expandable-item-content">
+                          <div class="icon-container">
+                            <img class="icon" src="images/icons/icon_physicians.svg" />
+                          </div>
+                          <div class="text-area">
+                            <span class="title">Physicians</span>
+                            <p class="text">Bring genetically informed medicine to your desktop.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="expandable-item" href="laboratories.html">
+                        <div class="expandable-item-content">
+                          <div class="icon-container">
+                            <img class="icon" src="images/icons/icon_laboratories.svg" />
+                          </div>
+                          <div class="text-area">
+                            <span class="title">Laboratories</span>
+                            <p class="text">Exploit the full potential of your genetic tests portfolio.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="expandable-item" href="patients-and-family.html">
+                        <div class="expandable-item-content">
+                          <div class="icon-container">
+                            <img class="icon" src="images/icons/icon_patients-family.svg" />
+                          </div>
+                          <div class="text-area">
+                            <span class="title">Patients Family</span>
+                            <p class="text">Get better care with your genome.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item nav-item-links">
+                  <a class="nav-link" href="case-studies.html">Case studies</a>
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item log-in">
+                  <button type="button" class="btn outline">
+                    <span>Log in</span>
+                    <i class="fa fa-arrow-right"></i>
+                    </button>
+                </li>
+                <li class="nav-item book-demo">
+                  <button type="button" class="btn">Book a demo</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Header -->
+<div id="main-navigation-header" class="header">
+  <div class="bg-blue-grad">
+    <div class="container section-header">
+      <div class="row">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+          <span class="sub-text">PHYSICIANS</span>
+          <h1>Your genetic digital assitant.</h1>
+          <div class="sub-section">
+            <p class="big">Speed-up and simplify how you find, access and order the best genetics tests that meet your patients' need in a user-firendly workspace. Our expert team gathers highly-curated genetics content to assist your clinical cases, from first patient contact to genetics results analysis.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/icons/physicians-workflow.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="shape-separator bg-blue-grad">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-blue-grad.png" />
+  <img class="shape-separator-right" src="images/shapes/shape-separator.png" />
+  <div class="cover"></div>
+  <img class="shape-separator-left" src="images/shapes/shape-separator.png" />
+  <img class="shape-grad-3" src="images/shapes/shape-grad.svg" />
 </div>
+
+</div>
+<!-- Card full width -->
 <div class="shape-separator-inside-block">
-  <div class="card-bodered-full-width">
-    <div class="container">
+  <div class="card-bodered">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 mb-3 col-md-6 col-lg-4">
           <!-- TODO: get missing patient care icon -->
@@ -188,17 +204,20 @@
     </div>
   </div>
 </div>
-<div class="section shape-container">
-  <img class="shape-dna-8 " src="images/shape-dna-8.png" />
-  <h2 class="text-center">How Elsie Works.</h2>
-  <p class="text-center text-secondary">Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice.</p>
+
+<div class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center-md">How Elsie Works.</h2>
+        <p class="text-center-md text-secondary">Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice.</p>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-- Workflow -->
-<div class="section-block workflow shape-container">
-  <img class="shape-dna-7" src="images/shape-dna-7.png" />
-  <img class="shape-dna-9 " src="images/shape-dna-9.png" />
-  <img class="shape-dna-10 " src="images/shape-dna-10.png" />
-  <img class="shape-dna-11 " src="images/shape-dna-11.png" />
+<div class="section-block workflow">
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -253,13 +272,13 @@
 </div>
 <!-- Why Genetics -->
 <div class="section-block-grey shape-section">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-white.png" />
+  <img class="shape-section-right" src="images/shapes/shape-separator.png" />
+  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <h2 class="text-center no-margin">Why you should be using genetics.</h2>
+          <h2 class="text-center-md no-margin">Why you should be using genetics.</h2>
         </div>
       </div>
       <div class="row sub-section">
@@ -289,13 +308,10 @@
   </div>
 </div>
 <!-- Quote section -->
-<div class="text-center shape-container section-block">
-  <img class="shape-dna-5" src="images/shape-dna-5.png" />
-  <img class="shape-dna-6" src="images/shape-dna-6.png" />
+<div class="card-quotes-container text-center section-block">
   <div class="card-quotes">
     <p class="quotation">"Elsie transformed the way I use genetics with my patients. It is now much more convenient to fully explore genecally informed medicine."</p>
     <div class="contact">
-      <!-- TODO: get proper contact image -->
       <img class="rounded" alt="Doctor Luis Silva" src="images/doctor-luis-silva.png" />
       <div class="name">Luís Silva</div>
       <div class="info">Osvaldo Cruz Hospital Alemão</div>
@@ -305,19 +321,21 @@
 
 <!-- Featured partners -->
 <div class="shape-section">
-  <img class="shape-right hide-sm-down" src="images/shape-right-grey.png" />
+  <img class="shape-section-right" src="images/shapes/shape-right-grey.png" />
   <div class="shape-section-content no-padding-sm-down">
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="bold text-grey">Featured partners</div>
-          <ul class="evenly-spread-list partners-logos">
-            <li><img alt="Oswald Cruz logo" src="images/oswald-cruz.png" /></li>
-            <li><img alt="Preventicum logo" src="images/preventicum.png" /></li>
-            <li><img alt="CHUC logo" src="images/chuc.png" /></li>
-            <li><img alt="Ruppiner logo" src="images/ruppiner.png" /></li>
-            <li><img alt="Rambam Health Care Campus logo" src="images/rambam.png" /></li>
-          </ul>
+          <div class="suber-section">
+            <ul class="evenly-spread-list partners-logos">
+              <li><img alt="Oswald Cruz logo" src="images/partners/oswald-cruz.png" /></li>
+              <li><img alt="Preventicum logo" src="images/partners/preventicum.png" /></li>
+              <li><img alt="CHUC logo" src="images/partners/chuc.png" /></li>
+              <li><img alt="Ruppiner logo" src="images/partners/ruppiner.png" /></li>
+              <li><img alt="Rambam Health Care Campus logo" src="images/partners/rambam.png" /></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -326,15 +344,15 @@
 
 <!-- Next step -->
 <div class="bg-blue-grad section-block shape-container">
-  <img class="shape-grad-1" src="images/shape-grad-1.svg" />
-  <img class="shape-grad-2" src="images/shape-grad.svg" />
+  <img class="shape-grad-1" src="images/shapes/shape-grad-1.svg" />
+  <img class="shape-grad-2" src="images/shapes/shape-grad.svg" />
   <div class="container">
     <div class="row">
-      <div class="col-12 mb-4 mb-sm-0 col-sm-6">
-        <h3>Order you genetic test with Elsie.</h3>
+      <div class="col-12 mb-4 mb-md-0 col-md-6">
+        <h2>Order you genetic test with Elsie.</h2>
         <p>Schedule a demo to see Elsie in action, or leave your email and we&#39;ll be in touch.</p>
       </div>
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-md-6">
         <div class="layout-bottom-right">
           <div class="input-group">
             <div class="input-group-prepend">
@@ -354,7 +372,7 @@
 </div>
 
 <!-- footer -->
-<div class="section footer">
+<div class="sub-section-grey footer">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 d-none d-lg-block">
@@ -406,10 +424,10 @@
       </div>
       <div class="col-12 col-sm-9">
         <ul class="inline partners-logos">
-          <li><img src="images/qren.png" /></li>
-          <li><img src="images/centro-2020.png" /></li>
-          <li><img src="images/portugal-2020.png" /></li>
-          <li><img src="images/ue.png" /></li>
+          <li><img src="images/partners/qren.png" /></li>
+          <li><img src="images/partners/centro-2020.png" /></li>
+          <li><img src="images/partners/portugal-2020.png" /></li>
+          <li><img src="images/partners/ue.png" /></li>
         </ul>
       </div>
     </div>

@@ -3,30 +3,31 @@
   description:'How Elsie works with patients and families.'
 })
 
-<div class="header bg-blue-metal-grad">
-  @@include('navigation')
+@@include('navigation', {  bg:'bg-blue-metal-grad' })
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-6 section">
-        <span class="sub-text">PATIENTS & FAMILY</span>
-        <h1>You, Your genome, individualised answers.</h1>
-        <div class="sub-section">
-          <p>Elsie bring genetically informed medicine to your physician, enabling a better path forward to your health based on your DNA.</p>
+<!-- Begin content -->
+<div id="main-navigation-header" class="header">
+  <div class="bg-blue-metal-grad">
+    <div class="container section-header">
+      <div class="row">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+          <span class="sub-text">PATIENTS & FAMILY</span>
+          <h1>You, Your genome, individualised answers.</h1>
+          <div class="sub-section">
+            <p class="big">Elsie bring genetically informed medicine to your physician, enabling a better path forward to your health based on your DNA.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-6 hide-md-down img-header-container sub-section">
-        <img class="img-header" alt="Elsie physicians workflow" src="images/icons/patients-workflow.svg" />
+        <div class="col-12 col-lg-6 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/icons/patients-workflow.svg" />
+        </div>
       </div>
     </div>
   </div>
+  @@include('shape_separator', { classes:'bg-blue-metal-grad' })
 </div>
-<div class="shape-separator bg-blue-metal-grad">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-blue-metal-grad.png" />
-</div>
+<!-- Card full width -->
 <div class="shape-separator-inside-block">
-  <div class="card-bodered-full-width">
+  <div class="card-bodered">
     <div class="container">
       <div class="row">
         <div class="col-12 mb-3 col-md-6 col-lg-4">
@@ -57,11 +58,17 @@
     </div>
   </div>
 </div>
-<div class="section shape-container">
-  <img class="shape-dna-8 " src="images/shape-dna-8.png" />
-  <h2 class="text-center">Your genome.</h2>
-  <h2 class="text-center">Comprehensive medical knowledge.</h2>
-  <p class="text-center text-secondary">Becuase each person is genetically unique, knowledge of your genome can reveal predisposition to certain disease, how your organism may deal with certain conditions, how you will respond to given treatments.</p>
+<!-- workflow_header included manually -->
+<div class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center-md">Your genome.</h2>
+        <h2 class="text-center-md">Comprehensive medical knowledge.</h2>
+        <p class="text-center-md text-secondary">Becuase each person is genetically unique, knowledge of your genome can reveal predisposition to certain disease, how your organism may deal with certain conditions, how you will respond to given treatments.</p>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Workflow -->
 <div class="section-block">
@@ -107,8 +114,8 @@
 </div>
 <!-- Quote section -->
 <div class="section-block-grey shape-section">
-  <img class="shape-right" src="images/shape-right-white.png" />
-  <img class="shape-left" src="images/shape-left-white.png" />
+  <img class="shape-section-right" src="images/shapes/shape-separator.png" />
+  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
     @@include('quote_section', {
       section:'',
