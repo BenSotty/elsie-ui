@@ -19,6 +19,11 @@ $suber-section-space: 15px;
   padding-bottom: $sub-section-space;
 }
 
+.section-header-block {
+  padding-top: $section-header-space;
+  padding-bottom: $section-header-space;
+}
+
 .section-block,
 %section-block {
   @extend %section;
@@ -68,6 +73,11 @@ $suber-section-space: 15px;
 @include media-breakpoint-down(sm) {
   .section-header {
     padding-top: $section-header-space-sm;
+  }
+
+  .section-header-block {
+    padding-top: $section-header-space-sm;
+    padding-bottom: $section-header-space-sm;
   }
 }
 
