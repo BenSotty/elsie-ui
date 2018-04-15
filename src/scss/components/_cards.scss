@@ -66,6 +66,16 @@
   background-color: $white;
 }
 
+a.card-bodered {
+  transition: all 0.2s ease-out;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0px 6px 5px 5px rgba(0,0,0,.07)
+  }
+}
+
 .card-bodered-container {
   padding: 0 $gutter / 2;
   height: 100%;
