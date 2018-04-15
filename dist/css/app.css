@@ -9976,16 +9976,16 @@ a.arrow-right i {
     color: #D27FE3; }
 
 .bg-blue-metal-grad {
-  background-color: #39366a;
+  background-color: #333164;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #39366a 0%, #39366a 80px, #8180be 100%);
+  background: linear-gradient(to right, #333164 0%, #333164 80px, #A4A4E7 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39366a', endColorstr='#8180be',GradientType=1 );
   /* IE6-9 */
   color: #fff; }
   .bg-blue-metal-grad .close-btn {
-    color: #8180be; }
+    color: #A4A4E7; }
 
 .section,
 .section-block,
