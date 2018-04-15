@@ -11,12 +11,51 @@
     color: $text-grey;
   }
 
-  input[type=email] {
-    margin-top: $gutter / 3;
-  }
-
   .partners-logos {
     float: right;
+  }
+
+  .subscribe-block {
+    .subscribe-label {
+      display: block;
+      width: 100%;
+    }
+
+    .subscribe-input {
+      display: block;
+      width: 100%;
+      margin-top: $gutter / 3;
+    }
+  }
+
+  .social {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .footer {
+    .subscribe-block {
+      .subscribe-label,
+      .subscribe-input {
+        width: 50%;
+      }
+    }
+
+    .social {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .footer {
+    .subscribe-block {
+      .subscribe-label,
+      .subscribe-input {
+        width: 100%;
+      }
+    }
   }
 }
 

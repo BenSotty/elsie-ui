@@ -10462,10 +10462,29 @@ ul.ticks li {
     max-height: 30px; }
   .footer a {
     color: #6c757d; }
-  .footer input[type=email] {
-    margin-top: 10px; }
   .footer .partners-logos {
     float: right; }
+  .footer .subscribe-block .subscribe-label {
+    display: block;
+    width: 100%; }
+  .footer .subscribe-block .subscribe-input {
+    display: block;
+    width: 100%;
+    margin-top: 10px; }
+  .footer .social {
+    text-align: center; }
+
+@media (min-width: 576px) {
+  .footer .subscribe-block .subscribe-label,
+  .footer .subscribe-block .subscribe-input {
+    width: 50%; }
+  .footer .social {
+    text-align: left; } }
+
+@media (min-width: 992px) {
+  .footer .subscribe-block .subscribe-label,
+  .footer .subscribe-block .subscribe-input {
+    width: 100%; } }
 
 @media (max-width: 767.98px) {
   .footer .partners-logos {
