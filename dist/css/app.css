@@ -9964,16 +9964,16 @@ a.arrow-right i {
     color: #7a7aca; }
 
 .bg-pink-grad {
-  background-color: #752884;
+  background-color: #812F92;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #752884 0%, #752884 80px, #b463c4 100%);
+  background: linear-gradient(to right, #812F92 0%, #812F92 80px, #D27FE3 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#752884', endColorstr='#b463c4',GradientType=1 );
   /* IE6-9 */
   color: #fff; }
   .bg-pink-grad .close-btn {
-    color: #b463c4; }
+    color: #D27FE3; }
 
 .bg-blue-metal-grad {
   background-color: #39366a;
