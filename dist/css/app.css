@@ -10471,6 +10471,8 @@ a.card-bodered {
     max-height: 30px; }
   .footer a {
     color: #6c757d; }
+    .footer a:hover {
+      color: #2cd4d9; }
   .footer .partners-logos {
     float: right; }
   .footer .subscribe-block .subscribe-label {

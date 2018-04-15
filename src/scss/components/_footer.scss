@@ -9,6 +9,10 @@
 
   a {
     color: $text-grey;
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   .partners-logos {
