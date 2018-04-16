@@ -10131,6 +10131,9 @@ body {
   height: 100%; }
   .layout-bottom-right > * {
     width: auto; }
+  @media (max-width: 767.98px) {
+    .layout-bottom-right > * {
+      width: 100%; } }
 
 @media (max-width: 1199.98px) {
   .hide-lg-down {
@@ -10166,6 +10169,9 @@ input:focus {
 
 input.short {
   max-width: 200px; }
+  @media (max-width: 767.98px) {
+    input.short {
+      max-width: none; } }
 
 input.open {
   background-color: transparent;

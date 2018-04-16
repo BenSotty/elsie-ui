@@ -35,6 +35,10 @@ input:focus {
 
 input.short {
   max-width: 200px;
+
+  @include media-breakpoint-down(sm) {
+    max-width: none;
+  }
 }
 
 input.open {
