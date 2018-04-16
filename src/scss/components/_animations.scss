@@ -15,3 +15,23 @@
   max-height: 450px;
   opacity: 1;
 }
+
+%hover-img-switch {
+  img {
+    display: inline-block;
+
+    &.hover {
+      display: none;
+    }
+  }
+
+  &:hover {
+    img {
+      display: none;
+
+      &.hover {
+        display: inline-block;
+      }
+    }
+  }
+}

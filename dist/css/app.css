@@ -9896,6 +9896,16 @@ h2 {
   max-height: 450px;
   opacity: 1; }
 
+ul.partners-logos li img {
+  display: inline-block; }
+  ul.partners-logos li img.hover {
+    display: none; }
+
+ul.partners-logos li:hover img {
+  display: none; }
+  ul.partners-logos li:hover img.hover {
+    display: inline-block; }
+
 .box-indicator {
   position: relative;
   width: 6px;
@@ -10194,10 +10204,18 @@ ul.separated li:not(:last-child) {
 
 ul.partners-logos li {
   max-width: 20%; }
+  ul.partners-logos li img {
+    max-width: 100%;
+    max-height: 30px; }
 
-ul.partners-logos img {
-  max-width: 100%;
-  max-height: 30px; }
+.featured-partners-section ul.partners-logos {
+  padding-bottom: 20px; }
+  @media (min-width: 768px) {
+    .featured-partners-section ul.partners-logos {
+      padding-bottom: 40px; } }
+  @media (min-width: 992px) {
+    .featured-partners-section ul.partners-logos {
+      padding-bottom: 60px; } }
 
 ul.ticks li {
   position: relative;
