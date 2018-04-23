@@ -2,6 +2,12 @@
   margin: 0 !important;
 }
 
+.form-control:focus{
+ -webkit-box-shadow: none;
+ box-shadow: none;
+}
+
+
 @include media-breakpoint-down(sm) {
   .no-padding-sm-down{
     padding: 0 !important;

@@ -1,7 +1,10 @@
 .header {
   .img-header {
-    height: 280px;
     max-width: 100%;
+  }
+
+  .lead {
+    color: $white;
   }
 }
 
@@ -9,7 +12,16 @@
   .header {
     .img-header-container {
       text-align: right;
-      padding-right: 5%;
+      width:100%;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .header {
+    .img-header {
+      /*display: none;*/
     }
   }
 }

@@ -33,6 +33,12 @@ body {
 }
 
 @include media-breakpoint-down(sm) {
+
+  .container {
+    width: 94%;
+  }
+
+
   .hide-sm-down {
     display: none !important;
   }

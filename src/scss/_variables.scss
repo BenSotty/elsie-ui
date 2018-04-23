@@ -1,6 +1,6 @@
 $purple-dark: #373682;
 $purple: #55459f;
-$purple-light: #9A71F5;
+$purple-light: #8064BC;
 $purple-lighter: #523B85;
 $pink: #a967cb;
 $pink-light: #9a71f4;
@@ -16,7 +16,7 @@ $gray-600: #6c757d;
 $gray-300: #dee2e6;
 $text-grey: $gray-600;
 $border-grey: $gray-300;
-$section-grey: #edf2f7;
+$section-grey: #F2F5F7;
 $box-radius: 8px;
 $gutter: 30px;
 $grid-gutter-width: $gutter;
@@ -99,7 +99,7 @@ $navbar-nav-link-padding-x: 1rem;
 //   "gray-dark":  $gray-800
 // ), $colors);
 //
-// $primary:       $blue;
+// $primary:       #8064BC;
 // $secondary:     $gray-600;
 // $success:       $green;
 // $info:          $cyan;
@@ -219,9 +219,9 @@ $navbar-nav-link-padding-x: 1rem;
 //
 // $container-max-widths: (
 //   sm: 540px,
-//   md: 720px,
+//   md: 800px,
 //   lg: 960px,
-//   xl: 1140px
+//   xl: 1200px
 // );
 //
 // @include _assert-ascending($container-max-widths, "$container-max-widths");

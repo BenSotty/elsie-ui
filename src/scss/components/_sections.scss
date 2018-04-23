@@ -1,5 +1,5 @@
 $section-space: 120px;
-$section-space-md: 90px;
+$section-space-md: 70px;
 $section-header-space: 100px;
 $section-header-space-sm: 40px;
 $sub-section-space: 35px;
@@ -32,6 +32,12 @@ $suber-section-space: 15px;
   @include media-breakpoint-down(md) {
     padding-bottom: $section-space-md;
   }
+}
+
+
+.section-block-md {
+  padding-top: $section-space-md;
+  padding-bottom: $section-space-md;
 }
 
 .section-block-grey {

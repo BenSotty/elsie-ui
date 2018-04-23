@@ -10,10 +10,32 @@ h1 {
 h2 {
   font-family: $font-family-serif-bold;
   font-size: rem(34px);
+  margin-bottom: 10px;
 }
 
-.big {
+h4 {
+  font-size: rem(20px);
+  font-family: 'nunitobold';
+  margin-bottom: 10px;
+}
+
+.lead {
   font-size: rem(18px);
+  margin-bottom: 40px;
+}
+
+.large-text {
+  font-size: rem(18px);
+}
+
+.white {
+  color: $white;
+}
+
+
+
+p {
+  color: $text-grey;
 }
 
 %sans-serif-bold,
@@ -26,7 +48,7 @@ h2 {
 }
 
 .sub-text {
-  font-size: rem(12px);
+  font-size: rem(14px);
 }
 
 %icon-font {
@@ -40,17 +62,9 @@ h2 {
   line-height:1
 }
 
-@include media-breakpoint-up(xl) {
-  h1 {
-    font-size: rem(50px);
-  }
 
-  h2 {
-    font-size: rem(40px);
-  }
-}
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(lg) { 
   .text-center-lg {
     text-align: center;
   }
@@ -66,4 +80,24 @@ h2 {
   h1 {
     font-size: rem(34px);
   }
+}
+
+@include media-breakpoint-up(xl) {
+  h1 {
+    font-size: rem(54px);
+  }
+
+  h2 {
+    font-size: rem(44px);
+    letter-spacing: 1px;
+  }
+
+  .lead {
+    font-size: rem(24px);
+  }
+
+}
+
+.fa-arrow-right {
+  font-size: 10px;
 }

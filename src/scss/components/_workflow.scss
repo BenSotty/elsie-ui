@@ -9,7 +9,7 @@ $number-height-sm: 50px;
     position: relative;
 
     &:not(:last-of-type) {
-      margin-bottom: 2 * $gutter;
+      margin-bottom: 4 * $gutter;
     }
 
     .workflow-number-wrapper {
@@ -25,7 +25,7 @@ $number-height-sm: 50px;
 
       .workflow-text-block {
         padding-left: $number-height;
-      }
+      } 
     }
 
     &.number-right {
