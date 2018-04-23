@@ -26,7 +26,7 @@
   @@include('shape_separator', { classes:'bg-purple-light-grad' })
 </div>
 <!-- Card full width -->
-<div class="shape-separator-inside-block">
+<div class="shape-separator-inside-block container">
   <div class="card-bodered">
     <div class="container-fluid col-lg-10">
       <div class="row">
@@ -58,12 +58,14 @@
     </div>
   </div>
 </div>
-@@include('workflow_header', {
-  title: 'How Elsie Works',
-  text: "Elsie's cutting-edge digital health platform helps healthcare units every step of the way."
-})
-<!-- Work flow -->
-<div class="section-block workflow">
+
+<!-- How it works -->
+<div class="section-block workflow container">
+  @@include('workflow_header', {
+    title: 'How Elsie Works',
+    text: "Elsie's cutting-edge digital health platform helps healthcare units every step of the way."
+  })
+
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -116,12 +118,14 @@
     </div>
   </div>
 </div>
+
+
 <!-- Innovate with Elsie section -->
 <div class="section-block-grey shape-section">
   <img class="shape-section-right" src="images/shapes/shape-separator.png" />
   <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col">
           <h2 class="text-center-md no-margin">Innovate with Elsie</h2>
@@ -163,7 +167,7 @@
             <p>Track all your genetic tests transactions in an innovative digital platform. Manage and evaluate your entire ordering flow, from purchasing genetic tests to receiving report results.</p>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
 </div>

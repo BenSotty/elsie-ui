@@ -9845,6 +9845,9 @@ h2 {
   font-size: 2.125rem;
   margin-bottom: 10px; }
 
+h3 {
+  margin-bottom: 10px; }
+
 h4 {
   font-size: 1.25rem;
   font-family: 'nunitobold';
@@ -10165,7 +10168,7 @@ body {
 
 @media (max-width: 767.98px) {
   .container {
-    width: 94%; }
+    width: 98%; }
   .hide-sm-down {
     display: none !important; } }
 
@@ -10382,13 +10385,13 @@ ul.ticks li {
     background-color: #fff; }
   @media (min-width: 768px) {
     .shape-separator-inside-block {
-      padding-left: 95px;
-      padding-right: 95px;
+      /*    padding-left: $shape-size-md + $gutter / 2;
+    padding-right: $shape-size-md + $gutter / 2;*/
       margin-top: -145px; } }
   @media (min-width: 992px) {
     .shape-separator-inside-block {
-      padding-left: 115px;
-      padding-right: 115px;
+      /*    padding-left: $shape-size + $gutter / 2;
+    padding-right: $shape-size + $gutter / 2;*/
       margin-top: -185px; } }
 
 .shape-container {
@@ -10532,7 +10535,7 @@ a.card-bodered {
       width: auto; } }
 
 .header .img-header {
-  max-width: 100%; }
+  max-width: 88%; }
 
 .header .lead {
   color: #fff; }
@@ -10545,6 +10548,10 @@ a.card-bodered {
 @media (max-width: 767.98px) {
   .header .img-header {
     /*display: none;*/ } }
+
+@media (max-width: 991.98px) {
+  .header .img-header {
+    height: 280px; } }
 
 .footer {
   color: #6c757d;
@@ -10783,7 +10790,7 @@ a.card-bodered {
 .workflow .workflow-block {
   margin-left: auto;
   margin-right: auto;
-  width: 55%;
+  width: 65%;
   position: relative; }
   .workflow .workflow-block:not(:last-of-type) {
     margin-bottom: 120px; }

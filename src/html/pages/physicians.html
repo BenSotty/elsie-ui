@@ -25,7 +25,7 @@
   @@include('shape_separator', { classes:'bg-blue-grad' })
 </div>
 <!-- Card full width -->
-<div class="shape-separator-inside-block">
+<div class="shape-separator-inside-block container">
   <div class="card-bodered">
     <div class="container-fluid col-lg-10">
       <div class="row">
@@ -61,12 +61,14 @@
   </div>
 </div>
 
-@@include('workflow_header', {
-  title: 'How Elsie Works',
-  text: "Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice."
-})
-<!-- Workflow -->
-<div class="section-block workflow">
+
+<!-- How it works -->
+<div class="section-block workflow container">
+  @@include('workflow_header', {
+    title: 'How Elsie Works',
+    text: "Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice."
+  })
+
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -117,7 +119,7 @@
   <img class="shape-section-right" src="images/shapes/shape-separator.png" />
   <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col">
           <h2 class="text-center-md no-margin">Why you should be using genetics.</h2>
@@ -150,10 +152,10 @@
   </div>
 </div>
 <!-- Quote section -->
-@@include('quote_section', {
+<!-- @@include('quote_section', {
   section:'section-block',
   quote:'Elsie transformed the way I use genetics with my patients. It is now much more convenient to fully explore genecally informed medicine.'
-})
+}) -->
 <!-- Featured partners -->
 @@include('partners')
 <!-- Next step -->

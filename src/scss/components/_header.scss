@@ -1,6 +1,6 @@
 .header {
   .img-header {
-    max-width: 100%;
+    max-width: 88%;
   }
 
   .lead {
@@ -22,6 +22,15 @@
   .header {
     .img-header {
       /*display: none;*/
+    }
+  }
+}
+
+
+@include media-breakpoint-down(md) {
+  .header {
+    .img-header {
+      height: 280px;
     }
   }
 }
