@@ -10379,8 +10379,8 @@ ul.ticks li {
 
 .shape-separator-inside-block {
   margin-top: -60px;
-  padding-left: 15px;
-  padding-right: 15px; }
+  /*  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;*/ }
   .shape-separator-inside-block > * {
     background-color: #fff; }
   @media (min-width: 768px) {
@@ -10826,7 +10826,7 @@ a.card-bodered {
 
 @media (max-width: 991.98px) {
   .workflow .workflow-block {
-    width: 75%; } }
+    width: 85%; } }
 
 @media (max-width: 767.98px) {
   .workflow .workflow-block {
