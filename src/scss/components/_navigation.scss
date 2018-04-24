@@ -22,11 +22,14 @@
       color: $white;
     }
 
+    a.btn {
+      margin-left: 20px;
+    }
+
     &.expandable-hover {
       position: relative;
 
       &:hover .expandable-content {
-        // Set max heigth on show for animation
         max-height: 450px;
       }
 
@@ -36,7 +39,7 @@
         left: 0;
         z-index: 2;
         width: 270px;
-        margin-top: - $box-indicator-height;
+        margin-top: -6px;
       }
 
       .box-indicator {
@@ -151,6 +154,12 @@
     .nav-item {
       a {
         color: $purple;
+      }
+      a.btn {
+        color: $white;
+      }
+      a.btn.outline {
+        color: $blue;
       }
     }
 
@@ -302,6 +311,11 @@
       .navbar-toggler {
         color: $purple;
       }
+
+      a.btn {
+        color: $blue;
+      }
+
     }
   }
 }

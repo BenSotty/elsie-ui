@@ -6,10 +6,10 @@ button:focus {
 .btn {
   background-color: $blue;
   color: $white;
-
-  height: $btn-height;
-  padding: 0 20px;
-  border-radius: $btn-height / 2;
+  height: auto;
+  border-radius: 50%;
+  padding: 8px 20px;
+  border-radius: $btn-height !important;
   box-shadow: 0 2px 4px 0 rgba(82,59,133,0.4);
 
   &.outline {
@@ -17,12 +17,13 @@ button:focus {
     border: solid 1px $blue;
     color: $blue;
     box-shadow: none;
-  }
+  } 
 
   &.btn-icon {
     $bth-icon-height: $btn-height - 4px;
     position: relative;
-    padding-right: 10px;
+    padding-right: 50px;
+    
 
     > * {
       padding-right: $bth-icon-height;
@@ -35,13 +36,23 @@ button:focus {
       border-radius: $bth-icon-height;
       position: absolute;
       right: 2px;
-      top: 1px;
+      top: 2px;
 
       line-height: $bth-icon-height;
 
       &:before {
         margin-left: 13px;
       }
+    }
+  }
+
+
+  &:hover {
+    background-color: $blue-metal-grad-end;
+    color: $white !important;
+
+    i {
+      background-color: $purple-light;
     }
   }
 
