@@ -1,0 +1,38 @@
+.login-form {
+  padding: 0 $gutter;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+
+  .brand-logo-link {
+    display: inline-block;
+  }
+
+  .brand-logo {
+    width: 120px;
+    max-width: 80%;
+  }
+
+  .form-group {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  button[type=submit] {
+    width: 100%;
+    margin-top: $gutter;
+  }
+}
+
+.form-help-text {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+@include media-breakpoint-up(lg) {
+  .login-message-container {
+    padding-left: $gutter;
+  }
+}
