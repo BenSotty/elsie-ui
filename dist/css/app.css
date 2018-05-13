@@ -10212,6 +10212,9 @@ a.arrow-right i {
   .bg-blue-metal-grad .close-btn {
     color: #A4A4E7; }
 
+.bg-white {
+  background-color: #fff; }
+
 .section,
 .section-block,
 .section-block-grey,
@@ -10339,9 +10342,20 @@ button:focus {
   line-height: normal;
   cursor: pointer; }
 
+html.layout-full-height {
+  height: 100%; }
+  html.layout-full-height body {
+    height: 100%;
+    overflow-y: scroll; }
+
 body {
   max-width: 100%;
   overflow-x: hidden; }
+
+.container-full-height {
+  height: 100%; }
+  .container-full-height > .row {
+    height: 100%; }
 
 .layout-bottom-right {
   display: -webkit-box;
@@ -10359,6 +10373,18 @@ body {
   @media (max-width: 767.98px) {
     .layout-bottom-right > * {
       width: 100%; } }
+
+.layout-centered-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%; }
 
 @media (max-width: 1199.98px) {
   .hide-lg-down {
@@ -10870,3 +10896,35 @@ a.card-bodered {
       padding-left: 0; }
     .workflow .workflow-block.number-right .workflow-text-block {
       padding-right: 0; } }
+
+.login-form {
+  padding: 0 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px; }
+  .login-form .brand-logo-link {
+    display: inline-block; }
+  .login-form .brand-logo {
+    width: 120px;
+    max-width: 80%; }
+  .login-form .form-group:last-of-type {
+    margin-bottom: 0; }
+  .login-form button[type=submit] {
+    width: 100%;
+    margin-top: 30px; }
+
+.form-help-text {
+  display: block;
+  text-align: right;
+  margin-top: 10px; }
+
+@media (min-width: 992px) {
+  .login-message-container {
+    padding-left: 30px; } }
+
+[data-randomize-content] {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1; }
+  [data-randomize-content].fadingOut {
+    opacity: 0; }

@@ -1,0 +1,8 @@
+[data-randomize-content] {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+
+  &.fadingOut {
+    opacity: 0;
+  }
+}
