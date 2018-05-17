@@ -9819,15 +9819,15 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navigation .nav-item.expandable-hover {
   position: relative; }
-  .navigation .nav-item.expandable-hover:hover .expandable-content {
-    max-height: 450px; }
   .navigation .nav-item.expandable-hover .expandable-content {
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 2;
     width: 270px;
-    margin-top: -6px; }
+    margin-top: -6px;
+    -webkit-box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07); }
   .navigation .nav-item.expandable-hover .box-indicator {
     margin-left: 30px; }
   .navigation .nav-item.expandable-hover .expandable-items {
@@ -9900,6 +9900,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: #fff; }
   .navigation.scrolled .nav-item a.btn.outline {
     color: #2cd4d9; }
+  .navigation.scrolled .nav-item .expandable-content {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .navigation.scrolled .expandable-items {
     border: solid 1px #dee2e6; }
 
@@ -9951,9 +9954,13 @@ a.text-dark:hover, a.text-dark:focus {
       transition: none;
       max-height: none;
       opacity: 1;
+      -webkit-transform: rotate3d(1, 0, 0, 0deg);
+              transform: rotate3d(1, 0, 0, 0deg);
       overflow: visible;
       width: auto;
       border: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
       float: left; }
       .navigation .navigation-container .nav-item .expandable-content .box-indicator {
         display: none; }
@@ -10252,19 +10259,27 @@ p {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
-.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-content, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
+.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
 .expandable-hover .expandable-content {
-  max-height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   display: block;
   overflow: hidden;
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: rotate3d(1, 0, 0, 20deg);
+          transform: rotate3d(1, 0, 0, 20deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
 
 .expandable-hover:hover .expandable-content {
-  max-height: 450px;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: rotate3d(1, 0, 0, 0deg);
+          transform: rotate3d(1, 0, 0, 0deg); }
 
 .box-indicator {
   position: relative;
