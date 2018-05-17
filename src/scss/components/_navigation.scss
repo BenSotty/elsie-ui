@@ -230,44 +230,48 @@
       }
 
       .nav-item {
-        .expandable-toggle {
-          padding: $gutter / 2;
-          color: $text-grey;
-          cursor: default;
+        &.expandable-hover,
+        &.expandable-hover.epanded {
+          .expandable-toggle {
+            padding: $gutter / 2;
+            color: $text-grey;
+            cursor: default;
 
-          i {
-            display: none;
+            i, .elsie-icon-arrow_down {
+              display: none;
+            }
+          }
+
+          .expandable-content {
+            position: relative;
+            // Show expandable content
+            transition: none;
+            max-height: none;
+            opacity: 1;
+            visibility: visible;
+            transform: rotate3d(1,0,0, 0deg);
+            overflow: visible;
+
+            width: auto;
+            border: none;
+            box-shadow: none;
+            float: left;
           }
         }
 
-        .expandable-content {
-          position: relative;
-          // Show expandable content
-          transition: none;
-          max-height: none;
-          opacity: 1;
-          transform: rotate3d(1,0,0, 0deg);
-          overflow: visible;
+        .box-indicator {
+          display: none;
+        }
 
-          width: auto;
-          border: none;
-          box-shadow: none;
-          float: left;
+        .expandable-items {
+          border-radius: 0px;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-bottom: solid 1px $border-grey;
 
-          .box-indicator {
-            display: none;
-          }
-
-          .expandable-items {
+          .expandable-item {
             border-radius: 0px;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            border-bottom: solid 1px $border-grey;
-
-            .expandable-item {
-              border-radius: 0px;
-            }
           }
         }
 

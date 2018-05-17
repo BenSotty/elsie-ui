@@ -12,13 +12,9 @@
     }
   }
 
-  &:hover {
-    .expandable-toggle {
-      color: $gray-500;
-
-      i, .elsie-icon-arrow_down {
-        transform: rotate(0deg);
-      }
+  &.expanded {
+    i, .elsie-icon-arrow_down {
+      transform: rotate(0deg);
     }
 
     .expandable-content {

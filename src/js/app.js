@@ -5,6 +5,10 @@
       new Navigation($navBar);
     }
 
+    $.each($(".expandable-hover"), function() {
+      new ExpandableHover($(this));
+    });
+
     var $greetings = $("#greetings");
     if ($greetings.length > 0) {
       new Greetings($greetings);

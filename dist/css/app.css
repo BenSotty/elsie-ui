@@ -9942,18 +9942,19 @@ a.text-dark:hover, a.text-dark:focus {
       top: 15px;
       right: 15px;
       z-index: 1; }
-    .navigation .navigation-container .nav-item .expandable-toggle {
+    .navigation .navigation-container .nav-item.expandable-hover .expandable-toggle, .navigation .navigation-container .nav-item.expandable-hover.epanded .expandable-toggle {
       padding: 15px;
       color: #6c757d;
       cursor: default; }
-      .navigation .navigation-container .nav-item .expandable-toggle i {
+      .navigation .navigation-container .nav-item.expandable-hover .expandable-toggle i, .navigation .navigation-container .nav-item.expandable-hover .expandable-toggle .elsie-icon-arrow_down, .navigation .navigation-container .nav-item.expandable-hover.epanded .expandable-toggle i, .navigation .navigation-container .nav-item.expandable-hover.epanded .expandable-toggle .elsie-icon-arrow_down {
         display: none; }
-    .navigation .navigation-container .nav-item .expandable-content {
+    .navigation .navigation-container .nav-item.expandable-hover .expandable-content, .navigation .navigation-container .nav-item.expandable-hover.epanded .expandable-content {
       position: relative;
       -webkit-transition: none;
       transition: none;
       max-height: none;
       opacity: 1;
+      visibility: visible;
       -webkit-transform: rotate3d(1, 0, 0, 0deg);
               transform: rotate3d(1, 0, 0, 0deg);
       overflow: visible;
@@ -9962,16 +9963,16 @@ a.text-dark:hover, a.text-dark:focus {
       -webkit-box-shadow: none;
               box-shadow: none;
       float: left; }
-      .navigation .navigation-container .nav-item .expandable-content .box-indicator {
-        display: none; }
-      .navigation .navigation-container .nav-item .expandable-content .expandable-items {
-        border-radius: 0px;
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        border-bottom: solid 1px #dee2e6; }
-        .navigation .navigation-container .nav-item .expandable-content .expandable-items .expandable-item {
-          border-radius: 0px; }
+    .navigation .navigation-container .nav-item .box-indicator {
+      display: none; }
+    .navigation .navigation-container .nav-item .expandable-items {
+      border-radius: 0px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: solid 1px #dee2e6; }
+      .navigation .navigation-container .nav-item .expandable-items .expandable-item {
+        border-radius: 0px; }
     .navigation .navigation-container .nav-item.nav-item-links {
       padding-left: 15px; }
       .navigation .navigation-container .nav-item.nav-item-links a {
@@ -10269,6 +10270,7 @@ p {
   display: block;
   overflow: hidden;
   opacity: 0;
+  visibility: hidden;
   -webkit-transform-origin: top center;
           transform-origin: top center;
   -webkit-transform: rotate3d(1, 0, 0, 20deg);
@@ -10276,8 +10278,9 @@ p {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d; }
 
-.expandable-hover:hover .expandable-content {
+.expandable-hover.expanded .expandable-content {
   opacity: 1;
+  visibility: visible;
   -webkit-transform: rotate3d(1, 0, 0, 0deg);
           transform: rotate3d(1, 0, 0, 0deg); }
 
@@ -10300,11 +10303,9 @@ p {
 .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
   display: inline-block; }
 
-.expandable-hover:hover .expandable-toggle {
-  color: #adb5bd; }
-  .expandable-hover:hover .expandable-toggle i, .expandable-hover:hover .expandable-toggle .elsie-icon-arrow_down {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+.expandable-hover.expanded i, .expandable-hover.expanded .elsie-icon-arrow_down {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg); }
 
 a.arrow-right > * {
   margin-right: 5px; }
