@@ -9834,7 +9834,7 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: #fff;
     border-radius: 8px;
     float: left; }
-  .navigation .nav-item.expandable-hover .expandable-toggle i {
+  .navigation .nav-item.expandable-hover .expandable-toggle i, .navigation .nav-item.expandable-hover .expandable-toggle .elsie-icon-arrow_up, .navigation .nav-item.expandable-hover .expandable-toggle .elsie-icon-arrow_down {
     font-size: 0.75rem; }
   .navigation .nav-item.expandable-hover .expandable-item {
     color: #000;
@@ -10052,11 +10052,25 @@ a.text-dark:hover, a.text-dark:focus {
 .elsie-icon-Accessible_Genetics:before {
   content: "\e900"; }
 
-.elsie-icon-arrow_down:before {
+.elsie-icon-arrow_right:before {
   content: "\e901"; }
+
+.elsie-icon-arrow_left {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+  .elsie-icon-arrow_left:before {
+    content: "\e901"; }
 
 .elsie-icon-arrow_up:before {
   content: "\e902"; }
+
+.elsie-icon-arrow_down {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+  .elsie-icon-arrow_down:before {
+    content: "\e902"; }
 
 .elsie-icon-Backed_Science:before {
   content: "\e903"; }
@@ -10178,6 +10192,18 @@ h4 {
 .white {
   color: #fff; }
 
+.purple-light {
+  color: #8064BC; }
+
+.blue-metal {
+  color: #7F7EBC; }
+
+.blue-physicians {
+  color: #8181D3; }
+
+.pink-lab {
+  color: #D587D0; }
+
 p {
   color: #6c757d; }
 
@@ -10226,7 +10252,7 @@ p {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
-.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-content, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i {
+.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-content, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
@@ -10256,11 +10282,14 @@ p {
     border-color: transparent transparent #ffffff transparent;
     line-height: 0px; }
 
+.expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
+  display: inline-block; }
+
 .expandable-hover:hover .expandable-toggle {
   color: #adb5bd; }
-  .expandable-hover:hover .expandable-toggle i {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+  .expandable-hover:hover .expandable-toggle i, .expandable-hover:hover .expandable-toggle .elsie-icon-arrow_down {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
 
 a.arrow-right > * {
   margin-right: 5px; }
@@ -10789,12 +10818,18 @@ ul.ticks li {
   .card-bodered .icon, .card-quotes .icon, .card-open .icon {
     margin-bottom: 15px;
     height: 50px;
-    max-width: 50px; }
+    max-width: 50px;
+    font-size: 50px; }
   .card-bodered .icon-inline, .card-quotes .icon-inline, .card-open .icon-inline {
     display: inline-block;
     margin-right: 7.5px;
     height: 30px;
-    max-width: 30px; }
+    font-size: 30px;
+    max-width: 30px;
+    float: left; }
+  .card-bodered .icon-inline-label, .card-quotes .icon-inline-label, .card-open .icon-inline-label {
+    height: 30px;
+    line-height: 30px; }
   .card-bodered .title, .card-quotes .title, .card-open .title {
     font-size: 1rem;
     margin-bottom: 15px; }
@@ -10852,7 +10887,8 @@ a.card-bodered {
   margin-bottom: 40px; }
   .card-open .icon {
     height: 40px;
-    max-width: 40px; }
+    max-width: 40px;
+    font-size: 40px; }
 
 .card-quotes-container {
   padding-left: 15px;

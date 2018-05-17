@@ -36,7 +36,21 @@ h4 {
   color: $white;
 }
 
+.purple-light {
+  color: $purple-light;
+}
 
+.blue-metal {
+  color: $blue-metal
+}
+
+.blue-physicians {
+  color: $blue-physicians;
+}
+
+.pink-lab {
+  color: $pink-lab;
+}
 
 p {
   color: $text-grey;
@@ -66,9 +80,7 @@ p {
   line-height:1
 }
 
-
-
-@include media-breakpoint-up(lg) { 
+@include media-breakpoint-up(lg) {
   .text-center-lg {
     text-align: center;
   }

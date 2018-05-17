@@ -5,13 +5,21 @@
     margin-bottom: $gutter / 2;
     height: 50px;
     max-width: 50px;
+    font-size: 50px;
   }
 
   .icon-inline {
     display: inline-block;
     margin-right: $gutter / 4;
     height: 30px;
+    font-size: 30px;
     max-width: 30px;
+    float: left;
+  }
+
+  .icon-inline-label {
+    height: 30px;
+    line-height: 30px;
   }
 
   .title {
@@ -98,6 +106,7 @@ a.card-bodered {
   .icon {
     height: 40px;
     max-width: 40px;
+    font-size: 40px;
   }
 }
 
@@ -138,7 +147,7 @@ a.card-bodered {
 
   .card-bodered-container {
     position: relative;
-    
+
     > * {
         padding-left: 100px;
     }

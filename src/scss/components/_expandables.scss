@@ -6,7 +6,8 @@
   .expandable-toggle {
     @extend %transition-all;
 
-    i {
+    i, .elsie-icon-arrow_down {
+      display: inline-block;
       @extend %transition-all;
     }
   }
@@ -15,8 +16,8 @@
     .expandable-toggle {
       color: $gray-500;
 
-      i {
-        transform: rotate(180deg);
+      i, .elsie-icon-arrow_down {
+        transform: rotate(0deg);
       }
     }
 

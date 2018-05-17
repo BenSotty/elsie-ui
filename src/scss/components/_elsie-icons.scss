@@ -17,12 +17,29 @@
 .elsie-icon-Accessible_Genetics:before {
   content: "\e900";
 }
-.elsie-icon-arrow_down:before {
+.elsie-icon-arrow_right:before {
   content: "\e901";
+}
+.elsie-icon-arrow_left {
+  display: inline-block;
+  transform: rotate(180deg);
+
+  &:before {
+    content: "\e901";
+  }
 }
 .elsie-icon-arrow_up:before {
   content: "\e902";
 }
+.elsie-icon-arrow_down {
+  display: inline-block;
+  transform: rotate(180deg);
+
+  &:before {
+    content: "\e902";
+  }
+}
+
 .elsie-icon-Backed_Science:before {
   content: "\e903";
 }
