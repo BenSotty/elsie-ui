@@ -10260,7 +10260,7 @@ p {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
-.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down {
+.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down, .arrow-right i, .arrow-right .elsie-icon-arrow_right {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
@@ -10307,11 +10307,12 @@ p {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg); }
 
-a.arrow-right > * {
+.arrow-right > * {
   margin-right: 5px; }
 
-a.arrow-right i {
-  font-size: 0.7em; }
+.arrow-right i, .arrow-right .elsie-icon-arrow_right {
+  font-size: 0.7em;
+  display: inline-block; }
 
 .bg-purple-grad {
   background-color: #55459f;
@@ -10486,7 +10487,7 @@ button:focus {
     padding-right: 50px; }
     .btn.btn-icon > * {
       padding-right: 36px; }
-    .btn.btn-icon i {
+    .btn.btn-icon i, .btn.btn-icon .elsie-icon-arrow_right {
       background-color: #50e3d9;
       height: 36px;
       width: 36px;
@@ -10495,7 +10496,7 @@ button:focus {
       right: 2px;
       top: 2px;
       line-height: 36px; }
-      .btn.btn-icon i:before {
+      .btn.btn-icon i:before, .btn.btn-icon .elsie-icon-arrow_right:before {
         margin-left: 13px; }
   .btn.btn-txt {
     background-color: transparent;
@@ -10890,6 +10891,9 @@ a.card-bodered {
   a.card-bodered:hover {
     -webkit-box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
             box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07); }
+    a.card-bodered:hover .elsie-icon-arrow_right {
+      -webkit-transform: translateX(1px);
+              transform: translateX(1px); }
 
 .card-bodered-container {
   padding: 0 15px;

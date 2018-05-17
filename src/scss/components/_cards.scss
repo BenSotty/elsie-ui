@@ -85,6 +85,10 @@ a.card-bodered {
 
   &:hover {
     box-shadow: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07);
+
+    .elsie-icon-arrow_right {
+      transform: translateX(1px);
+    }
   }
 }
 
