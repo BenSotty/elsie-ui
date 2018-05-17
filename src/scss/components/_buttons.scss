@@ -11,19 +11,37 @@ button:focus {
   padding: 8px 20px;
   border-radius: $btn-height !important;
   box-shadow: 0 2px 4px 0 rgba(82,59,133,0.4);
+  transition: all .15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+
+    background-color: $blue;
+    color: $white !important;
+
+    i {
+      background-color: $purple-light;
+    }
+  }
 
   &.outline {
     background-color: transparent;
     border: solid 1px $blue;
     color: $blue;
     box-shadow: none;
-  } 
+
+    &:hover {
+      box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      background-color: $blue;
+    }
+  }
 
   &.btn-icon {
     $bth-icon-height: $btn-height - 4px;
     position: relative;
     padding-right: 50px;
-    
+
 
     > * {
       padding-right: $bth-icon-height;
@@ -46,15 +64,6 @@ button:focus {
     }
   }
 
-
-  &:hover {
-    background-color: $blue-metal-grad-end;
-    color: $white !important;
-
-    i {
-      background-color: $purple-light;
-    }
-  }
 
   &.btn-txt {
     background-color: transparent;

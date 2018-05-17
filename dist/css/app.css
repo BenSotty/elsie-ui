@@ -10295,13 +10295,28 @@ button:focus {
   padding: 8px 20px;
   border-radius: 40px !important;
   -webkit-box-shadow: 0 2px 4px 0 rgba(82, 59, 133, 0.4);
-          box-shadow: 0 2px 4px 0 rgba(82, 59, 133, 0.4); }
+          box-shadow: 0 2px 4px 0 rgba(82, 59, 133, 0.4);
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease; }
+  .btn:hover {
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    background-color: #2cd4d9;
+    color: #fff !important; }
+    .btn:hover i {
+      background-color: #8064BC; }
   .btn.outline {
     background-color: transparent;
     border: solid 1px #2cd4d9;
     color: #2cd4d9;
     -webkit-box-shadow: none;
             box-shadow: none; }
+    .btn.outline:hover {
+      -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+              box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+      background-color: #2cd4d9; }
   .btn.btn-icon {
     position: relative;
     padding-right: 50px; }
@@ -10318,11 +10333,6 @@ button:focus {
       line-height: 36px; }
       .btn.btn-icon i:before {
         margin-left: 13px; }
-  .btn:hover {
-    background-color: #A4A4E7;
-    color: #fff !important; }
-    .btn:hover i {
-      background-color: #8064BC; }
   .btn.btn-txt {
     background-color: transparent;
     color: #2cd4d9;
