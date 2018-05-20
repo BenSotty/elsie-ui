@@ -31,6 +31,30 @@
   margin-top: 10px;
 }
 
+.schedule-demo-form {
+  > *, input, select, label {
+    color: $white;
+  }
+
+  input[name="demo[msg]"] {
+    width: 600px;
+  }
+}
+
+form.open-form {
+  input, select, label, div {
+    font-size: rem(24px);
+  }
+
+  .input-text-open:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  input, select {
+    width: 300px;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .login-message-container {
     padding-left: $gutter;

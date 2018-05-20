@@ -9906,6 +9906,11 @@ a.text-dark:hover, a.text-dark:focus {
   .navigation.scrolled .expandable-items {
     border: solid 1px #dee2e6; }
 
+.navigation-simplified {
+  padding-top: 10px; }
+  .navigation-simplified a:last-child {
+    float: right; }
+
 @media (max-width: 991.98px) {
   .navigation .logo,
   .navigation .logo-scrolled {
@@ -10408,6 +10413,9 @@ p {
     .section-block-grey {
       padding-bottom: 70px; } }
 
+.section-md {
+  padding-top: 70px; }
+
 .section-block-md {
   padding-top: 70px;
   padding-bottom: 70px; }
@@ -10469,7 +10477,7 @@ button:focus {
     -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     background-color: #2cd4d9;
-    color: #fff !important; }
+    color: #fff; }
     .btn:hover i {
       background-color: #8064BC; }
   .btn.outline {
@@ -10481,7 +10489,8 @@ button:focus {
     .btn.outline:hover {
       -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
               box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-      background-color: #2cd4d9; }
+      background-color: #2cd4d9;
+      color: #fff; }
   .btn.btn-icon {
     position: relative;
     padding-right: 50px; }
@@ -10508,6 +10517,28 @@ button:focus {
     vertical-align: initial;
     -webkit-box-shadow: none;
             box-shadow: none; }
+  .btn.btn-white {
+    background: #fff;
+    color: #55459f; }
+    .btn.btn-white:hover {
+      background-color: transparent;
+      border: solid 1px #fff;
+      color: #fff; }
+  .btn.btn-outline-white {
+    background-color: transparent;
+    border: solid 1px #fff;
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .btn.btn-outline-white:hover {
+      -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+              box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+      background-color: #fff;
+      color: #55459f; }
+  .btn.btn-longer {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 150px; }
 
 .btn-unstyled {
   background: none;
@@ -10601,13 +10632,47 @@ input.short {
     input.short {
       max-width: none; } }
 
-input.open {
+input.open,
+select.open {
   background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: solid 1px #55459f;
-  padding: 0 0 3px 0; }
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: solid 1px;
+  border-radius: 0;
+  padding: 0; }
+
+select.open {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* hide the default arrow in ie10 and ie11 */ }
+  select.open::-ms-expand {
+    display: none; }
+  select.open option {
+    font-size: 1rem;
+    background-color: #fff; }
+
+input.white,
+select.white {
+  color: #fff;
+  border-color: #fff; }
+  input.white::-webkit-input-placeholder,
+  select.white::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #dee2e6; }
+  input.white::-moz-placeholder,
+  select.white::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #dee2e6; }
+  input.white:-ms-input-placeholder,
+  select.white:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #dee2e6; }
+  input.white:-moz-placeholder,
+  select.white:-moz-placeholder {
+    /* Firefox 18- */
+    color: #dee2e6; }
 
 ul.inline, ul.evenly-spread-list, ul.separated, ul.ticks,
 ul.unstyled {
@@ -11102,6 +11167,21 @@ a.card-bodered {
   display: block;
   text-align: right;
   margin-top: 10px; }
+
+.schedule-demo-form > *, .schedule-demo-form input, .schedule-demo-form select, .schedule-demo-form label {
+  color: #fff; }
+
+.schedule-demo-form input[name="demo[msg]"] {
+  width: 600px; }
+
+form.open-form input, form.open-form select, form.open-form label, form.open-form div {
+  font-size: 1.5rem; }
+
+form.open-form .input-text-open:not(:last-child) {
+  margin-bottom: 25px; }
+
+form.open-form input, form.open-form select {
+  width: 300px; }
 
 @media (min-width: 992px) {
   .login-message-container {

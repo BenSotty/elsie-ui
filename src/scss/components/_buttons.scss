@@ -18,7 +18,7 @@ button:focus {
     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 
     background-color: $blue;
-    color: $white !important;
+    color: $white;
 
     i {
       background-color: $purple-light;
@@ -34,6 +34,7 @@ button:focus {
     &:hover {
       box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
       background-color: $blue;
+      color: $white;
     }
   }
 
@@ -64,7 +65,6 @@ button:focus {
     }
   }
 
-
   &.btn-txt {
     background-color: transparent;
     color: $blue;
@@ -74,6 +74,36 @@ button:focus {
     display: inline;
     vertical-align: initial;
     box-shadow: none;
+  }
+
+  &.btn-white {
+    background: $white;
+    color: $purple;
+
+    &:hover {
+      background-color: transparent;
+      border: solid 1px $white;
+      color: $white;
+    }
+  }
+
+  &.btn-outline-white {
+    background-color: transparent;
+    border: solid 1px $white;
+    color: $white;
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      background-color: $white;
+      color: $purple;
+    }
+  }
+
+  &.btn-longer {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 150px;
   }
 }
 

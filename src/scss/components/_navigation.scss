@@ -169,6 +169,14 @@
   }
 }
 
+.navigation-simplified {
+  padding-top: 10px;
+
+  a:last-child {
+    float: right;
+  }
+}
+
 @include media-breakpoint-down(md) {
   .navigation {
     .logo,
