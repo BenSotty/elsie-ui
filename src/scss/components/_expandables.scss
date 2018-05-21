@@ -1,6 +1,6 @@
 .expandable-hover {
   .expandable-content {
-    @extend %animate-slide-down-collapsed;
+    @extend %animate-menu-collapsed;
   }
 
   .expandable-toggle {
@@ -18,7 +18,7 @@
     }
 
     .expandable-content {
-      @extend %animate-slide-down-expanded;
+      @extend %animate-menu-expanded;
     }
   }
 }

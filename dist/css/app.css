@@ -10265,7 +10265,7 @@ p {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
-.navigation .nav-item.expandable-hover .expandable-item, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down, .arrow-right i, .arrow-right .elsie-icon-arrow_right {
+.navigation .nav-item.expandable-hover .expandable-item, .select-dropdown .dropdown-options, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down, .arrow-right i, .arrow-right .elsie-icon-arrow_right, .select-dropdown .dropdown-toggle i {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
@@ -10288,6 +10288,16 @@ p {
   visibility: visible;
   -webkit-transform: rotate3d(1, 0, 0, 0deg);
           transform: rotate3d(1, 0, 0, 0deg); }
+
+.select-dropdown .dropdown-options {
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0; }
+
+.select-dropdown.expanded .dropdown-options {
+  max-height: 450px;
+  opacity: 1; }
 
 .box-indicator {
   position: relative;
@@ -10674,7 +10684,7 @@ select.white {
     /* Firefox 18- */
     color: #dee2e6; }
 
-ul.inline, ul.evenly-spread-list, ul.separated, ul.ticks,
+ul.inline, ul.evenly-spread-list, ul.separated, ul.ticks, .select-dropdown .dropdown-options,
 ul.unstyled {
   list-style: none;
   margin: 0;
@@ -11168,11 +11178,15 @@ a.card-bodered {
   text-align: right;
   margin-top: 10px; }
 
-.schedule-demo-form > *, .schedule-demo-form input, .schedule-demo-form select, .schedule-demo-form label {
-  color: #fff; }
+.schedule-demo-form > *, .schedule-demo-form input, .schedule-demo-form select, .schedule-demo-form label, .schedule-demo-form .dropdown-toggle {
+  color: #fff;
+  border-color: #fff; }
 
 .schedule-demo-form input[name="demo[msg]"] {
   width: 600px; }
+
+.schedule-demo-form .select-dropdown-institution-type.expanded .dropdown-options {
+  max-height: 140px; }
 
 form.open-form input, form.open-form select, form.open-form label, form.open-form div {
   font-size: 1.5rem; }
@@ -11180,7 +11194,7 @@ form.open-form input, form.open-form select, form.open-form label, form.open-for
 form.open-form .input-text-open:not(:last-child) {
   margin-bottom: 25px; }
 
-form.open-form input, form.open-form select {
+form.open-form input, form.open-form select, form.open-form .dropdown-toggle {
   width: 300px; }
 
 @media (min-width: 992px) {
@@ -11193,3 +11207,53 @@ form.open-form input, form.open-form select {
   opacity: 1; }
   [data-randomize-content].fadingOut {
     opacity: 0; }
+
+.select-dropdown {
+  display: inline-block;
+  position: relative; }
+  .select-dropdown select {
+    display: none; }
+  .select-dropdown .dropdown-toggle {
+    border-bottom: solid 1px;
+    cursor: pointer; }
+    .select-dropdown .dropdown-toggle:after {
+      display: none; }
+    .select-dropdown .dropdown-toggle i {
+      float: right;
+      font-size: 0.875rem;
+      line-height: 37px; }
+  .select-dropdown .dropdown-options {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+    z-index: 1; }
+  .select-dropdown.expanded .dropdown-options {
+    max-height: 300px; }
+  .select-dropdown.expanded .dropdown-toggle i {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  .select-dropdown .dropdown-option {
+    padding: 0 10px;
+    color: #000;
+    font-size: 1rem;
+    line-height: 35px;
+    cursor: pointer; }
+    .select-dropdown .dropdown-option:hover {
+      background-color: #dee2e6; }
+    .select-dropdown .dropdown-option.selected {
+      background-color: #55459f;
+      color: #fff; }
+      .select-dropdown .dropdown-option.selected:hover {
+        background-color: #55459f; }
+    .select-dropdown .dropdown-option.disabled {
+      cursor: default; }
+      .select-dropdown .dropdown-option.disabled:hover {
+        background-color: transparent; }

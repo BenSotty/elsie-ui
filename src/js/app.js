@@ -17,5 +17,9 @@
     $.each($("[data-randomize-content]"), function() {
       new RandomizeContent($(this));
     });
+
+    $.each($(".select-dropdown"), function() {
+      new SelectDropdown($(this));
+    });
   });
 }());

@@ -32,12 +32,17 @@
 }
 
 .schedule-demo-form {
-  > *, input, select, label {
+  > *, input, select, label, .dropdown-toggle {
     color: $white;
+    border-color: $white;
   }
 
   input[name="demo[msg]"] {
     width: 600px;
+  }
+
+  .select-dropdown-institution-type.expanded .dropdown-options {
+    max-height: 140px;
   }
 }
 
@@ -50,7 +55,7 @@ form.open-form {
     margin-bottom: 25px;
   }
 
-  input, select {
+  input, select, .dropdown-toggle {
     width: 300px;
   }
 }

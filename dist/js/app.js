@@ -280,6 +280,45 @@ window.elsie.randomContents.loginPage = {
   ]
 };
 
+SelectDropdown = function($container) {
+  this.init($container);
+};
+
+$.extend(SelectDropdown.prototype, {
+  init: function($container) {
+    this.$container = $container;
+    this.$toggle = this.$container.find(".dropdown-toggle");
+    this.$toggleLabel = this.$toggle.find(".dropdown-toggle-label");
+    this.$content = this.$container.find(".dropdown-options");
+    this.$options = this.$content.find(".dropdown-option");
+    this.$select = this.$container.find("select");
+
+    this.$toggle.click(this.toggle.bind(this));
+    this.$options.not(".disabled").click(this.select.bind(this));
+  },
+  toggle: function () {
+    this.$container.toggleClass("expanded");
+  },
+  close: function() {
+    this.$container.removeClass("expanded");
+  },
+  select: function () {
+    var $option = $(event.currentTarget),
+        value = $option.data("value"),
+        closeDelayInMs = 100;
+
+    this.$options.not($option).removeClass("selected");
+    $option.addClass("selected");
+    this.$toggleLabel.html($option.html());
+    window.setTimeout(this.close.bind(this), closeDelayInMs);
+
+    if (this.$select.length > 0) {
+      var $selectOption = this.$select.find("option[value='" + value + "']");
+      $selectOption.prop("selected", true);
+    }
+  }
+});
+
 (function() {
   $(document).ready(function(){
     var $navBar = $("#main-navigation");
@@ -298,6 +337,10 @@ window.elsie.randomContents.loginPage = {
 
     $.each($("[data-randomize-content]"), function() {
       new RandomizeContent($(this));
+    });
+
+    $.each($(".select-dropdown"), function() {
+      new SelectDropdown($(this));
     });
   });
 }());

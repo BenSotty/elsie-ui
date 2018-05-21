@@ -2,7 +2,7 @@
   transition: all 0.3s ease-out;
 }
 
-%animate-slide-down-collapsed {
+%animate-menu-collapsed {
   transition: all 0.2s ease-out;
   display: block;
   overflow: hidden;
@@ -13,10 +13,24 @@
   transform-style: preserve-3d;
 }
 
-%animate-slide-down-expanded {
+%animate-menu-expanded {
   opacity: 1;
   visibility: visible;
   transform: rotate3d(1,0,0, 0deg);
+}
+
+%animate-slide-down-collapsed {
+  @extend %transition-all;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+%animate-slide-down-expanded {
+  // Override max-height for every use case
+  max-height: 450px;
+  opacity: 1;
 }
 
 %hover-img-switch {
