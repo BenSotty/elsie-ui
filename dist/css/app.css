@@ -9994,10 +9994,16 @@ a.text-dark:hover, a.text-dark:focus {
       background-color: #f8f9fa;
       border-radius: 0 0 8px 8px;
       padding-left: 15px; }
-      .navigation .navigation-container .nav-item.log-in button {
+      .navigation .navigation-container .nav-item.log-in .btn {
         margin: 0;
         border: none;
-        padding: 0; }
+        padding-left: 0;
+        padding-right: 0;
+        color: #2cd4d9; }
+        .navigation .navigation-container .nav-item.log-in .btn:hover {
+          background-color: transparent;
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
       .navigation .navigation-container .nav-item.log-in i {
         font-size: 0.75rem;
         margin-left: 3px; }

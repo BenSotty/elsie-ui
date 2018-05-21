@@ -306,10 +306,17 @@
           border-radius: 0 0 $box-radius $box-radius;
           padding-left: $gutter / 2;
 
-          button {
+          .btn {
             margin: 0;
             border: none;
-            padding: 0;
+            padding-left: 0;
+            padding-right: 0;
+            color: $blue;
+
+            &:hover {
+              background-color: transparent;
+              box-shadow: none;
+            }
           }
 
 
