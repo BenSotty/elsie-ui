@@ -13,7 +13,8 @@ $.extend(RandomizeContent.prototype, {
     this.defaultOptions = {
       switchIntervallInSeconds: 20,
       animationDuration: 0.8,
-      fadingOutStopRate: 0.3
+      fadingOutStopRate: 0.3,
+      fadeOut: true
     };
     this.options = $.extend({}, this.defaultOptions, randomContent.options);
     this.$container.css("transition-duration", this.options.animationDuration + "s");
@@ -42,9 +43,12 @@ $.extend(RandomizeContent.prototype, {
   },
   switchContent: function() {
     this.setRandomIndex.call(this);
-    this.startFadeOut.call(this);
-    var stopFadeOutInMs = this.options.animationDuration * this.options.fadingOutStopRate * 1000;
-    window.setTimeout(this.stopFadeOut.bind(this), stopFadeOutInMs);
+    if (this.options.fadeOut) {
+      this.startFadeOut.call(this);
+      var stopFadeOutInMs = this.options.animationDuration * this.options.fadingOutStopRate * 1000;
+      window.setTimeout(this.stopFadeOut.bind(this), stopFadeOutInMs);
+    }
+
     this.setContent.call(this);
   },
   setRandomIndex: function() {

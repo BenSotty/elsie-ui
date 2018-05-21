@@ -11220,6 +11220,9 @@ form.open-form .input-text-open:not(:last-child) {
   opacity: 1; }
   [data-randomize-content].fadingOut {
     opacity: 0; }
+  [data-randomize-content] a, [data-randomize-content] .btn {
+    -webkit-transition: none !important;
+    transition: none !important; }
 
 .select-dropdown {
   display: inline-block;

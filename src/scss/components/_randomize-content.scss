@@ -5,4 +5,8 @@
   &.fadingOut {
     opacity: 0;
   }
+
+  a, .btn {
+    transition: none !important;
+  }
 }
