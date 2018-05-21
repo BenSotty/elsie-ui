@@ -11182,20 +11182,27 @@ a.card-bodered {
   color: #fff;
   border-color: #fff; }
 
-.schedule-demo-form input[name="demo[msg]"] {
-  width: 600px; }
-
 .schedule-demo-form .select-dropdown-institution-type.expanded .dropdown-options {
   max-height: 140px; }
 
 form.open-form input, form.open-form select, form.open-form label, form.open-form div {
   font-size: 1.5rem; }
 
+form.open-form .input-text-open .input-text, form.open-form .input-text-open input, form.open-form .input-text-open .select-dropdown {
+  width: 100%;
+  display: block; }
+
 form.open-form .input-text-open:not(:last-child) {
   margin-bottom: 25px; }
 
-form.open-form input, form.open-form select, form.open-form .dropdown-toggle {
-  width: 300px; }
+@media (min-width: 768px) {
+  form.open-form .input-text-open .input-text {
+    display: inline; }
+  form.open-form .input-text-open input, form.open-form .input-text-open .select-dropdown {
+    display: inline-block;
+    width: 300px; }
+  .schedule-demo-form .input-text-open input[name="demo[msg]"] {
+    width: 600px; } }
 
 @media (min-width: 992px) {
   .login-message-container {

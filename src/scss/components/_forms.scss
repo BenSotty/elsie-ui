@@ -37,10 +37,6 @@
     border-color: $white;
   }
 
-  input[name="demo[msg]"] {
-    width: 600px;
-  }
-
   .select-dropdown-institution-type.expanded .dropdown-options {
     max-height: 140px;
   }
@@ -51,12 +47,32 @@ form.open-form {
     font-size: rem(24px);
   }
 
-  .input-text-open:not(:last-child) {
-    margin-bottom: 25px;
+  .input-text-open {
+    .input-text, input, .select-dropdown {
+      width: 100%;
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  form.open-form .input-text-open {
+    .input-text {
+      display: inline;
+    }
+
+    input, .select-dropdown {
+      display: inline-block;
+      width: 300px;
+    }
   }
 
-  input, select, .dropdown-toggle {
-    width: 300px;
+  .schedule-demo-form .input-text-open input[name="demo[msg]"] {
+    width: 600px;
   }
 }
 
