@@ -11201,6 +11201,15 @@ form.open-form .input-text-open .input-text, form.open-form .input-text-open inp
 form.open-form .input-text-open:not(:last-child) {
   margin-bottom: 25px; }
 
+form.open-form .input-check-open input,
+form.open-form .input-check-open label {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0; }
+
+form.open-form .input-check-open input {
+  margin-right: 10px; }
+
 @media (min-width: 768px) {
   form.open-form .input-text-open .input-text {
     display: inline; }

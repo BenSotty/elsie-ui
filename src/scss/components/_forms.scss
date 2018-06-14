@@ -57,6 +57,17 @@ form.open-form {
       margin-bottom: 25px;
     }
   }
+
+  .input-check-open input,
+  .input-check-open label {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-check-open input {
+    margin-right: 10px;
+  }
 }
 
 @include media-breakpoint-up(md) {
