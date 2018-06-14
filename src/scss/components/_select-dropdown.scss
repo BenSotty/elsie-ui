@@ -56,7 +56,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $gray-300;
+      background-color: $hover-dropdown-color;
     }
 
     &.selected {

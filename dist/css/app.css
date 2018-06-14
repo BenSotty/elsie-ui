@@ -11263,7 +11263,7 @@ form.open-form .input-text-open:not(:last-child) {
     line-height: 35px;
     cursor: pointer; }
     .select-dropdown .dropdown-option:hover {
-      background-color: #dee2e6; }
+      background-color: #9575CD; }
     .select-dropdown .dropdown-option.selected {
       background-color: #55459f;
       color: #fff; }
