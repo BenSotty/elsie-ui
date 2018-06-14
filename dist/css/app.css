@@ -10462,6 +10462,19 @@ p {
 .suber-section {
   padding-top: 15px; }
 
+.schedule-demo-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: right;
+  color: #fff; }
+  .schedule-demo-section .schedule-demo-txt {
+    color: #fff;
+    line-height: 40px;
+    display: inline-block;
+    float: left; }
+  .schedule-demo-section .btn {
+    display: inline-block; }
+
 @media (max-width: 767.98px) {
   .section-header {
     padding-top: 40px; }

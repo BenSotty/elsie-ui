@@ -79,6 +79,24 @@ $suber-section-space: 15px;
   padding-top: $suber-section-space;
 }
 
+.schedule-demo-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: right;
+  color: $white;
+
+  .schedule-demo-txt {
+    color: $white;
+    line-height: $btn-height;
+    display: inline-block;
+    float: left;
+  }
+
+  .btn {
+    display: inline-block;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .section-header {
     padding-top: $section-header-space-sm;
