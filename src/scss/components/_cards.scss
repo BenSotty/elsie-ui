@@ -143,6 +143,10 @@ a.card-bodered {
   background-image: url("../images/icons/quotes_white.svg");
 }
 
+.cards-title {
+  margin-bottom: $gutter;
+}
+
 @include media-breakpoint-down(xs) {
 
   .card-quotes:before {

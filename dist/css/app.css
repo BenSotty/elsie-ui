@@ -11012,6 +11012,9 @@ a.card-bodered {
 .section-block-grey .card-quotes:before {
   background-image: url("../images/icons/quotes_white.svg"); }
 
+.cards-title {
+  margin-bottom: 30px; }
+
 @media (max-width: 575.98px) {
   .card-quotes:before {
     display: none; }
