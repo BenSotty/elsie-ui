@@ -17,6 +17,12 @@ button:focus {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 
+    &.no-hover-up {
+      transform: none;
+      // the box shadow of the .btn class
+      box-shadow: 0 2px 4px 0 rgba(82,59,133,0.4);
+    }
+
     background-color: $blue;
     color: $white;
 
