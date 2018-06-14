@@ -11,8 +11,15 @@ $.extend(SelectDropdown.prototype, {
     this.$options = this.$content.find(".dropdown-option");
     this.$select = this.$container.find("select");
 
-    this.$toggle.click(this.toggle.bind(this));
-    this.$options.not(".disabled").click(this.select.bind(this));
+    var self = this;
+    this.$toggle.click(function(event) {
+      self.toggle.call(self);
+      event.stopPropagation();
+    });
+
+    this.$options.not(".disabled").click(function(event) {
+      self.select.call(self, $(event.currentTarget));
+    });
   },
   toggle: function () {
     this.$container.toggleClass("expanded");
@@ -20,9 +27,10 @@ $.extend(SelectDropdown.prototype, {
   close: function() {
     this.$container.removeClass("expanded");
   },
-  select: function () {
-    var $option = $(event.currentTarget),
-        value = $option.data("value"),
+  select: function ($option) {
+    if (!$option) { return; }
+
+    var value = $option.data("value"),
         closeDelayInMs = 100;
 
     this.$options.not($option).removeClass("selected");
