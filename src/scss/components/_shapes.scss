@@ -138,26 +138,25 @@ $shape-size-md: 80px;
 
 .shape-separator-inside-block {
   margin-top: - 60px;
-/*  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;*/
+  //  padding-left: $gutter / 2;
+  // padding-right: $gutter / 2;
 
   > * {
     background-color: $white;
   }
 
   @include media-breakpoint-up(md) {
-/*    padding-left: $shape-size-md + $gutter / 2;
-    padding-right: $shape-size-md + $gutter / 2;*/
+    // padding-left: $shape-size-md + $gutter / 2;
+    // padding-right: $shape-size-md + $gutter / 2;
     margin-top: - 2 * $shape-size-md  + $gutter / 2;
   }
 
   @include media-breakpoint-up(lg) {
-/*    padding-left: $shape-size + $gutter / 2;
-    padding-right: $shape-size + $gutter / 2;*/
+    //padding-left: $shape-size + $gutter / 2;
+    //padding-right: $shape-size + $gutter / 2;
     margin-top: - 2 * $shape-size  + $gutter / 2;
   }
 }
-
 
 .shape-container {
   position: relative;
