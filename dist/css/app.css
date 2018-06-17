@@ -10880,20 +10880,14 @@ ul.ticks li {
   position: relative; }
 
 .shape-separator-inside-block {
-  margin-top: -60px;
-  /*  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;*/ }
+  margin-top: -60px; }
   .shape-separator-inside-block > * {
     background-color: #fff; }
   @media (min-width: 768px) {
     .shape-separator-inside-block {
-      /*    padding-left: $shape-size-md + $gutter / 2;
-    padding-right: $shape-size-md + $gutter / 2;*/
       margin-top: -145px; } }
   @media (min-width: 992px) {
     .shape-separator-inside-block {
-      /*    padding-left: $shape-size + $gutter / 2;
-    padding-right: $shape-size + $gutter / 2;*/
       margin-top: -185px; } }
 
 .shape-container {
@@ -11304,3 +11298,39 @@ form.open-form .input-check-open input {
       cursor: default; }
       .select-dropdown .dropdown-option.disabled:hover {
         background-color: transparent; }
+
+.parallax-shape-container {
+  position: relative; }
+
+.parallax-shape-01, .parallax-shape-02, .parallax-shape-07 {
+  -webkit-animation: parallaxShapeMove 12s ease-in-out 0s infinite alternate;
+          animation: parallaxShapeMove 12s ease-in-out 0s infinite alternate;
+  display: none; }
+  @media (min-width: 992px) {
+    .parallax-shape-01, .parallax-shape-02, .parallax-shape-07 {
+      display: block;
+      position: absolute; } }
+
+@-webkit-keyframes parallaxShapeMove {
+  from {
+    margin-top: -40px; }
+  to {
+    margin-top: 40px; } }
+
+@keyframes parallaxShapeMove {
+  from {
+    margin-top: -40px; }
+  to {
+    margin-top: 40px; } }
+
+.parallax-shape-01 {
+  top: -50px;
+  left: 100px; }
+
+.parallax-shape-02 {
+  top: 110px;
+  right: 20px; }
+
+.parallax-shape-07 {
+  top: 510px;
+  left: 15px; }

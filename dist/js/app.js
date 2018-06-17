@@ -102,7 +102,11 @@ $.extend(Navigation.prototype, {
     this.headerId = this.id + "-header";
     this.$header = $("#" + this.headerId);
     this.scrolled = false;
-    this.$scrollContainer = $(window);
+    this.scrollContainerId = this.id + "-container";
+    this.$scrollContainer = $("#" + this.scrollContainerId);
+    if (this.$scrollContainer.length === 0) {
+      this.$scrollContainer = $(window);
+    }
     this.$scrollContainer.scroll(this.updateState.bind(this));
     this.updateState();
   },
