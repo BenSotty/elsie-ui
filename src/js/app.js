@@ -21,5 +21,9 @@
     $.each($(".select-dropdown"), function() {
       new SelectDropdown($(this));
     });
+
+    $.each($(".parallax-shape-container [class^='parallax-shape-']"), function() {
+      new ParallaxScroll($(this));
+    });
   });
 }());

@@ -102,7 +102,11 @@ $.extend(Navigation.prototype, {
     this.headerId = this.id + "-header";
     this.$header = $("#" + this.headerId);
     this.scrolled = false;
-    this.$scrollContainer = $(window);
+    this.scrollContainerId = this.id + "-container";
+    this.$scrollContainer = $("#" + this.scrollContainerId);
+    if (this.$scrollContainer.length === 0) {
+      this.$scrollContainer = $(window);
+    }
     this.$scrollContainer.scroll(this.updateState.bind(this));
     this.updateState();
   },
@@ -116,6 +120,56 @@ $.extend(Navigation.prototype, {
     if (isScrolled !== this.scrolled) {
       this.scrolled = isScrolled;
       this.$navBar.toggleClass("scrolled");
+    }
+  }
+});
+
+ParallaxScroll = function($elt) {
+  this.init($elt);
+};
+
+$.extend(ParallaxScroll.prototype, {
+  init: function ($elt) {
+    this.$elt = $elt;
+
+    this.config = {
+      isBottom: this.$elt.hasClass("parallax-bottom"),
+      initTop: +this.$elt.css("top").replace('px',''),
+      initBottom: +this.$elt.css("bottom").replace('px',''),
+      moveHeight: 150
+    };
+
+
+    this.$scrollContainer = $(window);
+
+    var $nav = $('#main-navigation');
+    this.navHeight = $nav.length > 0 ?  $nav.innerHeight() : 0;
+
+    this.scroll.bind(this);
+    this.$scrollContainer.scroll(this.scroll.bind(this));
+  },
+  scroll: function () {
+    var eltOffset = this.$elt.offset(),
+        eltTop = eltOffset.top,
+        windowHeight = this.$scrollContainer.innerHeight() - this.navHeight,
+        windowTop = this.$scrollContainer.scrollTop(),
+        windowBottom = windowTop + windowHeight,
+        scrollRatio = (windowBottom -  eltTop) / windowHeight;
+
+    if (scrollRatio > - 0.1 && scrollRatio < 1.1) {
+      var movePx = this.config.moveHeight * scrollRatio;
+
+      if (this.config.isBottom) {
+        var newBottom = this.config.initBottom - movePx,
+            newBottomCss = newBottom + "px";
+
+        this.$elt.css("bottom", newBottomCss);
+      } else {
+        var newTop = this.config.initTop + movePx,
+            newTopCss = newTop + "px";
+
+        this.$elt.css("top", newTopCss);
+      }
     }
   }
 });
@@ -352,6 +406,10 @@ $.extend(SelectDropdown.prototype, {
 
     $.each($(".select-dropdown"), function() {
       new SelectDropdown($(this));
+    });
+
+    $.each($(".parallax-shape-container [class^='parallax-shape-']"), function() {
+      new ParallaxScroll($(this));
     });
   });
 }());
