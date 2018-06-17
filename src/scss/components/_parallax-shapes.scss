@@ -1,0 +1,51 @@
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  perspective-origin-x: 100%;
+}
+%parallax-layer {
+  transform-origin-x: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-layer-base {
+  transform-origin-x: 100%;
+  transform: translateZ(0);
+}
+.parallax-layer-back {
+  @extend %parallax-layer;
+  transform: translateZ(-1px) scale(2);
+}
+
+%parallax-shape {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    position: absolute;
+  }
+}
+
+.parallax-shape-01 {
+  @extend %parallax-shape;
+  top: 650px;
+  left: 100px;
+}
+
+.parallax-shape-02 {
+  @extend %parallax-shape;
+  top: 850px;
+  right: 20px;
+}
+
+.parallax-shape-07 {
+  @extend %parallax-shape;
+  top: 850px;
+  left: 20px;
+}

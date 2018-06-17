@@ -102,7 +102,11 @@ $.extend(Navigation.prototype, {
     this.headerId = this.id + "-header";
     this.$header = $("#" + this.headerId);
     this.scrolled = false;
-    this.$scrollContainer = $(window);
+    this.scrollContainerId = this.id + "-container";
+    this.$scrollContainer = $("#" + this.scrollContainerId);
+    if (this.$scrollContainer.length === 0) {
+      this.$scrollContainer = $(window);
+    }
     this.$scrollContainer.scroll(this.updateState.bind(this));
     this.updateState();
   },
@@ -116,6 +120,39 @@ $.extend(Navigation.prototype, {
     if (isScrolled !== this.scrolled) {
       this.scrolled = isScrolled;
       this.$navBar.toggleClass("scrolled");
+    }
+  }
+});
+
+ParallaxScroll = function($elts) {
+  this.init($elt);
+};
+
+$.extend(ParallaxScroll.prototype, {
+  init: function ($elt) {
+    this.$elt = $elt;
+    this.config = {
+      initTop: +this.$elt.css("top").replace('px',''),
+      moveHeight: 20,
+    };
+    this.$scrollContainer = $(window);
+
+    this.$scrollContainer.scroll(this.scroll.bind(this));
+  },
+  scroll: function () {
+    var eltOffset = this.$elt.offset(),
+        eltTop = eltOffset.top,
+        windowMidHeight = this.$scrollContainer.innerHeight() / 2,
+        windowTop = this.$scrollContainer.scrollTop(),
+        windowCenter = windowTop + windowMidHeight,
+        scrollRatio = (windowCenter -  eltTop) / windowMidHeight;
+
+    if (scrollRatio > -1 && scrollRatio < 1) {
+      var movePx = this.config.moveHeight * scrollRatio,
+          newTop = this.config.initTop + movePx,
+          newTopCss = newTop + "px";
+
+      this.$elt.css("top", newTopCss);
     }
   }
 });
