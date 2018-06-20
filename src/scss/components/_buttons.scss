@@ -49,11 +49,6 @@ button:focus {
     position: relative;
     padding-right: 50px;
 
-
-    > * {
-      padding-right: $bth-icon-height;
-    }
-
     i, .elsie-icon-arrow_right {
       background-color: $blue-light;
       height: $bth-icon-height;
@@ -62,12 +57,9 @@ button:focus {
       position: absolute;
       right: 2px;
       top: 2px;
+      text-align: center;
 
       line-height: $bth-icon-height;
-
-      &:before {
-        margin-left: 13px;
-      }
     }
   }
 

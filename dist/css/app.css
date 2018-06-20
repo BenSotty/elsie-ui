@@ -10528,8 +10528,6 @@ button:focus {
   .btn.btn-icon {
     position: relative;
     padding-right: 50px; }
-    .btn.btn-icon > * {
-      padding-right: 36px; }
     .btn.btn-icon i, .btn.btn-icon .elsie-icon-arrow_right {
       background-color: #50e3d9;
       height: 36px;
@@ -10538,9 +10536,8 @@ button:focus {
       position: absolute;
       right: 2px;
       top: 2px;
+      text-align: center;
       line-height: 36px; }
-      .btn.btn-icon i:before, .btn.btn-icon .elsie-icon-arrow_right:before {
-        margin-left: 13px; }
   .btn.btn-txt {
     background-color: transparent;
     color: #2cd4d9;
