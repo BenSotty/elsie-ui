@@ -4,7 +4,9 @@
 @import "rem";
 
 // include custom made components
+@import "components/navigation";
 @import "components/fonts";
+@import "components/elsie-icons";
 @import "components/typography";
 @import "components/helpers";
 @import "components/animations";
@@ -21,5 +23,8 @@
 @import "components/cards";
 @import "components/header";
 @import "components/footer";
-@import "components/navigation";
 @import "components/workflow";
+@import "components/forms";
+@import "components/randomize-content";
+@import "components/select-dropdown";
+@import "components/parallax-shapes";

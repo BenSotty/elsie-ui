@@ -1,0 +1,42 @@
+.parallax-shape-container {
+  position: relative;
+}
+
+%parallax-shape {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    position: absolute;
+  }
+}
+
+.parallax-shape-01 {
+  @extend %parallax-shape;
+  top: -90px;
+  left: 120px;
+}
+
+.parallax-shape-02 {
+  @extend %parallax-shape;
+  top: 110px;
+  right: 10%;
+}
+
+.parallax-shape-03 {
+  @extend %parallax-shape;
+  top: 170px;
+  right: 5%;
+}
+
+.parallax-shape-04 {
+  @extend %parallax-shape;
+  bottom: 200px;
+  right: 5%;
+}
+
+.parallax-shape-07 {
+  @extend %parallax-shape;
+  bottom: 150px;
+  left: 5%;
+}

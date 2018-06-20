@@ -41,11 +41,48 @@ input.short {
   }
 }
 
-input.open {
+input.open,
+select.open {
   background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: solid 1px $purple;
-  padding: 0 0 3px 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: solid 1px;
+  border-radius: 0;
+  padding: 0;
+}
+
+select.open {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* hide the default arrow in ie10 and ie11 */
+  &::-ms-expand {
+    display: none;
+  }
+
+  option {
+    font-size: 1rem;
+    background-color: $white;
+  }
+}
+
+input.white,
+select.white {
+  color: $white;
+  border-color: $white;
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $gray-300;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $gray-300;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $gray-300;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $gray-300;
+  }
 }

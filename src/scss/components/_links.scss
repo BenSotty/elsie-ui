@@ -1,9 +1,11 @@
-a.arrow-right {
+.arrow-right {
   > * {
     margin-right: 5px;
   }
 
-  i {
+  i, .elsie-icon-arrow_right {
+    @extend %transition-all;
     font-size: 0.7em;
+    display: inline-block;
   }
 }

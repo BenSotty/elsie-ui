@@ -2,6 +2,23 @@
   transition: all 0.3s ease-out;
 }
 
+%animate-menu-collapsed {
+  transition: all 0.2s ease-out;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: top center;
+  transform: rotate3d(1,0,0, 20deg);
+  transform-style: preserve-3d;
+}
+
+%animate-menu-expanded {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate3d(1,0,0, 0deg);
+}
+
 %animate-slide-down-collapsed {
   @extend %transition-all;
   max-height: 0;

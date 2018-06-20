@@ -1,6 +1,7 @@
-@@include('start',{
-  title:'Elsie patients and family workflow',
-  description:'How Elsie works with patients and families.'
+@@include('start', {
+  title:'Elsie - Patients and Family Home',
+  description:'Elsie brings genetically informed medicine to your physician, enabling a better path forward to your health based on your DNA.',
+  layout: ''
 })
 
 @@include('navigation', {  bg:'bg-blue-metal-grad' })
@@ -10,122 +11,102 @@
   <div class="bg-blue-metal-grad">
     <div class="container section-header">
       <div class="row">
-        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
-          <span class="sub-text">PATIENTS & FAMILY</span>
-          <h1>You, Your genome, individualised answers.</h1>
+        <div class="col-12 mb-4 mb-lg-0 col-lg-7">
+          <span class="sub-text">PATIENTS &amp; FAMILY</span>
+          <h1>Your genome, unique&nbsp;answers</h1>
           <div class="sub-section">
-            <p class="big">Elsie bring genetically informed medicine to your physician, enabling a better path forward to your health based on your DNA.</p>
+            <p class="lead white">Elsie brings genetically informed medicine to your physician, enabling a better path forward to your health based on your&nbsp;DNA.</p>
           </div>
         </div>
-        <div class="col-12 col-lg-6 img-header-container">
-          <img class="img-header" alt="Elsie workflow" src="images/icons/patients-workflow.svg" />
+        <div class="col-12 col-lg-5 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/heros/patients.svg" />
         </div>
       </div>
     </div>
   </div>
   @@include('shape_separator', { classes:'bg-blue-metal-grad' })
 </div>
+
+
 <!-- Card full width -->
-<div class="shape-separator-inside-block">
+<div class="shape-separator-inside-block container">
   <div class="card-bodered">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_healthier.svg" />
-          <span>Healthier Lifestyle</span>
-        </div>
-        <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_benefits.svg" />
-          <span>Life Time Benefits</span>
-        </div>
-        <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_diagnosis.svg" />
-          <span>Improved Diagnosis</span>
-        </div>
-        <div class="col-12 mb-3 col-md-6 mb-lg-0 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_disease.svg" />
-          <span>Disease Prevention</span>
-        </div>
-        <div class="col-12 mb-3 mb-md-0 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_personalised-treatment.svg" />
-          <span>Personalised Treatments and Prescriptions</span>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_family.svg" />
-          <span>Deeper Awareness of Family History</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- workflow_header included manually -->
-<div class="section">
-  <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <h2 class="text-center-md">Your genome.</h2>
-        <h2 class="text-center-md">Comprehensive medical knowledge.</h2>
-        <p class="text-center-md text-secondary">Becuase each person is genetically unique, knowledge of your genome can reveal predisposition to certain disease, how your organism may deal with certain conditions, how you will respond to given treatments.</p>
+      <div class="col-12 mb-3 col-md-6 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Healthier"></div>
+        <div class="icon-inline-label">Healthier lifestyle</div>
+      </div>
+      <div class="col-12 mb-3 col-md-6 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Benefits"></div>
+        <div class="icon-inline-label">Lifetime benefits</div>
+      </div>
+      <div class="col-12 mb-3 col-md-6 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Diagnosis"></div>
+        <div class="icon-inline-label">Improved diagnosis</div>
+      </div>
+      <div class="col-12 mb-3 col-md-6 mb-lg-0 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Disease"></div>
+        <div class="icon-inline-label">Disease prevention</div>
+      </div>
+      <div class="col-12 mb-3 mb-md-0 col-md-6 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Treatment"></div>
+        <div class="icon-inline-label">Better treatments and prescriptions</div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="icon-inline blue-metal elsie-icon-Family"></div>
+        <div class="icon-inline-label">Deeper awareness of family history</div>
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- Workflow -->
-<div class="section-block">
+<div class="section-block container">
+    @@include('workflow_header', {
+    title: 'Comprehensive knowledge',
+    text: "Each person is genetically unique. Genetic knowledge can reveal your predisposition to certain diseases, how your organism may deal with certain conditions and how you'll respond to given treatments."
+  })
+
   <div class="container">
     <div class="row sub-section">
       <div class="col-12 mb-4 col-sm-6 col-md-4 col-lg mb-lg-0">
         <div class="card-open">
-          <img class="icon" src="images/icons/icon_dna.svg" />
+          <div class="icon blue-metal elsie-icon-dna"></div>
           <h3 class="title">DNA</h3>
           <p class="text">Your genome is the sum of all genetics information you carry, determining to a significant extent, who you are. This information is written in a four-letter language: your DNA.</p>
         </div>
       </div>
       <div class="col-12 mb-4 col-sm-6 col-md-4 col-lg mb-lg-0">
         <div class="card-open">
-          <img class="icon" src="images/icons/icon_dna_2.svg" />
+          <div class="icon blue-metal elsie-icon-genome"></div>
           <h3 class="title">Unique Genome</h3>
           <p class="text">Differences in these letters make your genome unique. Identifying those differences and understand the meaning behind leads to a more personnalised care.</p>
         </div>
       </div>
       <div class="col-12 mb-4 col-sm-6 col-md-4 col-lg mb-lg-0">
         <div class="card-open">
-          <img class="icon" src="images/icons/icon_sample.svg" />
+          <div class="icon blue-metal elsie-icon-sample"></div>
           <h3 class="title">Sample DNA</h3>
           <p class="text">DNA is found in every cell of your body. When you provide a blood or a saliva sample to a lab, your DNA is ready for extraction.</p>
         </div>
       </div>
       <div class="col-12 mb-4 col-sm-6 col-md-6 col-lg mb-lg-0">
         <div class="card-open">
-          <img class="icon" src="images/icons/icon_lab-work.svg" />
+          <div class="icon blue-metal elsie-icon-lab_work"></div>
           <h3 class="title">Lab Work</h3>
           <p class="text">Your DNA is processed through a combination of chemical procedures and data analyses. These technologies identify thousands of alterations in your genome.</p>
         </div>
       </div>
       <div class="col-12 col-md-6  col-lg">
         <div class="card-open">
-          <img class="icon" src="images/icons/icon_results.svg" />
+          <div class="icon blue-metal elsie-icon-Individualised_Results"></div>
           <h3 class="title">Individualised Results</h3>
           <p class="text">Comprehensive algorithms analyse your genetic data, cross-checking it with the latest reference datasets and specific evidence. All meaningful changes are then used to build a unique report.</p>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Quote section -->
-<div class="section-block-grey shape-section">
-  <img class="shape-section-right" src="images/shapes/shape-separator.png" />
-  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
-  <div class="shape-section-content">
-    @@include('quote_section', {
-      section:'',
-      quote:'I am empowering myself by learning about my genome, and making better health & lifestyle decisions based on my personal genetics.'
-    })
-  </div>
-</div>
-<!-- Featured partners -->
-<div class="section">
-  @@include('partners')
 </div>
 <!-- Next step -->
 @@include('newsletter_section', {

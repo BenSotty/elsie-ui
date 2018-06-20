@@ -1,6 +1,23 @@
+html.layout-full-height {
+  height: 100%;
+
+  body {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.container-full-height {
+  height: 100%;
+
+  > .row {
+    height: 100%;
+  }
 }
 
 .layout-bottom-right {
@@ -20,6 +37,13 @@ body {
   }
 }
 
+.layout-centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 @include media-breakpoint-down(lg) {
   .hide-lg-down {
     display: none !important;
@@ -33,6 +57,12 @@ body {
 }
 
 @include media-breakpoint-down(sm) {
+
+  .container {
+    width: 98%;
+  }
+
+
   .hide-sm-down {
     display: none !important;
   }

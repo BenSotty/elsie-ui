@@ -1,6 +1,7 @@
 @@include('start', {
-  title:'Elsie home page',
-  description:'Get to know the Elsie organisation'
+  title:'Elsie about page',
+  description:'Get to know the Elsie organisation',
+  layout: ''
 })
 
 @@include('navigation', { bg:'bg-purple-grad' })
@@ -11,23 +12,9 @@
     <div class="container section-header-block">
       <div class="row">
         <div class="col-8">
-          <h1>Transform your genetics workflow with Elsie.</h1>
-          <div class="sub-section">
-            <p class="big">We built Elsie to radically improve patient healthcare by bringing high quality and validated genomic knowledge into everyday clinical practice.</p>
-          </div>
+          <h1>Transform your genetics workflow with Elsie</h1>
+          <p class="lead white">We built Elsie to radically improve patient healthcare by bringing high quality and validated genomic knowledge into everyday clinical practice.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section-block">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 mb-4 col-sm-6 mb-sm-0 offset-lg-1 col-lg-5">
-        <p>Elsie is a digital health platform to simplify and modernise how genetic tests are accessed, purchased and managed. We bring digital efficiency to streamline the handling of genetic tests, unifying all necessary documentation in a direct and easy-to-use web platform.</p>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-5">
-        <p>We bring individualised medicine to the desktop of every physician. Elsie bridges the gap between genomics knowledge and medical practice, helping physicians make more personalised diagnosis and prognoses adapted to each patient’s genetic makeup.</p>
       </div>
     </div>
   </div>
@@ -35,45 +22,62 @@
 <div class="section-block-grey">
   <div class="container">
     <div class="row">
-      <div class="col-12 offset-lg-2 col-lg-8">
-        <h2 class="text-center-md">We’d love  to hear from you.</h2>
-        <p class="suber-section text-center-md">Our main office is located at the state-of-the-art Biocant Park. You can find us in the middle of a large pine tree forest, half an hour from unspoiled beaches and 20 minutes from Coimbra, home to one of Europe's oldest universities.</p>
+      <div class="col-12 mb-4 col-sm-6 mb-sm-0 offset-lg-1 col-lg-5">
+        <p class="lead">Elsie is a digital health platform to simplify and modernise how genetic tests are accessed, purchased and managed. We bring digital efficiency to streamline the handling of genetic tests, unifying all necessary documentation in a direct and easy-to-use web platform.</p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-5">
+        <p class="lead">We bring individualised medicine to the desktop of every physician. Elsie bridges the gap between genomics knowledge and medical practice, helping physicians make more personalised diagnosis and prognoses adapted to each patient’s genetic makeup.</p>
       </div>
     </div>
   </div>
 </div>
+
 <div class="section-block">
   <div class="container">
-    <div class="row">
-      <div class="col-12 offset-lg-2 col-lg-8">
-        <h2 class="text-center-md">Growing fast to provide you with closer support.</h2>
-      </div>
-    </div>
+
+    @@include('workflow_header', {
+      title: 'We’d love  to hear from you',
+      text: "Elsie currently has offices in two cities, and we’re growing fast to provide you with an even closer support. Our main office is located at the state-of-the-art Biocant Park."
+    })
+
     <div class="row sub-section">
-      <div class="col-12 mb-4 mb-sm-0 col-sm-6 offset-md-1 col-md-5 offset-lg-3 col-lg-3">
-        <div class="card-open">
-          <img class="icon" src="images/icons/icon_workflow.svg" />
-          <h3 class="title">Cantanhede, Coimbra</h3>
-          <p class="text">Biocante, Parque Tecnológico de Cantanhede</p>
-          <p class="text">Núcleo 04, Lote 3</p>
-          <p class="text">3060-197 Cantanhede</p>
+      <div class="col-12 mb-4 col-sm-6 offset-lg-2 col-lg-4">
+        <div class="card-bodered-container">
+          <a href="https://www.google.pt/maps/place/Coimbra+Genomics/@40.3598864,-8.6076952,15z/data=!4m2!3m1!1s0x0:0x6b2db717e783205d?sa=X&ved=0ahUKEwjt2ZXB9tDaAhUHVRQKHU_5B9QQ_BIIcTAK" target="_blank" class="card-bodered">
+            <div class="icon purple-light elsie-icon-Cantanhede"></div>
+            <h4>Cantanhede, Coimbra</h4>
+            <p class="text">Biocant Park</p>
+            <p class="text">Núcleo 04, Lote 3</p>
+            <p class="text">3060-197 Cantanhede</p>
+            <p class="text">Portugal</p>
+            <div class="link arrow-right">
+              <span>View Map</span>
+              <span class="elsie-icon-arrow_right"></span>
+            </div>
+          </a>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-5 col-lg-3">
-        <div class="card-open">
-          <img class="icon" src="images/icons/icon_workflow.svg" />
-          <h3 class="title">Neuruppin, Berlin</h3>
-          <p class="text">Biocante, Parque Tecnológico de Cantanhede</p>
-          <p class="text">Núcleo 04, Lote 3</p>
-          <p class="text">3060-197 Cantanhede</p>
+      <div class="col-12 mb-4 col-sm-6  col-lg-4">
+        <div class="card-bodered-container">
+          <a href="https://www.google.pt/maps/place/Fehrbelliner+Str.+38,+10119+Berlin,+Germany/data=!4m2!3m1!1s0x47a851faf6ac1919:0x25e362d9c357b0fc?sa=X&ved=0ahUKEwjItdmu9tDaAhUPkRQKHeFjC1gQ8gEIJjAA" target="_blank" class="card-bodered">
+            <div class="icon purple-light elsie-icon-Berlim"></div>
+            <h4>Neuruppin, Berlin</h4>
+            <p class="text">Fehrbelliner Str. 38</p>
+            <p class="text">16816</p>
+            <p class="text">Neuruppin</p>
+            <p class="text">Germany</p>
+            <div class="link arrow-right">
+              <span>View Map</span>
+              <span class="elsie-icon-arrow_right"></span>
+            </div>
+          </a>
         </div>
       </div>
+
+      <p class="lead section text-center-md text-secondary col-lg-10 offset-lg-1">Reach us by email <a href="mailto:support@elsie.pt">support@elsie.pt</a> </p>
+
     </div>
-    <div class="row sub-section">
-      <div class="col-12 offset-md-1 col-md-10 offset-lg-3 col-lg-6">
-        <p class="bold">Reach us by phone at XXX, or by email support@elsie.pt.</div>
-      </div>
-    </div>
+
   </div>
 </div>
 

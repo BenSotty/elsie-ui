@@ -1,5 +1,29 @@
 (function() {
   $(document).ready(function(){
-    new Navigation("main-navigation");
+    var $navBar = $("#main-navigation");
+    if ($navBar.length > 0) {
+      new Navigation($navBar);
+    }
+
+    $.each($(".expandable-hover"), function() {
+      new ExpandableHover($(this));
+    });
+
+    var $greetings = $("#greetings");
+    if ($greetings.length > 0) {
+      new Greetings($greetings);
+    }
+
+    $.each($("[data-randomize-content]"), function() {
+      new RandomizeContent($(this));
+    });
+
+    $.each($(".select-dropdown"), function() {
+      new SelectDropdown($(this));
+    });
+
+    $.each($(".parallax-shape-container [class^='parallax-shape-']"), function() {
+      new ParallaxScroll($(this));
+    });
   });
 }());

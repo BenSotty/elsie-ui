@@ -1,23 +1,27 @@
-Navigation = function(id) {
-  this.init(id);
+Navigation = function($navBar) {
+  this.init($navBar);
 };
 
 $.extend(Navigation.prototype, {
-  init: function (id) {
-    this.id = id;
-    this.$navBar = $("#" + this.id);
+  init: function ($navBar) {
+    this.$navBar = $navBar;
+    this.id = this.$navBar.attr('id');
     this.headerId = this.id + "-header";
     this.$header = $("#" + this.headerId);
     this.scrolled = false;
-    $(window).scroll(this.updateState.bind(this));
+    this.scrollContainerId = this.id + "-container";
+    this.$scrollContainer = $("#" + this.scrollContainerId);
+    if (this.$scrollContainer.length === 0) {
+      this.$scrollContainer = $(window);
+    }
+    this.$scrollContainer.scroll(this.updateState.bind(this));
     this.updateState();
   },
 
   updateState: function () {
     var headerPos = this.$header.position(),
         headerbottom = headerPos.top + this.$header.innerHeight(),
-        navBottom = $(window).scrollTop() + this.$navBar.innerHeight(),
-        windowScrollTop = $(window).scrollTop(),
+        navBottom = this.$scrollContainer.scrollTop() + this.$navBar.innerHeight(),
         isScrolled = navBottom > headerbottom;
 
     if (isScrolled !== this.scrolled) {

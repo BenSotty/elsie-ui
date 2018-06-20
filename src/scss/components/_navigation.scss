@@ -22,13 +22,12 @@
       color: $white;
     }
 
+    a.btn {
+      margin-left: 20px;
+    }
+
     &.expandable-hover {
       position: relative;
-
-      &:hover .expandable-content {
-        // Set max heigth on show for animation
-        max-height: 450px;
-      }
 
       .expandable-content {
         position: absolute;
@@ -36,7 +35,8 @@
         left: 0;
         z-index: 2;
         width: 270px;
-        margin-top: - $box-indicator-height;
+        margin-top: -6px;
+        box-shadow: 0 10px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
       }
 
       .box-indicator {
@@ -50,7 +50,7 @@
       }
 
       .expandable-toggle {
-        i {
+        i, .elsie-icon-arrow_up, .elsie-icon-arrow_down {
           font-size: rem(12px);
         }
       }
@@ -152,11 +152,28 @@
       a {
         color: $purple;
       }
+      a.btn {
+        color: $white;
+      }
+      a.btn.outline {
+        color: $blue;
+      }
+      .expandable-content {
+        box-shadow: none;
+      }
     }
 
     .expandable-items {
       border: solid 1px $border-grey;
     }
+  }
+}
+
+.navigation-simplified {
+  padding-top: 10px;
+
+  a:last-child {
+    float: right;
   }
 }
 
@@ -221,42 +238,48 @@
       }
 
       .nav-item {
-        .expandable-toggle {
-          padding: $gutter / 2;
-          color: $text-grey;
-          cursor: default;
+        &.expandable-hover,
+        &.expandable-hover.epanded {
+          .expandable-toggle {
+            padding: $gutter / 2;
+            color: $text-grey;
+            cursor: default;
 
-          i {
-            display: none;
+            i, .elsie-icon-arrow_down {
+              display: none;
+            }
+          }
+
+          .expandable-content {
+            position: relative;
+            // Show expandable content
+            transition: none;
+            max-height: none;
+            opacity: 1;
+            visibility: visible;
+            transform: rotate3d(1,0,0, 0deg);
+            overflow: visible;
+
+            width: auto;
+            border: none;
+            box-shadow: none;
+            float: left;
           }
         }
 
-        .expandable-content {
-          position: relative;
-          // Show expandable content
-          transition: none;
-          max-height: none;
-          opacity: 1;
-          overflow: visible;
+        .box-indicator {
+          display: none;
+        }
 
-          width: auto;
-          border: none;
-          float: left;
+        .expandable-items {
+          border-radius: 0px;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          border-bottom: solid 1px $border-grey;
 
-          .box-indicator {
-            display: none;
-          }
-
-          .expandable-items {
+          .expandable-item {
             border-radius: 0px;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            border-bottom: solid 1px $border-grey;
-
-            .expandable-item {
-              border-radius: 0px;
-            }
           }
         }
 
@@ -283,10 +306,17 @@
           border-radius: 0 0 $box-radius $box-radius;
           padding-left: $gutter / 2;
 
-          button {
+          .btn {
             margin: 0;
             border: none;
-            padding: 0;
+            padding-left: 0;
+            padding-right: 0;
+            color: $blue;
+
+            &:hover {
+              background-color: transparent;
+              box-shadow: none;
+            }
           }
 
 
@@ -302,6 +332,11 @@
       .navbar-toggler {
         color: $purple;
       }
+
+      a.btn {
+        color: $blue;
+      }
+
     }
   }
 }

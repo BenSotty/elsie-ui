@@ -1,0 +1,48 @@
+@@include('start', {
+  title:'Elsie - Login page',
+  description:'Login to Elsie platform.',
+  layout: 'layout-full-height'
+})
+
+<div class="container-fluid container-full-height">
+  <div class="row">
+    <div class="col-12 col-md-7 bg-white">
+      <div class="layout-centered-container">
+        <form class="login-form">
+          <a class="brand-logo-link" href="index.html">
+            <img class="brand-logo" alt="Elsie logo" src="images/icons/elsie_logo.svg" />
+          </a>
+          <div class="suber-section bold greeting-container">
+            <span id="greetings">Hello!</span>&nbsp;<span>Welcome back.</span>
+          </div>
+          <p class="text-grey">Sign into your account here.</p>
+          <div class="sub-section">
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="pwd" placeholder="Password">
+            </div>
+            <a href="forgotten-password.html" class="form-help-text text-grey">Forgotten password ?</a>
+            <button type="submit" class="btn">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Set data-randomize-content attribut to load and start randomize content process -->
+    <div class="d-none d-md-block col-md-5 bg-purple-grad" data-randomize-index="0" data-randomize-content="loginPage" data-randomize-bg>
+      <div class="layout-centered-container">
+        <div class="login-message-container">
+          <span class="sub-text" data-randomize-name>HEALTHCARE UNITS</span>
+          <h3 class="suber-section" data-randomize-title>Your digital one-stop solution for genetics</h3>
+          <p class="suber-section white" data-randomize-desc>Genetics can be a complicated affair. Elsie is a one-stop solution that delivers an innovative and convenient approach to streamline how genetics works.</p>
+          <div class="sub-section">
+            <a href="healthcare-units.html" class="btn outline" data-randomize-link data-randomize-linkLabel>Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('end')

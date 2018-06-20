@@ -51,7 +51,7 @@ var html = {
 
 var js = {
   in: [
-    source + "js/vendor/jquery-3.2.1.slim.min.js",
+    source + "js/vendor/jquery-3.3.1.min.js",
     source + "js/vendor/popper.min.js",
     source + "js/vendor/bootstrap.min.js",
     source + "js/components/**/*.js",

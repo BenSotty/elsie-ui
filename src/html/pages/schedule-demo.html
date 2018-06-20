@@ -1,0 +1,79 @@
+@@include('start', {
+  title:'Elsie book a demo',
+  description:'Schedule a demo with us and get an overview of our services',
+  layout: ''
+})
+
+<div class="bg-purple-grad">
+  @@include('navigation_simplified')
+  <div class="container section-md">
+    <div class="row">
+      <div class="col-12 col-lg-7">
+        <span class="sub-text">SCHEDULE A DEMO</span>
+        <p class="lead white no-margin">Let's talk - it only takes a few seconds to register your interest and be aware of all the news</p>
+      </div>
+    </div>
+  </div>
+  <div class="container section-block-md">
+    <div class="row">
+      <div class="col-12">
+        <form class="schedule-demo-form open-form">
+          <div class="input-text-open">
+            <span class="input-text">My name is&nbsp;</span>
+            <input type="text" class="open white" name="demo[name]" />
+          </div>
+          <div class="input-text-open">
+            <span class="input-text">I am from&nbsp;</span>
+            <div class="select-dropdown">
+              <div class="dropdown-toggle"><span class="dropdown-toggle-label">select a country</span><i class="fa fa-chevron-down"></i></div>
+              <ul class="dropdown-options">@@include('country_select_dropdown_options')</ul>
+              <!-- Hidden select box for form submission -->
+              <select class="open white" name="demo[country]">@@include('country_select_options')</select>
+            </div>&nbsp;
+            <span class="input-text">and I work at&nbsp;</span>
+            <input type="text" class="open white" name="demo[name]" placeholder="Institution name" />
+          </div>
+          <div class="input-text-open">
+            <span class="input-text">which is a&nbsp;</span>
+            <div class="select-dropdown select-dropdown-institution-type">
+              <div class="dropdown-toggle"><span class="dropdown-toggle-label">select a type</span><i class="fa fa-chevron-down"></i></div>
+              <ul class="dropdown-options">
+                <li class="dropdown-option" data-value="healthcare-unit">Healthcare unit</li>
+                <li class="dropdown-option" data-value="physician">Physician</li>
+                <li class="dropdown-option" data-value="laboratory">Laboratory</li>
+                <li class="dropdown-option" data-value="other">Other</li>
+              </ul>
+              <select class="open white" name="demo[institution-type]">
+                <option value="">select a type</option>
+                <option value="healthcare-unit">Healthcare unit</option>
+                <option value="physician">Physician</option>
+                <option value="laboratory">Laboratory</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-text-open">
+            <span class="input-text">Please contact me at&nbsp;</span>
+            <input type="email" class="open white" name="demo[email]" placeholder="email address" />
+          </div>
+          <div class="input-text-open">
+            <span class="input-text">My message is&nbsp;</span>
+            <input type="text" class="open white" name="demo[msg]" />
+          </div>
+          <div class="input-check-open">
+            <input  type="checkbox" value="1" id="demo_consent" name="[demo]consent" required>
+            <label for="[demo]consent">
+              I am interested! I would like to schedule a demo with <span class="bold">Coimbra Genomics</span> to see <span class="bold">Elsie</span> in action.
+            </label>
+          </div>
+        </div>
+          <div class="sub-section">
+            <button type="submit" class="btn btn-outline-white btn-longer">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('end')

@@ -1,6 +1,7 @@
 @@include('start',{
-  title:'Elsie laboratories workflow',
-  description:'How Elsie works with laboratories.'
+  title:'Elsie - Laboratories Home',
+  description:'Optimise your test management workflow and build a stronger customer network. Elsie provides digital genetics tests-handling tool and increase your exposure to new clients.',
+  layout: ''
 })
 
 @@include('navigation', {  bg:'bg-pink-grad' })
@@ -10,64 +11,62 @@
   <div class="bg-pink-grad">
     <div class="container section-header">
       <div class="row">
-        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-7">
           <span class="sub-text">LABORATORIES</span>
-          <h1>Your digital business partner for genetics.</h1>
+          <h1>Your digital business partner for genetics</h1>
           <div class="sub-section">
-            <p class="big">Optimise your test management workflow and build a stronger customer network. Elsie provides digital genetics tests-handling tool and increase your exposure to new clients.</p>
+            <p class="lead white">Optimise your test management workflow and build a stronger customer network. Elsie provides digital genetics tests-handling tool and increase your exposure to new clients.</p>
           </div>
         </div>
-        <div class="col-12 col-lg-6 img-header-container">
-          <img class="img-header" alt="Elsie workflow" src="images/icons/laboratories-workflow.svg" />
+        <div class="col-12 col-lg-5 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/heros/laboratories.svg" />
         </div>
       </div>
     </div>
   </div>
   @@include('shape_separator', { classes:'bg-pink-grad' })
 </div>
-<div class="shape-separator-inside-block">
+
+
+<div class="shape-separator-inside-block container">
   <div class="card-bodered">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_customer-portfolio.svg" />
-          <span>Expand Customer Portfolio</span>
+          <div class="icon-inline pink-lab elsie-icon-Portfolio"></div>
+          <div class="icon-inline-label">Expand customer portfolio</div>
         </div>
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <!-- TODO: get icon in pink -->
-          <img class="icon-inline" src="images/icons/icon_costs_time.svg" />
-          <span>Scaled Down Costs</span>
+          <div class="icon-inline pink-lab elsie-icon-Scaled_Down_Cost"></div>
+          <div class="icon-inline-label">Scaled down costs</div>
         </div>
-        <!-- TODO: get proper icon icon_logistics -->
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_logistics.svg" />
-          <span>Reduced Logistics Flaws</span>
+          <div class="icon-inline pink-lab elsie-icon-Logistics"></div>
+          <div class="icon-inline-label">Reduce logistics flaws</div>
         </div>
-        <!-- TODO: get icon in pink -->
         <div class="col-12 mb-3 col-md-6 mb-lg-0 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_tailored.svg" />
-          <span>Automated and Customisable Processes</span>
+          <div class="icon-inline pink-lab elsie-icon-Tailored_automated_avoid_errors"></div>
+          <div class="icon-inline-label">Automated processes</div>
         </div>
-        <!-- TODO: get icon in pink -->
         <div class="col-12 mb-3 mb-md-0 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_workflow.svg" />
-          <span>Simple and Unified Workflow</span>
+          <div class="icon-inline pink-lab elsie-icon-Workflow"></div>
+          <div class="icon-inline-label">Simple and unified workflow</div>
         </div>
-        <!-- TODO: get icon in pink -->
         <div class="col-12 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_security.svg" />
-          <span>Easy and Secured Delivery</span>
+          <div class="icon-inline pink-lab elsie-icon-Security"></div>
+          <div class="icon-inline-label">Easy and secure delivery</div>
         </div>
       </div>
     </div>
   </div>
 </div>
-@@include('workflow_header', {
-  title: 'How Elsie Works.',
-  text: "Use Elsie's cutting edge digital platform to deliver premium genetics service."
-})
-<!-- Workflow -->
-<div class="section-block workflow">
+
+<!-- How it Works -->
+<div class="section-block workflow container">
+  @@include('workflow_header', {
+    title: 'How Elsie Works.',
+    text: "Use Elsie's cutting edge digital platform to deliver premium genetics service."
+  })
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -77,7 +76,7 @@
     </div>
     <div class="workflow-text-block">
       <h3>Tailor Elsie to your unique needs</h3>
-      <p class="text-grey">We'll adapt Elsie to better match your internal processes, from including proprietary test requisition forms to test specific sample handling instructions, up to automated customs invoice generation. After this, your portfolio will be readily available to Elsie healthcare units network.</p>
+      <p class="lead">We'll adapt Elsie to better match your internal processes, from including proprietary test requisition forms to test specific sample handling instructions, up to automated customs invoice generation. After this, your portfolio will be readily available to Elsie healthcare units network.</p>
       <p class="text-grey suber-section sub-text">Furthermore your portfolio is effortlessly and immediately available to a growing healthcare units network.</p>
     </div>
   </div>
@@ -89,27 +88,25 @@
       </div>
     </div>
     <div class="workflow-text-block">
-      <h3>Receive Request & Sample</h3>
-      <p class="text-grey">Scale donw your staff's work load. At the healthcare unit, Elsie automatically generates and fills-in all your forms, resulting in a smoother, error-free, sample handling and shipping process.</p>
-      <div class="sub-section">
-        <ul class="ticks">
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <div class="text-grey bold sub-text">Enhanced logistics</div>
-            <p class="text-grey sub-text">We'll recieve alerts on Elsie platform when your kits stock is low to make sure you never run out of kits from any of your providers.</p>
-          </li>
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <div class="text-grey bold sub-text">Secure tests results</div>
-            <p class="text-grey sub-text">Genetic tests results are securely uploaded to our centralised workspace.</p>
-          </li>
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <div class="text-grey bold sub-text">Painless Sample Handling</div>
-            <p class="text-grey sub-text">Fewer blocking steps in your sample handling process and less red flags in your quality control.</p>
-          </li>
-        </ul>
-      </div>
+      <h3>Receive Request &amp; Sample</h3>
+      <p class="lead">Scale donw your staff's work load. At the healthcare unit, Elsie automatically generates and fills-in all your forms, resulting in a smoother, error-free, sample handling and shipping process.</p>
+      <ul class="ticks">
+        <li>
+          <i class="fa fa-check-circle"></i>
+          <div class="text-grey bold sub-text">Enhanced logistics</div>
+          <p class="text-grey sub-text">We'll recieve alerts on Elsie platform when your kits stock is low to make sure you never run out of kits from any of your providers.</p>
+        </li>
+        <li>
+          <i class="fa fa-check-circle"></i>
+          <div class="text-grey bold sub-text">Secure tests results</div>
+          <p class="text-grey sub-text">Genetic tests results are securely uploaded to our centralised workspace.</p>
+        </li>
+        <li>
+          <i class="fa fa-check-circle"></i>
+          <div class="text-grey bold sub-text">Painless Sample Handling</div>
+          <p class="text-grey sub-text">Fewer blocking steps in your sample handling process and less red flags in your quality control.</p>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="workflow-block number-left">
@@ -121,68 +118,64 @@
     </div>
     <div class="workflow-text-block">
       <h3>Deliver Reports Securely</h3>
-      <p class="text-grey">Upload report results securely to Elsie. Elsie coordinate the delivery of your results to a secure inbox, making them promptly available for the physician.</p>
+      <p class="lead">Upload report results securely to Elsie. Elsie coordinates the delivery of your results to a secure inbox, making them promptly available to the physician.</p>
     </div>
   </div>
 </div>
+
+<!-- Schedule a demo section -->
+@@include('schedule_demo_section', {
+  bg: 'bg-pink-grad'
+})
+
 <!-- Innovate with Elsie section -->
 <div class="section-block-grey shape-section">
   <img class="shape-section-right" src="images/shapes/shape-separator.png" />
-  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
-  <div class="shape-section-content">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="text-center-md no-margin">Innovate with Elsie.</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center-md cards-title">Innovate with Elsie</h2>
+      </div>
+    </div>
+    <div class="row sub-section">
+      <div class="col-12 mb-4 mb-lg-0 col-lg">
+        <div class="card-open">
+          <div class="icon pink-lab elsie-icon-Strengthen_Lab_Relationships"></div>
+          <h3 class="title">Stregthen Lab Relationships</h3>
+          <p class="test">Elsie bridges the interaction gap between healthcare units and laboratories so you don't have to worry about sales, ordering or shipping logistics.</p>
         </div>
       </div>
-      <div class="row sub-section">
-        <div class="col-12 mb-4 mb-lg-0 col-lg">
-          <div class="card-open">
-            <img class="icon" src="images/icons/icon_relationships.svg" />
-            <h3 class="title">Stregthen Lab Relationships</h3>
-            <p class="text">Elsie bridges the interaction gap between healthcare units and laboratories so you don't have to worry about sales, ordering or shipping logistics.</p>
-          </div>
+      <div class="col-12 mb-4 mb-lg-0 col-lg">
+        <div class="card-open">
+          <div class="icon pink-lab elsie-icon-Save_Time_Money"></div>
+          <h3 class="title">Save Time and Money</h3>
+          <p class="test">Elsie is tailored to your processes, which result in a less demanding workload allowing your staff to focus on meaningful tasks.</p>
         </div>
-        <div class="col-12 mb-4 mb-lg-0 col-lg">
-          <div class="card-open">
-            <img class="icon" src="images/icons/icon_time_money.svg" />
-            <h3 class="title">Save Time and Money</h3>
-            <p class="text">Elsie is tailored to your processes, which result in a less demanding workload allowing your staff to focus on meaningful tasks.</p>
-          </div>
+      </div>
+      <div class="col-12 mb-4 mb-lg-0 col-lg">
+        <div class="card-open">
+          <div class="icon pink-lab elsie-icon-Workflow"></div>
+          <h3 class="title">Unifed Genetics Workflow</h3>
+          <p class="test">Elsie increase processes efficiency and reduces human errors. This mean a smoother ordering process with fewer blocking steps.</p>
         </div>
-        <div class="col-12 mb-4 mb-lg-0 col-lg">
-          <div class="card-open">
-            <img class="icon" src="images/icons/icon_workflow.svg" />
-            <h3 class="title">Unifed Genetics Workflow</h3>
-            <p class="text">Elsie increase processes efficiency and reduces human errors. This mean a smoother ordering process with fewer blocking steps.</p>
-          </div>
+      </div>
+      <div class="col-12 mb-4 mb-lg-0 col-lg">
+        <div class="card-open">
+          <div class="icon pink-lab elsie-icon-Privacy_Security"></div>
+          <h3 class="title">Secure Exchanges</h3>
+          <p class="test">Elsie follows the best data storage and security practices being stricly compliant with the latest GDPR.</p>
         </div>
-        <div class="col-12 mb-4 mb-lg-0 col-lg">
-          <div class="card-open">
-            <img class="icon" src="images/icons/icon_security.svg" />
-            <h3 class="title">Secure Exchanges</h3>
-            <p class="text">Elsie follows the best data storage and security practices being stricly compliant with the latest GDPR.</p>
-          </div>
-        </div>
-        <div class="col-12 col-lg">
-          <div class="card-open">
-            <img class="icon" src="images/icons/icon_auditing.svg" />
-            <h3 class="title">Simplify Auditing</h3>
-            <p class="text">Track all your genetic tests transactions in an innovative digital platform. Manage and evaluate your entire ordering flow.</p>
-          </div>
+      </div>
+      <div class="col-12 col-lg">
+        <div class="card-open">
+          <div class="icon pink-lab elsie-icon-Simplify_Auditing"></div>
+          <h3 class="title">Simplify Auditing</h3>
+          <p class="test">Track all your genetic tests transactions in an innovative digital platform. Manage and evaluate your entire ordering flow.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- Quote section -->
-@@include('quote_section', {
-  section:'section-block',
-  quote:'Thanks to Elsie we welcomed new customers and our processes became more agile.'
-})
-<!-- Featured partners -->
-@@include('partners')
 <!-- Next step -->
 @@include('newsletter_section', {
   bg:'bg-pink-grad',

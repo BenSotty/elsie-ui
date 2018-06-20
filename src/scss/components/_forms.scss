@@ -1,0 +1,94 @@
+.login-form {
+  padding: 0 $gutter;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+
+  .brand-logo-link {
+    display: inline-block;
+  }
+
+  .brand-logo {
+    width: 120px;
+    max-width: 80%;
+  }
+
+  .form-group {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  button[type=submit] {
+    width: 100%;
+    margin-top: $gutter;
+  }
+}
+
+.form-help-text {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.schedule-demo-form {
+  > *, input, select, label, .dropdown-toggle {
+    color: $white;
+    border-color: $white;
+  }
+
+  .select-dropdown-institution-type.expanded .dropdown-options {
+    max-height: 140px;
+  }
+}
+
+form.open-form {
+  input, select, label, div {
+    font-size: rem(24px);
+  }
+
+  .input-text-open {
+    .input-text, input, .select-dropdown {
+      width: 100%;
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .input-check-open input,
+  .input-check-open label {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-check-open input {
+    margin-right: 10px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  form.open-form .input-text-open {
+    .input-text {
+      display: inline;
+    }
+
+    input, .select-dropdown {
+      display: inline-block;
+      width: 300px;
+    }
+  }
+
+  .schedule-demo-form .input-text-open input[name="demo[msg]"] {
+    width: 600px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .login-message-container {
+    padding-left: $gutter;
+  }
+}

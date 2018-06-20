@@ -5,11 +5,11 @@ $number-height-sm: 50px;
   .workflow-block {
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
+    width: 65%;
     position: relative;
 
     &:not(:last-of-type) {
-      margin-bottom: 2 * $gutter;
+      margin-bottom: 4 * $gutter;
     }
 
     .workflow-number-wrapper {
@@ -25,7 +25,7 @@ $number-height-sm: 50px;
 
       .workflow-text-block {
         padding-left: $number-height;
-      }
+      } 
     }
 
     &.number-right {
@@ -64,7 +64,7 @@ $number-height-sm: 50px;
 @include media-breakpoint-down(md) {
   .workflow {
     .workflow-block {
-      width: 75%;
+      width: 85%;
     }
   }
 }

@@ -1,27 +1,24 @@
 .expandable-hover {
   .expandable-content {
-    @extend %animate-slide-down-collapsed;
+    @extend %animate-menu-collapsed;
   }
 
   .expandable-toggle {
     @extend %transition-all;
 
-    i {
+    i, .elsie-icon-arrow_down {
+      display: inline-block;
       @extend %transition-all;
     }
   }
 
-  &:hover {
-    .expandable-toggle {
-      color: $gray-500;
-
-      i {
-        transform: rotate(180deg);
-      }
+  &.expanded {
+    i, .elsie-icon-arrow_down {
+      transform: rotate(0deg);
     }
 
     .expandable-content {
-      @extend %animate-slide-down-expanded;
+      @extend %animate-menu-expanded;
     }
   }
 }

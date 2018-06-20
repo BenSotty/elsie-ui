@@ -1,6 +1,7 @@
-@@include('start',{
-  title:'Elsie physicians workflow',
-  description:'How Elsie works with physicians.'
+@@include('start', {
+  title:'Elsie - Physicians Home',
+  description:'How Elsie works with physicians.',
+  layout: ''
 })
 
 @@include('navigation', {  bg:'bg-blue-grad' })
@@ -9,15 +10,15 @@
   <div class="bg-blue-grad">
     <div class="container section-header">
       <div class="row">
-        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-7">
           <span class="sub-text">PHYSICIANS</span>
-          <h1>Your genetic digital assitant.</h1>
+          <h1>Your genetics digital&nbsp;assistant</h1>
           <div class="sub-section">
-            <p class="big">Speed-up and simplify how you find, access and order the best genetics tests that meet your patients' need in a user-firendly workspace. Our expert team gathers highly-curated genetics content to assist your clinical cases, from first patient contact to genetics results analysis.</p>
+            <p class="lead white">Speed-up and simplify how you find, access and order the best genetics tests that meet your patients' need in a user-firendly workspace. Our expert team gathers highly-curated genetics content to assist your clinical cases, from first patient contact to genetics results analysis.</p>
           </div>
         </div>
-        <div class="col-12 col-lg-6 img-header-container">
-          <img class="img-header" alt="Elsie workflow" src="images/icons/physicians-workflow.svg" />
+        <div class="col-12 col-lg-5 img-header-container">
+          <img class="img-header" alt="Elsie workflow" src="images/heros/physicians.svg" />
         </div>
       </div>
     </div>
@@ -25,48 +26,47 @@
   @@include('shape_separator', { classes:'bg-blue-grad' })
 </div>
 <!-- Card full width -->
-<div class="shape-separator-inside-block">
+<div class="shape-separator-inside-block container">
   <div class="card-bodered">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <!-- TODO: get missing patient care icon -->
-          <img class="icon-inline" src="images/icons/icon_family.svg" />
-          <span>Better Patient Care</span>
+          <div class="icon-inline blue-physicians elsie-icon-Patient_Care"></div>
+          <div class="icon-inline-label">Better patient care</div>
         </div>
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <!-- TODO: get missing report icon -->
-          <img class="icon-inline" src="images/icons/icon_improved-diagnosis.svg" />
-          <span>Rich and Readable Genetics Reports</span>
+          <div class="icon-inline blue-physicians elsie-icon-Rich_Readable_Reports"></div>
+          <div class="icon-inline-label">Rich and comprehensible reports</div>
         </div>
         <div class="col-12 mb-3 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_security.svg" />
-          <span>State-of-the-Art Security</span>
+          <div class="icon-inline blue-physicians elsie-icon-Security"></div>
+          <div class="icon-inline-label">State-of-the-art security</div>
         </div>
-        <!-- TODO: get missing support icon -->
         <div class="col-12 mb-3 col-md-6 mb-lg-0 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_relationships.svg" />
-          <span>Accessible Genetics Support</span>
+          <div class="icon-inline blue-physicians elsie-icon-Accessible_Genetics"></div>
+          <div class="icon-inline-label">Accessible genetics support</div>
         </div>
         <div class="col-12 mb-3 mb-md-0 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_workflow.svg" />
-          <span>Simplified Ordering Process</span>
+          <div class="icon-inline blue-physicians elsie-icon-Simplified_Ordering_Process"></div>
+          <div class="icon-inline-label">Simplified ordering process</div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-          <img class="icon-inline" src="images/icons/icon_book.svg" />
-          <span>Comprehensive Genomics Knowledge Base</span>
+          <div class="icon-inline blue-physicians elsie-icon-Backed_Science"></div>
+          <div class="icon-inline-label">Comprehensive knowledge base</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-@@include('workflow_header', {
-  title: 'How Elsie Works.',
-  text: "Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice."
-})
-<!-- Workflow -->
-<div class="section-block workflow">
+
+<!-- How it works -->
+<div class="section-block workflow container">
+  @@include('workflow_header', {
+    title: 'How Elsie Works',
+    text: "Elsie support you during the entire genetic tests ordering process, improving your everyday clinical practice."
+  })
+
   <div class="workflow-block number-left">
     <div class="workflow-number-wrapper">
       <div class="workflow-number-block">
@@ -76,7 +76,7 @@
     </div>
     <div class="workflow-text-block">
       <h3>Tailor Elsie to your unique needs</h3>
-      <p class="text-grey">Get direct access to all genetic tests available in your healthcare unit. Elsie provie one-click access to the genetic test details, simplifying your management workflow and supporting you in the decision making process of the right test.</p>
+      <p class="lead">Get direct access to all genetic tests available in your healthcare unit. Elsie provides one-click access to the genetic test details, simplifying your management workflow and supporting you in the decision making process of the right test.</p>
     </div>
   </div>
   <div class="workflow-block number-right">
@@ -87,8 +87,8 @@
       </div>
     </div>
     <div class="workflow-text-block">
-      <h3>Access & Request Genetic Tests</h3>
-      <p class="text-grey">Get direct access to all genetic tests available in your healthcare unit. Elsie provie one-click access to the genetic test details, simplifying your management workflow and supporting you in the decision making process of the right test.</p>
+      <h3>Access and order genetic tests</h3>
+      <p class="lead">Get direct access to all genetic tests available in your healthcare unit. Elsie provie one-click access to the genetic test details, simplifying your management workflow and supporting you in the decision making process of the right test.</p>
       <p class="text-grey sub-text suber-section">Avoid filling cumbersome documentation. Elsie replaces numerous forms and documents from different labs with a single order confirmation, automatically filled-in for you.</p>
     </div>
   </div>
@@ -100,54 +100,50 @@
       </div>
     </div>
     <div class="workflow-text-block">
-      <h3>Access Results</h3>
-      <p class="text-grey">Access report results in your secure Elsie inbox. Elsie centralise the reception of laboratory results in a single secure location, promptly available for you.</p>
-      <div class="sub-section">
-        <ul class="ticks">
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <div class="text-grey bold sub-text">Secure Tests Results</div>
-            <p class="text-grey sub-text">Access report results in your secure Elsie inbox. Elsie centralise the reception of laboratory results in a single secure location, promptly available for you.</p>
-          </li>
-          <li>
-            <i class="fa fa-check-circle"></i>
-            <div class="text-grey bold sub-text">Genetics Knowledge</div>
-            <p class="text-grey sub-text">If needed our genetic team is available to help you interpret the report results.</p>
-          </li>
-        </ul>
-      </div>
+      <h3>Access results</h3>
+      <p class="lead">Access report results in your secure Elsie inbox. Elsie centralise the reception of laboratory results in a single secure location, promptly available for you.</p>
+      <ul class="ticks">
+        <li>
+          <i class="fa fa-check-circle"></i>
+          <div class="text-grey bold sub-text">Genetics knowledge</div>
+          <p class="text-grey sub-text">If needed, our genetic team is available to help you interpret the report results.</p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+<!-- Schedule a demo section -->
+@@include('schedule_demo_section', {
+  bg: 'bg-blue-grad'
+})
 <!-- Why Genetics -->
 <div class="section-block-grey shape-section">
   <img class="shape-section-right" src="images/shapes/shape-separator.png" />
-  <img class="shape-section-left" src="images/shapes/shape-separator.png" />
   <div class="shape-section-content">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col">
-          <h2 class="text-center-md no-margin">Why you should be using genetics.</h2>
+          <h2 class="text-center-md cards-title">Why you should be using genetics.</h2>
         </div>
       </div>
       <div class="row sub-section">
         <div class="col-12 mb-4 mb-md-0 col-md">
           <div class="card-open">
-            <img class="icon" src="images/icons/icon_treatment.svg" />
+            <div class="icon blue-physicians elsie-icon-Treatment"></div>
             <h3 class="title">Individualised Treatment</h3>
             <p class="text">Predict your patients' response to drugs you want to prescribe, leading to better efficiency, fewer adverse drug reactions and a better cost-benefit ratio.</p>
           </div>
         </div>
         <div class="col-12 mb-4 mb-md-0 col-md">
           <div class="card-open">
-            <img class="icon" src="images/icons/icon_disease.svg" />
+            <div class="icon blue-physicians elsie-icon-Disease"></div>
             <h3 class="title">Disease Prevention</h3>
             <p class="text">Learn about your patient disease risks, and provide them councelling about beneficial lifestyle changes and risk reducing behaviour implementation. Improve clinical surveillance and enhance preventive and treatment interventions.</p>
           </div>
         </div>
         <div class="col-12 mb-4 mb-md-0 col-md">
           <div class="card-open">
-            <img class="icon" src="images/icons/icon_diagnosis.svg" />
+            <div class="icon blue-physicians elsie-icon-Diagnosis"></div>
             <h3 class="title">Improved Diagnosis</h3>
             <p class="text">Deliver the right diagnosis at the right time. Provide more accurate, definitve and quicker diagnosis for your patients and inform your choices about management and healthcare options.</p>
           </div>
@@ -156,17 +152,10 @@
     </div>
   </div>
 </div>
-<!-- Quote section -->
-@@include('quote_section', {
-  section:'section-block',
-  quote:'Elsie transformed the way I use genetics with my patients. It is now much more convenient to fully explore genecally informed medicine.'
-})
-<!-- Featured partners -->
-@@include('partners')
 <!-- Next step -->
 @@include('newsletter_section', {
   bg:'bg-blue-grad',
-  title:'Order you genetic test with Elsie.',
+  title:'Order your next genetic test with Elsie',
   text:"Schedule a demo to see Elsie in action, or leave your email and we'll be in touch."
 })
 <!-- footer -->
