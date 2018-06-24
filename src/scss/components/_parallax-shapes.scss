@@ -40,3 +40,57 @@
   bottom: 150px;
   left: 5%;
 }
+
+.parallax-shape-workflow-01 {
+  @extend %parallax-shape;
+  top: 20px;
+  left: 120px;
+}
+
+.parallax-shape-workflow-02 {
+  @extend %parallax-shape;
+  top: 220px;
+  right: 10%;
+}
+
+.parallax-shape-workflow-03 {
+  @extend %parallax-shape;
+  top: 320px;
+  right: 10%;
+}
+
+.parallax-shape-workflow-04 {
+  @extend %parallax-shape;
+  top: 240px;
+  left: 7%;
+}
+
+.parallax-shape-workflow-05 {
+  @extend %parallax-shape;
+  top: 640px;
+  right: 7%;
+}
+
+.parallax-shape-workflow-06 {
+  @extend %parallax-shape;
+  top: 360px;
+  left: 7%;
+}
+
+.parallax-shape-workflow-07 {
+  @extend %parallax-shape;
+  top: 840px;
+  right: 7%;
+}
+
+.parallax-shape-workflow-08 {
+  @extend %parallax-shape;
+  bottom: 200px;
+  right: 5%;
+}
+
+.parallax-shape-workflow-09 {
+  @extend %parallax-shape;
+  bottom: 240px;
+  left: 5%;
+}
