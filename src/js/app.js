@@ -25,5 +25,9 @@
     $.each($(".parallax-shape-container [class^='parallax-shape-']"), function() {
       new ParallaxScroll($(this));
     });
+
+    $.each($(".submit-animated"), function() {
+      new SubmitAnimated($(this));
+    });
   });
 }());
