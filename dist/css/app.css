@@ -10592,7 +10592,8 @@ button:focus {
           justify-content: center;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  outline: none; }
+  outline: none;
+  height: 40px; }
 
 .submit-animated svg {
   margin: 0;
@@ -10647,7 +10648,8 @@ button:focus {
   border-color: #2cd4d9;
   -webkit-animation: closeButton .3s .3s ease-in forwards;
           animation: closeButton .3s .3s ease-in forwards;
-  padding: 0; }
+  padding: 0;
+  min-width: auto; }
   .submit-animated.running:focus {
     -webkit-box-shadow: none;
             box-shadow: none; }

@@ -7,7 +7,12 @@ $.extend(SubmitAnimated.prototype, {
     this.$btn = $btn;
     this.$timer = this.$btn.find(".timer svg");
 
-    this.$btn.click(this.animate.bind(this));
+    var self = this;
+    this.$btn.click(function(event) {
+      // Prevent form from being submitted
+      event.preventDefault();
+      self.animate.call(self);
+    });
   },
   animate: function() {
     if (this.$btn.hasClass("running")) {

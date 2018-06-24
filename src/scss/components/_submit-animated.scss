@@ -8,6 +8,7 @@ $gray: #BBBBBB;
     justify-content: center;
     transition: all .5s ease-in-out;
     outline: none;
+    height: $btn-height;
   }
 
   svg {
@@ -64,6 +65,7 @@ $gray: #BBBBBB;
     border-color: $blue;
     animation: closeButton .3s .3s ease-in forwards;
     padding: 0;
+    min-width: auto;
 
     &:focus {
       box-shadow: none;
