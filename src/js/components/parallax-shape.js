@@ -4,19 +4,16 @@ ParallaxScroll = function($elt) {
 
 $.extend(ParallaxScroll.prototype, {
   init: function ($elt) {
-    this.$elt = $elt;
+    var $nav = $('#main-navigation');
 
+    this.$elt = $elt;
+    this.$scrollContainer = $(window);
     this.config = {
       isBottom: this.$elt.hasClass("parallax-bottom"),
       initTop: +this.$elt.css("top").replace('px',''),
       initBottom: +this.$elt.css("bottom").replace('px',''),
       moveHeight: 150
     };
-
-
-    this.$scrollContainer = $(window);
-
-    var $nav = $('#main-navigation');
     this.navHeight = $nav.length > 0 ?  $nav.innerHeight() : 0;
 
     this.scroll.bind(this);

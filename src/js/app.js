@@ -34,5 +34,9 @@
     $("#newsletter-submit").click(function() {
       $("#newsletter-submit-input").val("");
     });
+
+    $.each($("[data-smooth-apparition]"), function () {
+      new SmoothApparition($(this));
+    });
   });
 }());

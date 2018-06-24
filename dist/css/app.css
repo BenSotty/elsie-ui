@@ -11535,3 +11535,29 @@ form.open-form .input-check-open label {
 .parallax-shape-07 {
   bottom: 150px;
   left: 5%; }
+
+.smooth-apparition-left, .smooth-apparition-right, .smooth-apparition-bottom, .smooth-apparition-top {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+  .not-appeared.smooth-apparition-left, .not-appeared.smooth-apparition-right, .not-appeared.smooth-apparition-bottom, .not-appeared.smooth-apparition-top {
+    opacity: 0; }
+  .appeared.smooth-apparition-left, .appeared.smooth-apparition-right, .appeared.smooth-apparition-bottom, .appeared.smooth-apparition-top {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1; }
+
+.smooth-apparition-left.not-appeared {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px); }
+
+.smooth-apparition-right.not-appeared {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px); }
+
+.smooth-apparition-bottom.not-appeared {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px); }
+
+.smooth-apparition-top.not-appeared {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px); }

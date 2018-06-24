@@ -1,0 +1,48 @@
+$translationSize: 100px;
+$opacityStart: 0;
+$tansitionProperties: all 0.3s ease-out;
+
+%smooth-apparition {
+  transition: $tansitionProperties;
+
+  &.not-appeared {
+    opacity: $opacityStart;
+  }
+
+  &.appeared {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.smooth-apparition-left {
+  @extend %smooth-apparition;
+
+  &.not-appeared {
+    transform: translateX(-$translationSize);
+  }
+}
+
+.smooth-apparition-right {
+  @extend %smooth-apparition;
+
+  &.not-appeared {
+    transform: translateX($translationSize);
+  }
+}
+
+.smooth-apparition-bottom {
+  @extend %smooth-apparition;
+
+  &.not-appeared {
+    transform: translateY($translationSize);
+  }
+}
+
+.smooth-apparition-top {
+  @extend %smooth-apparition;
+
+  &.not-appeared {
+    transform: translateY(-$translationSize);
+  }
+}
