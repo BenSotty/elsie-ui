@@ -4,7 +4,9 @@ input:focus {
 }
 
 .input-group {
-  $input-height: 40px;
+  $input-height: $btn-height;
+  height: $input-height;
+  position: relative;
 
   .input-group-prepend {
     .input-group-text {
@@ -26,9 +28,14 @@ input:focus {
 
   .input-group-append {
     > .btn {
-      border-radius: $input-height;
-      margin-left: - $input-height / 2;
+      height: $input-height;
       z-index: 5; // prevent bug on focus
+    }
+
+    &.with-submit-animated {
+      position: absolute;
+      right: - $input-height / 2;
+      top: 0;
     }
   }
 }

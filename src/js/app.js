@@ -29,5 +29,10 @@
     $.each($(".submit-animated"), function() {
       new SubmitAnimated($(this));
     });
+
+    // Empty newsletter after click submit button
+    $("#newsletter-submit").click(function() {
+      $("#newsletter-submit-input").val("");
+    });
   });
 }());
