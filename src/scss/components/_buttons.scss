@@ -46,6 +46,7 @@ button:focus {
 
   &.btn-icon {
     $bth-icon-height: $btn-height - 4px;
+    @extend %transition-all;
     position: relative;
     padding-right: 50px;
 
@@ -60,6 +61,10 @@ button:focus {
       text-align: center;
 
       line-height: $bth-icon-height;
+    }
+
+    &:hover {
+      padding-right: 54px;
     }
   }
 

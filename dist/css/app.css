@@ -10271,7 +10271,7 @@ p {
   .no-padding-sm-down {
     padding: 0 !important; } }
 
-.navigation .nav-item.expandable-hover .expandable-item, .select-dropdown .dropdown-options, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down, .arrow-right i, .arrow-right .elsie-icon-arrow_right, .select-dropdown .dropdown-toggle i {
+.navigation .nav-item.expandable-hover .expandable-item, .select-dropdown .dropdown-options, .expandable-hover .expandable-toggle, .expandable-hover .expandable-toggle i, .expandable-hover .expandable-toggle .elsie-icon-arrow_down, .arrow-right i, .arrow-right .elsie-icon-arrow_right, .btn.btn-icon, .select-dropdown .dropdown-toggle i {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
 
@@ -10538,6 +10538,8 @@ button:focus {
       top: 2px;
       text-align: center;
       line-height: 36px; }
+    .btn.btn-icon:hover {
+      padding-right: 54px; }
   .btn.btn-txt {
     background-color: transparent;
     color: #2cd4d9;
