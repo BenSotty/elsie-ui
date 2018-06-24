@@ -11427,6 +11427,9 @@ form.open-form .input-check-open label {
 form.open-form .input-check-open input {
   margin-right: 10px; }
 
+form.open-form .input-check-open label {
+  font-size: 1.125rem; }
+
 @media (min-width: 768px) {
   form.open-form .input-text-open .input-text {
     display: inline; }

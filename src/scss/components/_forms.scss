@@ -68,6 +68,10 @@ form.open-form {
   .input-check-open input {
     margin-right: 10px;
   }
+
+  .input-check-open label {
+    font-size: rem(18px);
+  }
 }
 
 @include media-breakpoint-up(md) {
